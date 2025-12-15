@@ -1,0 +1,27 @@
+title: "Scène"
+email: info@example.com
+description: "料理のために用意された、静かな一夜。"
+baseurl: "" 
+url: "https://your-domain.com" # 後で実ドメインに変更してください
+timezone: Asia/Tokyo
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 予約リンク（ここを変えるだけで全ページのボタンが変わります）
+reservation_url: "https://www.jalan.net/yad353095/"
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: "jp"
+    values:
+      lang: "jp"
+  - scope:
+      path: "en"
+    values:
+      lang: "en"

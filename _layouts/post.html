@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'jp' }}">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <!-- Simple Header for Posts -->
+    <header class="site-header">
+        <a href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/jp/' | relative_url }}{% endif %}" class="brand">Scène</a>
+        <nav class="nav-desktop">
+            <a href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/jp/' | relative_url }}{% endif %}">Back to Home</a>
+        </nav>
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- Simple Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/jp/' | relative_url }}{% endif %}" onclick="toggleMenu()">Back to Home</a>
+    </div>
+
+    <!-- Post Title Area -->
+    <div class="post-header">
+        <div class="wrap reveal">
+            <p style="color:var(--text-muted); margin-bottom:10px;">{{ page.date | date: "%Y.%m.%d" }}</p>
+            <h1 class="post-title">{{ page.title }}</h1>
+        </div>
+    </div>
+
+    <!-- Post Content -->
+    <article class="post-content wrap reveal">
+        {{ content }}
+        
+        <div style="margin-top:60px; padding-top:40px; border-top:1px solid var(--border); text-align:center;">
+            <a href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}#news{% else %}{{ '/jp/' | relative_url }}#news{% endif %}" style="border-bottom:1px solid #fff;">
+                {% if page.lang == 'en' %}Back to News{% else %}お知らせ一覧へ戻る{% endif %}
+            </a>
+        </div>
+    </article>
+
+    <!-- Simple Footer -->
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <div style="font-family:var(--font-display);">© Scène</div>
+        </div>
+    </footer>
+    
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+</html>
