@@ -1,0 +1,148 @@
+---
+layout: default
+lang: en
+title: Top
+---
+
+<!-- Hero -->
+<div class="hero">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549487532-6a84d94b0052?q=80&w=2574&auto=format&fit=crop');"></div>
+    <div class="hero-content">
+        <h1 class="hero-main">Scène</h1>
+        <p class="hero-sub">A Quiet Night<br>Prepared for Cuisine.</p>
+    </div>
+    <div class="scroll-down">
+        <div class="scroll-line"></div>
+        <span style="font-size:10px; letter-spacing:0.2em;">SCROLL</span>
+    </div>
+</div>
+
+<!-- Concept -->
+<section id="concept" class="section-padding">
+    <div class="wrap reveal">
+        <span class="section-num">01 / Concept</span>
+        <div class="concept-block">
+            <div class="concept-text">
+                <h2 class="heading-lg">A Scene Prepared for<br>Cuisine and Silence.</h2>
+                <p style="color:var(--text-muted); margin-bottom:40px;">
+                    Scène means 'Scene' in French.<br><br>
+                    The weather, temperature, and scent of the air.<br>
+                    Ingredients from the fields and sea.<br>
+                    Expressing all of these as a 'scene on a plate'.<br><br>
+                    Away from the hustle and bustle, at the foot of Mt. Daisen,<br>
+                    we offer time to simply face the cuisine.
+                </p>
+                <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:20px;">
+                    <h3 style="font-family:var(--font-serif); font-size:18px; margin-bottom:10px;">About the Name "Scène"</h3>
+                    <p style="font-size:13px; color:var(--text-muted);">We harvest vegetables and herbs from our fields daily, so the varieties change day by day. The bounty of the sea also varies daily depending on the weather and fishing conditions. We offer courses that allow you to feel such scenes of the San-in region through our cuisine.</p>
+                </div>
+            </div>
+            <div class="concept-visual">
+                <div class="concept-caption"><span class="vertical-text">Auberge in the forest, Daisen, Tottori.</span></div>
+                <img src="https://images.unsplash.com/photo-1596120236172-231999844c69?q=80&w=2546&auto=format&fit=crop" class="concept-img" alt="Interior">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cuisine -->
+<section id="cuisine" class="section-padding" style="padding-top:0;">
+    <div class="cuisine-hero reveal">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" class="cuisine-bg" alt="Cuisine">
+        <div class="cuisine-content">
+            <span class="section-num">02 / Cuisine</span>
+            <h2 class="heading-lg">The Blessings of San-in,<br>Through French Techniques.</h2>
+            <p style="color:var(--text-muted);">
+                We use ingredients from the San-in region.<br>
+                Vegetables, fish, meat. We assemble the course facing the season.<br>
+                We build the unique 'scene' of the land on the plate.
+            </p>
+            <p style="margin-top:20px; font-size:13px;">*Our cuisine is created by young chefs. They are refining their skills and sensibilities while facing the ingredients of this land.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Rooms -->
+<section id="rooms" class="section-padding">
+    <div class="wrap reveal">
+        <span class="section-num">03 / Guest Rooms</span>
+        <div class="concept-block reverse">
+            <div class="concept-text">
+                <h2 class="heading-lg">A Space of Silence<br>and Simplicity.</h2>
+                <p style="color:var(--text-muted); margin-bottom:40px;">
+                    Guest rooms at Scène are designed for savoring the afterglow of dinner and the silence of Daisen.<br>
+                    We have eliminated excessive decorations and facilities,<br>
+                    offering only the forest view from the window and breathing space.<br>
+                    A space solely for peaceful sleep.
+                </p>
+                <ul style="font-size:13px; color:var(--text-muted); list-style:none; padding:0;">
+                    <li>・Free Wi-Fi</li>
+                    <li>・Shower booth / Towels / Hair dryer / Original pajamas</li>
+                    <li>*No bathtub (Hot spring facility is 10 mins away by car).</li>
+                </ul>
+            </div>
+            <div class="concept-visual">
+                <div class="concept-caption"><span class="vertical-text">A place just for sleeping.</span></div>
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2664&auto=format&fit=crop" class="concept-img" alt="Guest Room">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News -->
+<section id="news" class="section-padding">
+    <div class="wrap reveal">
+        <span class="section-num">04 / News</span>
+        <div id="newsList">
+            {% assign posts = site.posts | where: "lang", "en" %}
+            {% if posts.size > 0 %}
+                {% for post in posts %}
+                <div class="list-row" onclick="openModal('{{ post.title }}', '{{ post.date | date: "%Y.%m.%d" }}', '{{ post.content | strip_newlines | escape }}')">
+                    <span class="list-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                    <span class="list-title">{{ post.title }}</span>
+                    <span class="list-arrow">→</span>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p style="color:var(--text-muted);">No news currently available.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section-padding">
+    <div class="wrap reveal">
+        <span class="section-num">05 / FAQ</span>
+        <div style="max-width:800px; margin-left:auto;">
+            <p style="margin-bottom:40px; color:var(--text-muted);">We value a quiet environment for adults.</p>
+            
+            <details><summary><span class="faq-q">Can children stay?</span><span class="faq-toggle">+</span></summary><div class="faq-a">We accept guests aged 9 and over. We do not provide meals or facilities for small children to maintain a quiet environment.</div></details>
+            <details><summary><span class="faq-q">Is it okay to be noisy?</span><span class="faq-toggle">+</span></summary><div class="faq-a">Scène is an accommodation premised on a quiet environment. We do not envision lively ways of spending time.</div></details>
+            <details><summary><span class="faq-q">What is the meal like?</span><span class="faq-toggle">+</span></summary><div class="faq-a">Dinner is a course meal featuring ingredients from the San-in region. The content changes depending on the season and the situation of the day.</div></details>
+            <details><summary><span class="faq-q">Do you accommodate food allergies?</span><span class="faq-toggle">+</span></summary><div class="faq-a">Yes, please contact us in advance if possible. We may not be able to accommodate depending on the content.</div></details>
+            <details><summary><span class="faq-q">Please tell me the cancellation policy.</span><span class="faq-toggle">+</span></summary><div class="faq-a">Please check the cancellation policy on the reservation screen when booking.</div></details>
+        </div>
+    </div>
+</section>
+
+<!-- Access -->
+<section id="access" class="section-padding">
+    <div class="wrap reveal">
+        <span class="section-num">06 / Access</span>
+        <div class="access-layout">
+            <div class="access-info">
+                <h2 style="font-family:var(--font-display); font-size:32px; margin-bottom:40px;">Scène</h2>
+                <div style="font-size:13px; color:var(--text-muted); line-height:2.4;">
+                    <p>115-7 Daisen, Daisen-cho, Saihaku-gun, Tottori 689-3318</p>
+                    <p style="margin-top:20px;">[ Car ]<br>Approx. 20 min from Mizokuchi IC (Yonago Expressway)</p>
+                    <p style="margin-top:20px;">[ Public Transport ]<br>Approx. 50 min by bus from JR Yonago Station (Daisen Line)<br>5 min walk from "Daisen-ji" bus stop</p>
+                </div>
+                <a href="https://goo.gl/maps/PLACEHOLDER" target="_blank" style="display:inline-block; border:1px solid var(--border); padding:12px 30px; font-size:12px; margin-top:40px;">Google Maps</a>
+            </div>
+            <div class="access-map" style="position: relative; width: 100%; height: 100%; min-height: 400px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.628688469315!2d133.5350!3d35.3940!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDIzJzM4LjQiTiAxMzPCsDMyJzA2LjAiRQ!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp" style="border:0; width:100%; height:100%; filter: grayscale(100%) invert(90%) contrast(90%); opacity: 0.8;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</section>
