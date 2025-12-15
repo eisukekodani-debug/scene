@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <!-- アクセスと同時に日本語トップへ転送 -->
+    <meta http-equiv="refresh" content="0; url={{ '/jp/' | relative_url }}">
+    <script>
+        window.location.href = "{{ '/jp/' | relative_url }}";
+    </script>
+</head>
+<body>
+    <p>自動的に転送されない場合は、<a href="{{ '/jp/' | relative_url }}">こちらをクリック</a>してください。</p>
+</body>
+</html>
