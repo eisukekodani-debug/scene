@@ -4,7 +4,7 @@ description: "料理のために用意された、静かな一夜。"
 
 # 【重要】リポジトリ名を設定します（先頭にスラッシュが必要）
 # これがないとCSSや画像が読み込まれません
-baseurl: ""
+baseurl: "/scene"
 
 # 【重要】GitHub Pagesの基本ドメインを設定します
 url: "https://eisukekodani-debug.github.io"
