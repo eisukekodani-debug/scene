@@ -1,8 +1,7 @@
 <header class="site-header">
-    <a href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/jp/' | relative_url }}{% endif %}" class="brand">Scène</a>
+    <a href="{% if page.lang == 'en' %}{{ '/index.en.html' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="brand">Scène</a>
     
     <nav class="nav-desktop">
-        <!-- Single Page Anchors -->
         <a href="#concept">Concept</a>
         <a href="#cuisine">Cuisine</a>
         <a href="#rooms">Rooms</a>
@@ -16,7 +15,6 @@
     </div>
 </header>
 
-<!-- Mobile Menu Overlay -->
 <div class="mobile-menu" id="mobileMenu">
     <a href="#concept" onclick="toggleMenu()">Concept</a>
     <a href="#cuisine" onclick="toggleMenu()">Cuisine</a>
@@ -25,9 +23,9 @@
     <a href="#faq" onclick="toggleMenu()">FAQ</a>
     <a href="#access" onclick="toggleMenu()">Access</a>
     
-    <!-- Language Switch inside Mobile Menu -->
     <div style="margin-top: 40px; font-family: var(--font-display);">
-        <a href="{{ '/jp/' | relative_url }}" style="margin:0 10px; opacity: {% if page.lang == 'jp' %}1{% else %}0.5{% endif %}; font-size:16px;">JP</a>
-        <a href="{{ '/en/' | relative_url }}" style="margin:0 10px; opacity: {% if page.lang == 'en' %}1{% else %}0.5{% endif %}; font-size:16px;">EN</a>
+        <a href="{{ '/' | relative_url }}" style="margin:0 10px; opacity: {% if page.lang == 'jp' %}1{% else %}0.5{% endif %}; font-size:16px;">JP</a>
+        
+        <a href="{{ '/index.en.html' | relative_url }}" style="margin:0 10px; opacity: {% if page.lang == 'en' %}1{% else %}0.5{% endif %}; font-size:16px;">EN</a>
     </div>
 </div>
