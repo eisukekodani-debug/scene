@@ -1,8 +1,14 @@
 title: "Scène"
 email: info@example.com
 description: "料理のために用意された、静かな一夜。"
-baseurl: "" 
-url: "https://your-domain.com" # 後で実ドメインに変更してください
+
+# 【重要】リポジトリ名を設定します（先頭にスラッシュが必要）
+# これがないとCSSや画像が読み込まれません
+baseurl: "/scene"
+
+# 【重要】GitHub Pagesの基本ドメインを設定します
+url: "https://eisukekodani-debug.github.io"
+
 timezone: Asia/Tokyo
 
 # Build settings
@@ -11,7 +17,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# 予約リンク（ここを変えるだけで全ページのボタンが変わります）
+# 予約リンク
 reservation_url: "https://www.jalan.net/yad353095/"
 
 permalink: /:year/:month/:day/:title/
