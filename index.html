@@ -14,29 +14,17 @@
     
     <style>
         img { max-width: 100%; height: auto; }
+        .hero { position: relative; height: 100vh; width: 100%; overflow: hidden; }
         .hero-bg {
-            /* もしCSSファイル読み込みに失敗しても背景画像を表示させる設定 */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-size: cover;
-            background-position: center;
-        }
-        .hero {
-            position: relative;
-            height: 100vh; /* 画面の高さいっぱいに */
-            width: 100%;
-            overflow: hidden;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; background-size: cover; background-position: center;
         }
     </style>
 </head>
 <body>
     <div class="noise-overlay"></div>
     
-    <header class="site-header">
+	<header class="site-header">
         <a href="./index.html" class="brand">Scène</a>
         <nav class="nav-desktop">
             <a href="#concept">Concept</a>
@@ -45,12 +33,16 @@
             <a href="#news">News</a>
             <a href="#faq">FAQ</a>
             <a href="#access">Access</a>
+            
+            <div style="margin-left: 20px; border-left: 1px solid rgba(255,255,255,0.3); 			padding-left: 20px; display:flex; gap:15px;">
+                <a href="./index.html" style="opacity: 1; cursor: default;">JP</a>
+                <a href="./index.en.html" style="opacity: 0.5;">EN</a>
+            </div>
         </nav>
         <div class="nav-toggle" onclick="toggleMenu()">
             <span></span><span></span><span></span>
         </div>
     </header>
-
     <div class="mobile-menu" id="mobileMenu">
         <a href="#concept" onclick="toggleMenu()">Concept</a>
         <a href="#cuisine" onclick="toggleMenu()">Cuisine</a>
@@ -67,7 +59,8 @@
 
     <main>
         <div class="hero">
-            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549487532-6a84d94b0052?q=80&w=2574&auto=format&fit=crop'); background-size: cover; background-position: center; width: 100%; height: 100vh;"></div>
+            <div class="hero-bg" style="background-image: url('./assets/images/main.webp'); background-size: cover; background-position: center; width: 100%; height: 100vh;"></div>
+            
             <div class="hero-content">
                 <h1 class="hero-main">Scène</h1>
                 <p class="hero-sub">料理のために用意された、<br>静かな一夜。</p>
@@ -99,7 +92,7 @@
                     </div>
                     <div class="concept-visual">
                         <div class="concept-caption"><span class="vertical-text">鳥取県大山町、森の中のオーベルジュ。</span></div>
-                        <img src="https://images.unsplash.com/photo-1596120236172-231999844c69?q=80&w=2546&auto=format&fit=crop" class="concept-img" alt="Interior">
+                        <img src="./assets/images/concept.webp" class="concept-img" alt="Interior">
                     </div>
                 </div>
             </div>
@@ -107,7 +100,7 @@
 
         <section id="cuisine" class="section-padding" style="padding-top:0;">
             <div class="cuisine-hero reveal">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" class="cuisine-bg" alt="Cuisine">
+                <img src="./assets/images/cuisine.webp" class="cuisine-bg" alt="Cuisine">
                 <div class="cuisine-content">
                     <span class="section-num">02 / Cuisine</span>
                     <h2 class="heading-lg">山陰の恵みを、<br>フレンチという手法で。</h2>
@@ -141,7 +134,7 @@
                     </div>
                     <div class="concept-visual">
                         <div class="concept-caption"><span class="vertical-text">ただ、眠るためだけの場所。</span></div>
-                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2664&auto=format&fit=crop" class="concept-img" alt="Guest Room">
+                        <img src="./assets/images/room.webp" class="concept-img" alt="Guest Room">
                     </div>
                 </div>
             </div>
@@ -151,11 +144,25 @@
             <div class="wrap reveal">
                 <span class="section-num">04 / News</span>
                 <div id="newsList">
-                    <div class="list-row" onclick="openModal('季節の食材について', '2025.12.20', 'Scèneの料理は、その日の山陰から始まります。天気や気温、畑と海の状況によって、食材の表情は日々変わります。そうした変化そのものが、料理のテーマである「scène（情景）」です。')">
-                        <span class="list-date">2025.12.20</span>
-                        <span class="list-title">季節の食材について</span>
+
+                    <div class="list-row" onclick="openModal('スタッフ募集のお知らせ', '2025.12.21', 'Scèneでは現在、一緒に働くスタッフを募集しております。<br><br>【応募資格】<br>年齢、勤務経験は問いませんが、調理全般や丁寧な接客が出来る方を求めています。<br>※採用前に研修として3日間（20時間）の勤務をお願いしております。<br><br>詳しい内容はメールよりご説明いたします。ご興味のある方はお気軽にご連絡ください。')">
+                        <span class="list-date">2025.12.21</span>
+                        <span class="list-title">スタッフ募集のお知らせ</span>
                         <span class="list-arrow">→</span>
                     </div>
+
+                    <div class="list-row" onclick="openModal('公式サイトリリースのお知らせ', '2025.12.21', 'Scèneの公式サイトをリニューアルしました。<br>Scèneの世界観をより深く感じていただけるようにサイト内容を改善してまいります。<br>今後も季節のメニューなど、大山の麓から最新の情報を発信していく予定です。')">
+                        <span class="list-date">2025.12.21</span>
+                        <span class="list-title">公式サイトリリースのお知らせ</span>
+                        <span class="list-arrow">→</span>
+                    </div>
+
+                    <div class="list-row" onclick="openModal('Scène オープンのお知らせ', '2024.10.10', 'この度、大山参道にて Scène をオープンいたしました。<br>レストランに加え、静かな森の中で余韻を楽しんでいただける客室を備えたオーベルジュです。<br><br>Scène（セヌ）とは、場面、光景、舞台などを意味する言葉です。<br>過去、そしてこれから紡がれていく山陰の歴史を一つの物語と捉え、ゲストが来店されるその日の山陰を「1シーン」として皿の上で表現します。<br><br>鳥取・島根の豊かな食材と、その瞬間の感性を感じていただけるよう、スタッフ一同誠心誠意つとめて参ります。<br>皆様のご来店を心よりお待ちしております。')">
+                        <span class="list-date">2024.10.10</span>
+                        <span class="list-title">Scène オープンのお知らせ</span>
+                        <span class="list-arrow">→</span>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -167,7 +174,6 @@
                     <p style="margin-bottom:40px; color:var(--text-muted);">大人の方が静かに過ごせる場所であることを大切にしています。</p>
                     
                     <details><summary><span class="faq-q">子どもは宿泊できますか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">お食事は、9歳以上のお客様を対象としています。静かな環境を大切にするため、小さなお子様向けのお食事や設備は提供していません。</div></details>
-                    <details><summary><span class="faq-q">騒がしくしても大丈夫ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">Scèneは、静かな環境を前提とした宿です。にぎやかな過ごし方をご希望の方は他のお宿をおすすめします。</div></details>
                     <details><summary><span class="faq-q">食事はどのような内容ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">夕食は、山陰の食材を主役にしたコース料理です。内容は季節やその日の状況により変わります。</div></details>
                     <details><summary><span class="faq-q">アレルギー対応は可能ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">事前にお知らせいただければ、可能な範囲で対応します。</div></details>
                     <details><summary><span class="faq-q">キャンセル規定を教えてください</span><span class="faq-toggle">+</span></summary><div class="faq-a">キャンセル規定は、ご予約時の予約画面にてご確認ください。</div></details>

@@ -186,28 +186,52 @@ a:hover { opacity: 0.6; }
     filter: grayscale(30%) contrast(110%); opacity: 0.8;
 }
 .concept-caption {
-    position: absolute; top: 0; right: -40px; height: 100%;
+    position: absolute; top: 0; 
+    right: -80px; /* -40px から -80px に変更（右側のキャプション用） */
+    height: 100%;
     font-family: var(--font-serif); font-size: 13px; color: var(--text-muted);
     border-right: 1px solid var(--border); padding-right: 20px;
     display: flex; align-items: center;
 }
 .concept-block.reverse .concept-caption {
-    right: auto; left: -40px; border-right: none; border-left: 1px solid var(--border); padding-right: 0; padding-left: 20px;
-}
-.section-num {
-    font-family: var(--font-display); font-size: 14px; color: var(--text-muted);
-    margin-bottom: 24px; display: block;
+    right: auto; 
+    left: -80px; /* -40px から -80px に変更（今回の問題箇所：左側のキャプション） */
+    border-right: none; border-left: 1px solid var(--border); 
+    padding-right: 0; padding-left: 20px;
 }
 .heading-lg {
     font-family: var(--font-serif); font-size: clamp(24px, 4vw, 36px);
     line-height: 1.8; margin-bottom: 48px;
 }
+
+/* --- Mobile Layout Improvements (画像全画面表示用) --- */
 @media (max-width: 900px) {
-    .concept-block, .concept-block.reverse { grid-template-columns: 1fr; gap: 40px; }
-    .concept-visual { height: 400px; order: 2 !important; }
-    .concept-text { order: 1 !important; }
+    /* 1. スマホでは全体の余白を20pxに減らす */
+    .wrap { padding: 0 20px; }
+
+    /* 2. コンセプトブロックの並びを縦にする */
+    .concept-block, .concept-block.reverse { 
+        grid-template-columns: 1fr; 
+        gap: 60px; /* テキストと写真の間の余白 */
+    }
+
+    /* 3. 写真のキャプション（縦書き文字）はスマホでは消す */
     .concept-caption { display: none; }
+
+    /* 4. 順序変更：テキストを上に、写真を下に */
+    .concept-text { order: 1 !important; }
+    .concept-visual { order: 2 !important; }
+
+    /* 5. ★写真を画面いっぱいに強制拡大 */
+    .concept-visual {
+        height: 350px; /* スマホで見やすい高さに調整 */
+        width: 100vw; /* 画面幅いっぱいに指定 */
+        margin-left: -20px; /* 親の余白(20px)を打ち消すために左に引っ張る */
+        margin-right: -20px; /* 右にも引っ張る */
+        max-width: none; /* 幅の制限を解除 */
+    }
 }
+/* ---------------------------------------------------- */
 
 /* Cuisine */
 .cuisine-hero {

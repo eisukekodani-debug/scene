@@ -11,6 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <style>
+        img { max-width: 100%; height: auto; }
+        .hero { position: relative; height: 100vh; width: 100%; overflow: hidden; }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; background-size: cover; background-position: center;
+        }
+    </style>
 </head>
 <body>
     <div class="noise-overlay"></div>
@@ -24,6 +33,11 @@
             <a href="#news">News</a>
             <a href="#faq">FAQ</a>
             <a href="#access">Access</a>
+
+            <div style="margin-left: 20px; border-left: 1px solid rgba(255,255,255,0.3); 		padding-left: 20px; display:flex; gap:15px;">
+                <a href="./index.html" style="opacity: 0.5;">JP</a>
+                <a href="./index.en.html" style="opacity: 1; cursor: default;">EN</a>
+            </div>
         </nav>
         <div class="nav-toggle" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -46,7 +60,7 @@
 
     <main>
         <div class="hero">
-            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549487532-6a84d94b0052?q=80&w=2574&auto=format&fit=crop');"></div>
+            <div class="hero-bg" style="background-image: url('./assets/images/main.webp'); background-size: cover; background-position: center; width: 100%; height: 100vh;"></div>
             <div class="hero-content">
                 <h1 class="hero-main">Scène</h1>
                 <p class="hero-sub">A Quiet Night<br>Prepared for Cuisine.</p>
@@ -78,7 +92,7 @@
                     </div>
                     <div class="concept-visual">
                         <div class="concept-caption"><span class="vertical-text">Auberge in the forest, Daisen, Tottori.</span></div>
-                        <img src="https://images.unsplash.com/photo-1596120236172-231999844c69?q=80&w=2546&auto=format&fit=crop" class="concept-img" alt="Interior">
+                        <img src="./assets/images/concept.webp" class="concept-img" alt="Interior">
                     </div>
                 </div>
             </div>
@@ -86,7 +100,7 @@
 
         <section id="cuisine" class="section-padding" style="padding-top:0;">
             <div class="cuisine-hero reveal">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" class="cuisine-bg" alt="Cuisine">
+                <img src="./assets/images/cuisine.webp" class="cuisine-bg" alt="Cuisine">
                 <div class="cuisine-content">
                     <span class="section-num">02 / Cuisine</span>
                     <h2 class="heading-lg">The Blessings of San-in,<br>Through French Techniques.</h2>
@@ -120,7 +134,7 @@
                     </div>
                     <div class="concept-visual">
                         <div class="concept-caption"><span class="vertical-text">A place just for sleeping.</span></div>
-                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2664&auto=format&fit=crop" class="concept-img" alt="Guest Room">
+                        <img src="./assets/images/room.webp" class="concept-img" alt="Guest Room">
                     </div>
                 </div>
             </div>
@@ -130,7 +144,25 @@
             <div class="wrap reveal">
                 <span class="section-num">04 / News</span>
                 <div id="newsList">
-                    <p style="color:var(--text-muted);">No news currently available.</p>
+                    
+                    <div class="list-row" onclick="openModal('Staff Recruitment', '2025.12.21', 'Scène is currently recruiting staff to work with us.<br><br>[Requirements]<br>No specific age or experience required. We are looking for individuals capable of general kitchen duties and polite customer service.<br>*We require a 3-day (20-hour) trial period before official hiring.<br><br>Details will be provided via email. Please feel free to contact us.')">
+                        <span class="list-date">2025.12.21</span>
+                        <span class="list-title">Staff Recruitment</span>
+                        <span class="list-arrow">→</span>
+                    </div>
+
+                    <div class="list-row" onclick="openModal('Official Website Renewed', '2025.12.21', 'We have renewed the official Scène website.<br>Photos and structure have been updated to better convey our worldview.<br>We will continue to share the latest updates, including seasonal menus, from the foot of Mt. Daisen.')">
+                        <span class="list-date">2025.12.21</span>
+                        <span class="list-title">Official Website Renewed</span>
+                        <span class="list-arrow">→</span>
+                    </div>
+
+                    <div class="list-row" onclick="openModal('Notice of Scène Opening', '2024.10.10', 'We are pleased to announce the opening of Scène on the Daisen approach.<br>In addition to the restaurant, it is an auberge with guest rooms where you can enjoy the lingering atmosphere in the quiet forest.<br><br>&quot;Scène&quot; means scene, spectacle, or stage.<br>We interpret the history of San-in as a story and express the &quot;scene&quot; of the day you visit on the plate.<br><br>Our staff is dedicated to delivering the rich ingredients of Tottori and Shimane along with the sensibility of the moment.<br>We look forward to welcoming you.')">
+                        <span class="list-date">2024.10.10</span>
+                        <span class="list-title">Notice of Scène Opening</span>
+                        <span class="list-arrow">→</span>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -142,10 +174,9 @@
                     <p style="margin-bottom:40px; color:var(--text-muted);">We value a quiet environment for adults.</p>
                     
                     <details><summary><span class="faq-q">Can children stay?</span><span class="faq-toggle">+</span></summary><div class="faq-a">We accept guests aged 9 and over. We do not provide meals or facilities for small children to maintain a quiet environment.</div></details>
-                    <details><summary><span class="faq-q">Is it okay to be noisy?</span><span class="faq-toggle">+</span></summary><div class="faq-a">Scène is an accommodation premised on a quiet environment. We do not envision lively ways of spending time.</div></details>
                     <details><summary><span class="faq-q">What is the meal like?</span><span class="faq-toggle">+</span></summary><div class="faq-a">Dinner is a course meal featuring ingredients from the San-in region. The content changes depending on the season and the situation of the day.</div></details>
                     <details><summary><span class="faq-q">Do you accommodate food allergies?</span><span class="faq-toggle">+</span></summary><div class="faq-a">Yes, please contact us in advance if possible. We may not be able to accommodate depending on the content.</div></details>
-                    <details><summary><span class="faq-q">Please tell me the cancellation policy.</span><span class="faq-toggle">+</span></summary><div class="faq-a">Please check the cancellation policy on the reservation screen when booking.</div></details>
+                    <details><summary><span class="faq-q">Cancellation Policy</span><span class="faq-toggle">+</span></summary><div class="faq-a">Please check the cancellation policy on the reservation screen when booking.</div></details>
                 </div>
             </div>
         </section>
@@ -161,9 +192,53 @@
                             <p style="margin-top:20px;">[ Car ]<br>Approx. 20 min from Mizokuchi IC (Yonago Expressway)</p>
                             <p style="margin-top:20px;">[ Public Transport ]<br>Approx. 50 min from JR Yonago Station by bus<br>5 min walk from "Daisen-ji" bus stop</p>
                         </div>
-                        <a href="https://www.google.com/maps?q=Restaurant%20sc%C3%A8ne&hl=ja" target="_blank" rel="noopener" style="display:inline-block; border:1px solid var(--border); padding:12px 30px; font-size:12px; margin-top:40px;">Google Maps</a>
+                        <a href="https://goo.gl/maps/PlaceHolderLink" target="_blank" rel="noopener" style="display:inline-block; border:1px solid var(--border); padding:12px 30px; font-size:12px; margin-top:40px;">Google Maps</a>
 
-                        <div class="access-map" style="position: relative; width: 100%; height: 100%; min-height: 400px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.540042744753!2d133.5321851!3d35.3918623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355661f6696804f3%3A0x88b1d54bf1a4296b!2sRestaurant%20sc%C3%A8ne!5e0!3m2!1sja!2sjp!4v1765785993377!5m2!1sja!2sjp" style="border:0; width:100%; height:100%; filter: grayscale(100%) invert(90%) contrast(90%); opacity: 0.8;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="access-map" style="position: relative; width: 100%; height: 100%; min-height: 400px; margin-top: 30px;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.543026338573!2d133.5350!3d35.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3556885366453959%3A0xc6657c66705600c0!2z44CSNjg5LTMzMTgg6bOl5Y-W55yM6KW_5L-v6YKh5aSn5bGx55S65aSn5bGx!5e0!3m2!1sja!2sjp!4v1703162700000!5m2!1sja!2sjp" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0; filter: grayscale(100%) invert(90%) contrast(90%); opacity: 0.8;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <div>
+                <span style="font-family:var(--font-display); font-size:20px;">Scène</span>
+                <p style="margin-top:10px; opacity:0.5;">Cuisine-first auberge in the forest of Daisen.</p>
+            </div>
+            <div style="display:flex; gap:30px;">
+                <a href="#concept">Concept</a>
+                <a href="#cuisine">Cuisine</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+            <div style="font-family:var(--font-display);">© Scène</div>
+        </div>
+    </footer>
+
+    <a href="https://www.jalan.net/yad353095/" target="_blank" class="cta-fixed">
+        <span class="cta-main">Book Now</span>
+        <span class="cta-sub">Check Availability</span>
+    </a>
+    
+    <div class="modal-overlay" id="newsModal">
+        <div class="modal-content">
+            <button onclick="closeModal()" style="position:absolute; top:20px; right:20px; background:none; border:none; color:#fff; cursor:pointer; font-size:24px;">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
