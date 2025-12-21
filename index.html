@@ -1,157 +1,238 @@
----
-layout: default
-lang: jp
-title: Top
----
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top | Scène</title>
+    <meta name="description" content="料理のために用意された、静かな一夜。">
 
-<!-- Hero -->
-<div class="hero">
-    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549487532-6a84d94b0052?q=80&w=2574&auto=format&fit=crop');"></div>
-    <div class="hero-content">
-        <h1 class="hero-main">Scène</h1>
-        <p class="hero-sub">料理のために用意された、<br>静かな一夜。</p>
-    </div>
-    <div class="scroll-down">
-        <div class="scroll-line"></div>
-        <span style="font-size:10px; letter-spacing:0.2em;">SCROLL</span>
-    </div>
-</div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-<!-- Concept -->
-<section id="concept" class="section-padding">
-    <div class="wrap reveal">
-        <span class="section-num">01 / Concept</span>
-        <div class="concept-block">
-            <div class="concept-text">
-                <h2 class="heading-lg">料理と静けさのために<br>用意された、ひとつの場面。</h2>
-                <p style="color:var(--text-muted); margin-bottom:40px;">
-                    Scène（セヌ）は、フランス語で「情景」を意味します。<br><br>
-                    その日の天気、気温、空気の匂い。<br>
-                    畑と海から届く、その日だけの食材。<br>
-                    それらすべてを「一皿の情景」として表現すること。<br><br>
-                    街の喧騒から離れた大山の麓で、<br>
-                    ただ料理と向き合うための時間をご用意しました。
-                </p>
-                <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:20px;">
-                    <h3 style="font-family:var(--font-serif); font-size:18px; margin-bottom:10px;">Scèneという名前</h3>
-                    <p style="font-size:13px; color:var(--text-muted);">毎日畑で野菜やハーブを収穫するため、日によって野菜の種類も変わります。海の恵みも、天候によっては漁に出られず、日々ラインナップが変わる。そういった山陰の情景を料理から感じ取っていただけるようなコースをご提供しています。</p>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <style>
+        img { max-width: 100%; height: auto; }
+        .hero-bg {
+            /* もしCSSファイル読み込みに失敗しても背景画像を表示させる設定 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+        }
+        .hero {
+            position: relative;
+            height: 100vh; /* 画面の高さいっぱいに */
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <header class="site-header">
+        <a href="./index.html" class="brand">Scène</a>
+        <nav class="nav-desktop">
+            <a href="#concept">Concept</a>
+            <a href="#cuisine">Cuisine</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#news">News</a>
+            <a href="#faq">FAQ</a>
+            <a href="#access">Access</a>
+        </nav>
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#concept" onclick="toggleMenu()">Concept</a>
+        <a href="#cuisine" onclick="toggleMenu()">Cuisine</a>
+        <a href="#rooms" onclick="toggleMenu()">Rooms</a>
+        <a href="#news" onclick="toggleMenu()">News</a>
+        <a href="#faq" onclick="toggleMenu()">FAQ</a>
+        <a href="#access" onclick="toggleMenu()">Access</a>
+        
+        <div style="margin-top: 40px; font-family: var(--font-display);">
+            <a href="./index.html" style="margin:0 10px; opacity: 1; font-size:16px;">JP</a>
+            <a href="./index.en.html" style="margin:0 10px; opacity: 0.5; font-size:16px;">EN</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="hero">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1549487532-6a84d94b0052?q=80&w=2574&auto=format&fit=crop'); background-size: cover; background-position: center; width: 100%; height: 100vh;"></div>
+            <div class="hero-content">
+                <h1 class="hero-main">Scène</h1>
+                <p class="hero-sub">料理のために用意された、<br>静かな一夜。</p>
+            </div>
+            <div class="scroll-down">
+                <div class="scroll-line"></div>
+                <span style="font-size:10px; letter-spacing:0.2em;">SCROLL</span>
+            </div>
+        </div>
+
+        <section id="concept" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">01 / Concept</span>
+                <div class="concept-block">
+                    <div class="concept-text">
+                        <h2 class="heading-lg">料理と静けさのために<br>用意された、ひとつの場面。</h2>
+                        <p style="color:var(--text-muted); margin-bottom:40px;">
+                            Scène（セヌ）は、フランス語で「情景」を意味します。<br><br>
+                            その日の天気、気温、空気の匂い。<br>
+                            畑と海から届く、その日だけの食材。<br>
+                            それらすべてを「一皿の情景」として表現すること。<br><br>
+                            街の喧騒から離れた大山の麓で、<br>
+                            ただ料理と向き合うための時間をご用意しました。
+                        </p>
+                        <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:20px;">
+                            <h3 style="font-family:var(--font-serif); font-size:18px; margin-bottom:10px;">Scèneという名前</h3>
+                            <p style="font-size:13px; color:var(--text-muted);">毎日畑で野菜やハーブを収穫するため、日によって野菜の種類も変わります。海の恵みも、天候によっては漁に出られず、日々ラインナップが変わる。そういった山陰の情景を料理から感じ取っていただけるようなコースをご提供しています。</p>
+                        </div>
+                    </div>
+                    <div class="concept-visual">
+                        <div class="concept-caption"><span class="vertical-text">鳥取県大山町、森の中のオーベルジュ。</span></div>
+                        <img src="https://images.unsplash.com/photo-1596120236172-231999844c69?q=80&w=2546&auto=format&fit=crop" class="concept-img" alt="Interior">
+                    </div>
                 </div>
             </div>
-            <div class="concept-visual">
-                <div class="concept-caption"><span class="vertical-text">鳥取県大山町、森の中のオーベルジュ。</span></div>
-                <img src="https://images.unsplash.com/photo-1596120236172-231999844c69?q=80&w=2546&auto=format&fit=crop" class="concept-img" alt="Interior">
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Cuisine -->
-<section id="cuisine" class="section-padding" style="padding-top:0;">
-    <div class="cuisine-hero reveal">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" class="cuisine-bg" alt="Cuisine">
-        <div class="cuisine-content">
-            <span class="section-num">02 / Cuisine</span>
-            <h2 class="heading-lg">山陰の恵みを、<br>フレンチという手法で。</h2>
-            <p style="color:var(--text-muted);">
-                使う食材は、その時々の山陰のもの。<br>
-                野菜、魚、肉。季節と向き合いながら、その日のコースを組み立てます。<br>
-                同じ日がない土地の“情景（scène）”を、コースとして皿の上に立ち上げます。
-            </p>
-            <p style="margin-top:20px; font-size:13px;">※料理を手がけるのは鳥取県出身の料理人、前田帆貴。東京ではビストロの厨房に立ち、料理長として日々の営業に携わる一方、ミシュラン星を獲得するレストランではアシスタントとして現場を支え、基礎的な技法や仕事への向き合い方を学んできました。自身の料理はまだ道半ばと考え、土地の食材や素材そのものに向き合いながら、より良い一皿を目指して研鑽を続けています。</p>
-        </div>
-    </div>
-</section>
-
-<!-- Rooms -->
-<section id="rooms" class="section-padding">
-    <div class="wrap reveal">
-        <span class="section-num">03 / Guest Rooms</span>
-        <div class="concept-block reverse">
-            <div class="concept-text">
-                <h2 class="heading-lg">余白を楽しむ、<br>静寂の空間。</h2>
-                <p style="color:var(--text-muted); margin-bottom:40px;">
-                    Scèneの客室は、食事の余韻と大山の静けさに浸るための場所です。<br>
-                    過度な装飾や設備は設けず、<br>
-                    窓から切り取られる森の景色と、深呼吸できる余白をご用意しました。<br>
-                    ただ、心穏やかに眠るためだけの空間です。
-                </p>
-                <ul style="font-size:13px; color:var(--text-muted); list-style:none; padding:0;">
-                    <li>・Wi-Fi完備</li>
-                    <li>・シャワーブース / タオル / ドライヤー / オリジナルパジャマ</li>
-                    <li>※施設内にある陶器風呂の貸切バスルームもご利用いただけます。</li>
-                </ul>
-            </div>
-            <div class="concept-visual">
-                <div class="concept-caption"><span class="vertical-text">ただ、眠るためだけの場所。</span></div>
-                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2664&auto=format&fit=crop" class="concept-img" alt="Guest Room">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- News -->
-<section id="news" class="section-padding">
-    <div class="wrap reveal">
-        <span class="section-num">04 / News</span>
-        <div id="newsList">
-            {% assign posts = site.posts | where: "lang", "jp" %}
-            {% for post in posts %}
-            <div class="list-row" onclick="openModal('{{ post.title }}', '{{ post.date | date: "%Y.%m.%d" }}', '{{ post.content | strip_newlines | escape }}')">
-                <span class="list-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-                <span class="list-title">{{ post.title }}</span>
-                <span class="list-arrow">→</span>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section-padding">
-    <div class="wrap reveal">
-        <span class="section-num">05 / FAQ</span>
-        <div style="max-width:800px; margin-left:auto;">
-            <p style="margin-bottom:40px; color:var(--text-muted);">大人の方が静かに過ごせる場所であることを大切にしています。</p>
-            
-            <details><summary><span class="faq-q">子どもは宿泊できますか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">お食事は、9歳以上のお客様を対象としています。静かな環境を大切にするため、小さなお子様向けのお食事や設備は提供していません。</div></details>
-            <details><summary><span class="faq-q">騒がしくしても大丈夫ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">Scèneは、静かな環境を前提とした宿です。にぎやかな過ごし方をご希望の方は他のお宿をおすすめします。</div></details>
-            <details><summary><span class="faq-q">食事はどのような内容ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">夕食は、山陰の食材を主役にしたコース料理です。内容は季節やその日の状況により変わります。</div></details>
-            <details><summary><span class="faq-q">アレルギー対応は可能ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">事前にお知らせいただければ、可能な範囲で対応します。</div></details>
-            <details><summary><span class="faq-q">キャンセル規定を教えてください</span><span class="faq-toggle">+</span></summary><div class="faq-a">キャンセル規定は、ご予約時の予約画面にてご確認ください。</div></details>
-        </div>
-    </div>
-</section>
-
-<!-- Access -->
-<section id="access" class="section-padding">
-    <div class="wrap reveal">
-        <span class="section-num">06 / Access</span>
-        <div class="access-layout">
-            <div class="access-info">
-                <h2 style="font-family:var(--font-display); font-size:32px; margin-bottom:40px;">Scène</h2>
-                <div style="font-size:13px; color:var(--text-muted); line-height:2.4;">
-                    <p>〒689-3318 鳥取県西伯郡大山町大山115-7</p>
-                    <p style="margin-top:20px;">[ お車 ]<br>米子自動車道「溝口IC」より約20分</p>
-                    <p style="margin-top:20px;">[ 公共交通機関 ]<br>JR米子駅より日交バス「大山寺」行 約50分<br>「大山寺」バス停下車 徒歩5分</p>
+        <section id="cuisine" class="section-padding" style="padding-top:0;">
+            <div class="cuisine-hero reveal">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop" class="cuisine-bg" alt="Cuisine">
+                <div class="cuisine-content">
+                    <span class="section-num">02 / Cuisine</span>
+                    <h2 class="heading-lg">山陰の恵みを、<br>フレンチという手法で。</h2>
+                    <p style="color:var(--text-muted);">
+                        使う食材は、その時々の山陰のもの。<br>
+                        野菜、魚、肉。季節と向き合いながら、その日のコースを組み立てます。<br>
+                        同じ日がない土地の“情景（scène）”を、コースとして皿の上に立ち上げます。
+                    </p>
+                    <p style="margin-top:20px; font-size:13px;">※料理を手がけるのは鳥取県出身の料理人、前田帆貴。東京ではビストロの厨房に立ち、料理長として日々の営業に携わる一方、ミシュラン星を獲得するレストランではアシスタントとして現場を支え、基礎的な技法や仕事への向き合い方を学んできました。自身の料理はまだ道半ばと考え、土地の食材や素材そのものに向き合いながら、より良い一皿を目指して研鑽を続けています。</p>
                 </div>
-                <a href="https://www.google.com/maps?q=Restaurant%20sc%C3%A8ne&hl=ja"
-   target="_blank"
-   rel="noopener"
-   style="display:inline-block; border:1px solid var(--border); padding:12px 30px; font-size:12px; margin-top:40px;">
-  Google Maps
-</a>
+            </div>
+        </section>
 
-<div class="access-map" style="position: relative; width: 100%; height: 100%; min-height: 400px;">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.540042744753!2d133.5321851!3d35.3918623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355661f6696804f3%3A0x88b1d54bf1a4296b!　　　　　　
-　　2sRestaurant%20sc%C3%A8ne!5e0!3m2!1sja!2sjp!4v1765785993377!5m2!1sja!2sjp"
-    style="border:0; width:100%; height:100%; filter: grayscale(100%) invert(90%) contrast(90%); opacity: 0.8;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-	</div>
+        <section id="rooms" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">03 / Guest Rooms</span>
+                <div class="concept-block reverse">
+                    <div class="concept-text">
+                        <h2 class="heading-lg">余白を楽しむ、<br>静寂の空間。</h2>
+                        <p style="color:var(--text-muted); margin-bottom:40px;">
+                            Scèneの客室は、食事の余韻と大山の静けさに浸るための場所です。<br>
+                            過度な装飾や設備は設けず、<br>
+                            窓から切り取られる森の景色と、深呼吸できる余白をご用意しました。<br>
+                            ただ、心穏やかに眠るためだけの空間です。
+                        </p>
+                        <ul style="font-size:13px; color:var(--text-muted); list-style:none; padding:0;">
+                            <li>・Wi-Fi完備</li>
+                            <li>・シャワーブース / タオル / ドライヤー / オリジナルパジャマ</li>
+                            <li>※施設内にある陶器風呂の貸切バスルームもご利用いただけます。</li>
+                        </ul>
+                    </div>
+                    <div class="concept-visual">
+                        <div class="concept-caption"><span class="vertical-text">ただ、眠るためだけの場所。</span></div>
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2664&auto=format&fit=crop" class="concept-img" alt="Guest Room">
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="news" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">04 / News</span>
+                <div id="newsList">
+                    <div class="list-row" onclick="openModal('季節の食材について', '2025.12.20', 'Scèneの料理は、その日の山陰から始まります。天気や気温、畑と海の状況によって、食材の表情は日々変わります。そうした変化そのものが、料理のテーマである「scène（情景）」です。')">
+                        <span class="list-date">2025.12.20</span>
+                        <span class="list-title">季節の食材について</span>
+                        <span class="list-arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">05 / FAQ</span>
+                <div style="max-width:800px; margin-left:auto;">
+                    <p style="margin-bottom:40px; color:var(--text-muted);">大人の方が静かに過ごせる場所であることを大切にしています。</p>
+                    
+                    <details><summary><span class="faq-q">子どもは宿泊できますか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">お食事は、9歳以上のお客様を対象としています。静かな環境を大切にするため、小さなお子様向けのお食事や設備は提供していません。</div></details>
+                    <details><summary><span class="faq-q">騒がしくしても大丈夫ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">Scèneは、静かな環境を前提とした宿です。にぎやかな過ごし方をご希望の方は他のお宿をおすすめします。</div></details>
+                    <details><summary><span class="faq-q">食事はどのような内容ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">夕食は、山陰の食材を主役にしたコース料理です。内容は季節やその日の状況により変わります。</div></details>
+                    <details><summary><span class="faq-q">アレルギー対応は可能ですか？</span><span class="faq-toggle">+</span></summary><div class="faq-a">事前にお知らせいただければ、可能な範囲で対応します。</div></details>
+                    <details><summary><span class="faq-q">キャンセル規定を教えてください</span><span class="faq-toggle">+</span></summary><div class="faq-a">キャンセル規定は、ご予約時の予約画面にてご確認ください。</div></details>
+                </div>
+            </div>
+        </section>
+
+        <section id="access" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">06 / Access</span>
+                <div class="access-layout">
+                    <div class="access-info">
+                        <h2 style="font-family:var(--font-display); font-size:32px; margin-bottom:40px;">Scène</h2>
+                        <div style="font-size:13px; color:var(--text-muted); line-height:2.4;">
+                            <p>〒689-3318 鳥取県西伯郡大山町大山115-7</p>
+                            <p style="margin-top:20px;">[ お車 ]<br>米子自動車道「溝口IC」より約20分</p>
+                            <p style="margin-top:20px;">[ 公共交通機関 ]<br>JR米子駅より日交バス「大山寺」行 約50分<br>「大山寺」バス停下車 徒歩5分</p>
+                        </div>
+                        <a href="https://goo.gl/maps/PlaceHolderLink" target="_blank" rel="noopener" style="display:inline-block; border:1px solid var(--border); padding:12px 30px; font-size:12px; margin-top:40px;">Google Maps</a>
+
+                        <div class="access-map" style="position: relative; width: 100%; height: 100%; min-height: 400px; margin-top: 30px;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.543026338573!2d133.5350!3d35.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3556885366453959%3A0xc6657c66705600c0!2z44CSNjg5LTMzMTgg6bOl5Y-W55yM6KW_5L-v6YKh5aSn5bGx55S65aSn5bGx!5e0!3m2!1sja!2sjp!4v1703162700000!5m2!1sja!2sjp" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0; filter: grayscale(100%) invert(90%) contrast(90%); opacity: 0.8;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <div>
+                <span style="font-family:var(--font-display); font-size:20px;">Scène</span>
+                <p style="margin-top:10px; opacity:0.5;">Cuisine-first auberge in the forest of Daisen.</p>
+            </div>
+            <div style="display:flex; gap:30px;">
+                <a href="#concept">Concept</a>
+                <a href="#cuisine">Cuisine</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+            <div style="font-family:var(--font-display);">© Scène</div>
+        </div>
+    </footer>
+
+    <a href="https://www.jalan.net/yad353095/" target="_blank" class="cta-fixed">
+        <span class="cta-main">空室・予約を確認</span>
+        <span class="cta-sub">Check Availability</span>
+    </a>
+    
+    <div class="modal-overlay" id="newsModal">
+        <div class="modal-content">
+            <button onclick="closeModal()" style="position:absolute; top:20px; right:20px; background:none; border:none; color:#fff; cursor:pointer; font-size:24px;">×</button>
+            <div id="modalBody"></div>
         </div>
     </div>
-</section>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
