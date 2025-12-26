@@ -278,30 +278,33 @@
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {document.querySelector('form').style.display='none'; document.getElementById('formMessage').style.display='block';}"></iframe>
         <script>var submitted = false;</script>
 
-        <section id="access" class="section-padding">
+<section id="access" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">07 / Access</span>
-                <div class="access-layout">
-                    <div class="access-info">
-                        <h2 style="font-family:var(--font-display); font-size:32px; margin-bottom:40px;">Scène</h2>
+                
+                <div class="access-layout" style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start; margin-top: 40px;">
+                    
+                    <div class="access-info" style="flex: 1; min-width: 300px;">
+                        <h2 style="font-family:var(--font-display); font-size:32px; margin-bottom:30px;">Scène</h2>
                         <div style="font-size:13px; color:var(--text-muted); line-height:2.4;">
                             <p>〒689-3318 鳥取県西伯郡大山町大山115-7</p>
                             <p style="margin-top:20px;">[ お車 ]<br>米子自動車道「溝口IC」より約20分</p>
                             <p style="margin-top:20px;">[ 公共交通機関 ]<br>JR米子駅より日交バス「大山寺」行 約50分<br>「大山寺」バス停下車 徒歩5分</p>
                         </div>
                         <a href="https://goo.gl/maps/PlaceHolderLink" target="_blank" rel="noopener" style="display:inline-block; border:1px solid var(--border); padding:12px 30px; font-size:12px; margin-top:40px;">Google Maps</a>
-
-                        <div class="access-map" style="position: relative; width: 100%; height: 100%; min-height: 400px; margin-top: 30px;">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.543026338573!2d133.5350!3d35.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3556885366453959%3A0xc6657c66705600c0!2z44CSNjg5LTMzMTgg6bOl5Y-W55yM6KW_5L-v6YKh5aSn5bGx55S65aSn5bGx!5e0!3m2!1sja!2sjp!4v1703162700000!5m2!1sja!2sjp" 
-                                width="100%" 
-                                height="400" 
-                                style="border:0; filter: grayscale(100%) invert(90%) contrast(90%); opacity: 0.8;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
                     </div>
+
+                    <div class="access-map" style="flex: 1; min-width: 300px; height: 400px; position: relative; filter: grayscale(100%) invert(90%) contrast(90%);">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.543026338573!2d133.5350!3d35.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3556885366453959%3A0xc6657c66705600c0!2z44CSNjg5LTMzMTgg6bOl5Y-W55yM6KW_5L-v6YKh5aSn5bGx55S65aSn5bGx!5e0!3m2!1sja!2sjp!4v1703162700000!5m2!1sja!2sjp" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; width:100%; height:100%;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
                 </div>
             </div>
         </section>
