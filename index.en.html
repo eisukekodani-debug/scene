@@ -13,6 +13,8 @@
     <link rel="alternate" hreflang="en" href="https://scene-daisen.com/index.en.html">
     <link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/">
 
+    <meta name="google-site-verification" content="krqxI5Z12SwAkh32O1LW0gjpWUuoNK4HvNqL0GFwKU8" />
+
     <!-- Open Graph -->
     <meta property="og:title" content="Scène | French Auberge in the Forest of Daisen, Tottori">
     <meta property="og:description" content="Cuisine made with seasonal San'in ingredients and a quiet stay in the forest. A serene night at the foot of Mt. Daisen.">
@@ -70,73 +72,86 @@
         p { line-height: 1.8; letter-spacing: 0.05em; }
     </style>
 
-    <!-- Structured Data: Restaurant + LodgingBusiness -->
+    <!-- Structured Data: @graph (WebSite + Restaurant/LodgingBusiness + FAQPage) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": ["Restaurant", "LodgingBusiness"],
-        "name": "Scène",
-        "image": "https://scene-daisen.com/assets/images/main.webp",
-        "url": "https://scene-daisen.com/index.en.html",
-        "telephone": "",
-        "description": "A French auberge in Daisen, Tottori. Seasonal cuisine with San'in ingredients and quiet guest rooms in the forest.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "115-7 Daisen",
-            "addressLocality": "Daisen-cho",
-            "addressRegion": "Tottori",
-            "postalCode": "689-3318",
-            "addressCountry": "JP"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 35.3920,
-            "longitude": 133.5350
-        },
-        "servesCuisine": "French",
-        "priceRange": "¥¥¥",
-        "acceptsReservations": "True",
-        "sameAs": []
-    }
-    </script>
-
-    <!-- Structured Data: FAQ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@graph": [
             {
-                "@type": "Question",
-                "name": "Can children stay?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Dining is limited to guests aged 9 and older. To value the quiet environment, we do not provide meals or facilities for small children."
-                }
+                "@type": "WebSite",
+                "name": "Scène",
+                "url": "https://scene-daisen.com/",
+                "inLanguage": ["ja", "en"],
+                "description": "Official website of Scène, a French auberge in Daisen, Tottori, Japan"
             },
             {
-                "@type": "Question",
-                "name": "What kind of meal is served?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Dinner is a course meal featuring ingredients from the San'in region. The content changes depending on the season and the situation of the day."
-                }
+                "@type": ["Restaurant", "LodgingBusiness"],
+                "@id": "https://scene-daisen.com/#restaurant",
+                "name": "Scène",
+                "image": "https://scene-daisen.com/assets/images/main.webp",
+                "url": "https://scene-daisen.com/index.en.html",
+                "description": "A French auberge in Daisen, Tottori. Seasonal cuisine with San'in ingredients and quiet guest rooms in the forest.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "115-7 Daisen",
+                    "addressLocality": "Daisen-cho",
+                    "addressRegion": "Tottori",
+                    "postalCode": "689-3318",
+                    "addressCountry": "JP"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 35.3920,
+                    "longitude": 133.5350
+                },
+                "servesCuisine": "French",
+                "priceRange": "¥¥¥",
+                "acceptsReservations": true,
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
+                    "opens": "18:00",
+                    "closes": "22:00"
+                },
+                "hasMap": "https://maps.app.goo.gl/nVwHqy7FLRFMXQKW9",
+                "keywords": "auberge, French cuisine, Daisen, Tottori, course meal, lodging, San'in"
             },
             {
-                "@type": "Question",
-                "name": "Is allergy support available?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "If you let us know in advance, we will respond as much as possible."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What is the cancellation policy?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Please check the cancellation policy on the reservation screen when booking."
-                }
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Can children stay?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Dining is limited to guests aged 9 and older. To value the quiet environment, we do not provide meals or facilities for small children."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What kind of meal is served?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Dinner is a course meal featuring ingredients from the San'in region. The content changes depending on the season and the situation of the day."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is allergy support available?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "If you let us know in advance, we will respond as much as possible."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What is the cancellation policy?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Please check the cancellation policy on the reservation screen when booking."
+                        }
+                    }
+                ]
             }
         ]
     }
@@ -275,24 +290,24 @@
         <section id="news" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">04 / News</span>
-                <div id="newsList" role="list">
-                    <button class="list-row" role="listitem" data-title="Staff Recruitment" data-date="2025.12.21" data-content="Scène is currently looking for staff to work with us.&lt;br&gt;&lt;br&gt;[Qualifications]&lt;br&gt;Age and experience are not required, but we are looking for those who can handle general cooking and polite customer service.&lt;br&gt;*We ask for a 3-day (20 hours) trial period before hiring.&lt;br&gt;&lt;br&gt;Details will be explained via email. Please feel free to contact us if you are interested.">
+                <div id="newsList">
+                    <div class="list-row" onclick="openModal('Staff Recruitment','2025.12.21','Scène is currently looking for staff to work with us.<br><br>[Qualifications]<br>Age and experience are not required, but we are looking for those who can handle general cooking and polite customer service.<br>*We ask for a 3-day (20 hours) trial period before hiring.<br><br>Details will be explained via email. Please feel free to contact us if you are interested.')">
                         <span class="list-date">2025.12.21</span>
                         <span class="list-title">Staff Recruitment</span>
-                        <span class="list-arrow" aria-hidden="true">→</span>
-                    </button>
+                        <span class="list-arrow">→</span>
+                    </div>
 
-                    <button class="list-row" role="listitem" data-title="Official Website Release" data-date="2025.12.21" data-content="We have renewed the official website of Scène.&lt;br&gt;We will continue to improve the site content so that you can feel the worldview of Scène more deeply.&lt;br&gt;We plan to send out the latest information from the foot of Mt. Daisen, such as seasonal menus.">
+                    <div class="list-row" onclick="openModal('Official Website Release','2025.12.21','We have renewed the official website of Scène.<br>We will continue to improve the site content so that you can feel the worldview of Scène more deeply.<br>We plan to send out the latest information from the foot of Mt. Daisen, such as seasonal menus.')">
                         <span class="list-date">2025.12.21</span>
                         <span class="list-title">Official Website Release</span>
-                        <span class="list-arrow" aria-hidden="true">→</span>
-                    </button>
+                        <span class="list-arrow">→</span>
+                    </div>
 
-                    <button class="list-row" role="listitem" data-title="Scène Grand Opening" data-date="2024.10.10" data-content="We are pleased to announce the opening of Scène on the Daisen Sando.&lt;br&gt;It is an auberge equipped with a restaurant and guest rooms where you can enjoy the afterglow in a quiet forest.&lt;br&gt;&lt;br&gt;Scène means scene, sight, or stage.&lt;br&gt;Capturing the history of San'in—past and future—as a single story, we express the San'in of the day guests visit as a 'single scene' on a plate.&lt;br&gt;&lt;br&gt;Our staff will do their utmost so that you can feel the rich ingredients of Tottori and Shimane and the sensibilities of that moment.&lt;br&gt;We look forward to your visit.">
+                    <div class="list-row" onclick="openModal('Scène Grand Opening','2024.10.10','We are pleased to announce the opening of Scène on the Daisen Sando.<br>It is an auberge equipped with a restaurant and guest rooms where you can enjoy the afterglow in a quiet forest.<br><br>Scène means scene, sight, or stage.<br>Capturing the history of San'in—past and future—as a single story, we express the San'in of the day guests visit as a single scene on a plate.<br><br>Our staff will do their utmost so that you can feel the rich ingredients of Tottori and Shimane and the sensibilities of that moment.<br>We look forward to your visit.')">
                         <span class="list-date">2024.10.10</span>
                         <span class="list-title">Scène Grand Opening</span>
-                        <span class="list-arrow" aria-hidden="true">→</span>
-                    </button>
+                        <span class="list-arrow">→</span>
+                    </div>
                 </div>
             </div>
         </section>
