@@ -1,22 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: dark;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Scène | French Auberge in the Forest of Daisen, Tottori</title>
     <meta name="description" content="Located in Daisen, Tottori, Scène is a French auberge offering cuisine made with seasonal ingredients from the San'in region. Enjoy a quiet stay in the forest, away from the everyday.">
+    <meta name="theme-color" content="#0f0f0f">
 
     <link rel="canonical" href="https://scene-daisen.com/index.en.html">
     <link rel="alternate" hreflang="ja" href="https://scene-daisen.com/">
     <link rel="alternate" hreflang="en" href="https://scene-daisen.com/index.en.html">
+    <link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Scène | French Auberge in the Forest of Daisen, Tottori">
+    <meta property="og:description" content="Cuisine made with seasonal San'in ingredients and a quiet stay in the forest. A serene night at the foot of Mt. Daisen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scene-daisen.com/index.en.html">
+    <meta property="og:image" content="https://scene-daisen.com/assets/images/main.webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:site_name" content="Scène">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scène | French Auberge in Daisen, Tottori">
+    <meta name="twitter:description" content="Seasonal French cuisine and forest retreat at the foot of Mt. Daisen.">
+    <meta name="twitter:image" content="https://scene-daisen.com/assets/images/main.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+
     <style>
         img { max-width: 100%; height: auto; }
         .hero { position: relative; height: 100vh; width: 100%; overflow: hidden; }
@@ -24,7 +44,7 @@
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1; background-size: cover; background-position: center;
         }
-        
+
         /* Contact Form Styles */
         .form-group { margin-bottom: 24px; }
         .form-label { display: block; font-size: 13px; color: var(--text-muted, #aaa); margin-bottom: 8px; }
@@ -33,7 +53,7 @@
             background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);
             color: #fff; padding: 12px; font-size: 14px; font-family: inherit;
         }
-        .form-input:focus, .form-textarea:focus { outline: none; border-color: #fff; background: rgba(255,255,255,0.1); }
+        .form-input:focus-visible, .form-textarea:focus-visible { outline: 2px solid rgba(255,255,255,0.6); outline-offset: 2px; border-color: #fff; background: rgba(255,255,255,0.1); }
         .radio-group { display: flex; gap: 20px; margin-top: 5px; }
         .radio-label { display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; color: #fff; }
         .btn-submit {
@@ -41,21 +61,93 @@
             font-family: var(--font-display, serif); letter-spacing: 0.1em; cursor: pointer; transition: opacity 0.3s;
         }
         .btn-submit:hover { opacity: 0.8; }
-        
-        /* Message Styles */
+        .btn-submit:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
         #formMessage { display: none; margin-top: 20px; color: #fff; font-size: 14px; text-align: center; line-height: 1.8; }
-        
+
         /* English Specific Adjustments */
         body { font-family: 'Cormorant Garamond', 'Noto Sans JP', serif; }
         p { line-height: 1.8; letter-spacing: 0.05em; }
     </style>
+
+    <!-- Structured Data: Restaurant + LodgingBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["Restaurant", "LodgingBusiness"],
+        "name": "Scène",
+        "image": "https://scene-daisen.com/assets/images/main.webp",
+        "url": "https://scene-daisen.com/index.en.html",
+        "telephone": "",
+        "description": "A French auberge in Daisen, Tottori. Seasonal cuisine with San'in ingredients and quiet guest rooms in the forest.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "115-7 Daisen",
+            "addressLocality": "Daisen-cho",
+            "addressRegion": "Tottori",
+            "postalCode": "689-3318",
+            "addressCountry": "JP"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.3920,
+            "longitude": 133.5350
+        },
+        "servesCuisine": "French",
+        "priceRange": "¥¥¥",
+        "acceptsReservations": "True",
+        "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can children stay?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dining is limited to guests aged 9 and older. To value the quiet environment, we do not provide meals or facilities for small children."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What kind of meal is served?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dinner is a course meal featuring ingredients from the San'in region. The content changes depending on the season and the situation of the day."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is allergy support available?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If you let us know in advance, we will respond as much as possible."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the cancellation policy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Please check the cancellation policy on the reservation screen when booking."
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <div class="noise-overlay"></div>
-    
+
 	<header class="site-header">
         <a href="./index.html" class="brand">Scène</a>
-        <nav class="nav-desktop">
+        <nav class="nav-desktop" aria-label="Main navigation">
             <a href="#concept">Concept</a>
             <a href="#cuisine">Cuisine</a>
             <a href="#rooms">Rooms</a>
@@ -63,17 +155,17 @@
             <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
             <a href="#access">Access</a>
-            
-            <div style="margin-left: 20px; border-left: 1px solid rgba(255,255,255,0.3); padding-left: 20px; display:flex; gap:15px;">
-                <a href="./index.html" style="opacity: 0.5;">JP</a>
-                <a href="./index.en.html" style="opacity: 1; cursor: default;">EN</a>
+
+            <div class="lang-switch">
+                <a href="./index.html">JP</a>
+                <a href="./index.en.html" aria-current="page" class="lang-active">EN</a>
             </div>
         </nav>
-        <div class="nav-toggle" onclick="toggleMenu()">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
             <span></span><span></span><span></span>
-        </div>
+        </button>
     </header>
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
         <a href="#concept" onclick="toggleMenu()">Concept</a>
         <a href="#cuisine" onclick="toggleMenu()">Cuisine</a>
         <a href="#rooms" onclick="toggleMenu()">Rooms</a>
@@ -81,24 +173,27 @@
         <a href="#faq" onclick="toggleMenu()">FAQ</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
         <a href="#access" onclick="toggleMenu()">Access</a>
-        
-        <div style="margin-top: 40px; font-family: var(--font-display);">
-            <a href="./index.html" style="margin:0 10px; opacity: 0.5; font-size:16px;">JP</a>
-            <a href="./index.en.html" style="margin:0 10px; opacity: 1; font-size:16px;">EN</a>
+
+        <div class="mobile-lang-switch">
+            <a href="./index.html">JP</a>
+            <a href="./index.en.html" aria-current="page" class="lang-active">EN</a>
         </div>
-    </div>
+    </nav>
 
     <main>
         <div class="hero">
-            <div class="hero-bg" style="background-image: url('./assets/images/main.webp'); background-size: cover; background-position: center; width: 100%; height: 100vh;"></div>
-            
+            <div class="hero-bg" style="background-image: url('./assets/images/main.webp'); background-size: cover; background-position: center; width: 100%; height: 100vh;" role="img" aria-label="Exterior of Scène nestled in the forest of Mt. Daisen at night"></div>
+            <div class="hero-light" aria-hidden="true"></div>
+            <div class="hero-light-secondary" aria-hidden="true"></div>
+            <div class="hero-mist" aria-hidden="true"></div>
+
             <div class="hero-content">
                 <h1 class="hero-main">Scène</h1>
                 <p class="hero-sub">A quiet night,<br>prepared for cuisine.</p>
             </div>
-            <div class="scroll-down">
+            <div class="scroll-down" aria-hidden="true">
                 <div class="scroll-line"></div>
-                <span style="font-size:10px; letter-spacing:0.2em;">SCROLL</span>
+                <span class="scroll-label">SCROLL</span>
             </div>
         </div>
 
@@ -108,7 +203,7 @@
                 <div class="concept-block">
                     <div class="concept-text">
                         <h2 class="heading-lg">A single scene,<br>prepared for silence and cuisine.</h2>
-                        <p style="color:var(--text-muted); margin-bottom:40px;">
+                        <p class="text-muted-block">
                             "Scène" means "scene" or "setting" in French.<br><br>
                             The weather of the day, the temperature, the scent of the air.<br>
                             Ingredients that arrive from the fields and the sea, unique to that day.<br>
@@ -116,14 +211,14 @@
                             At the foot of Mt. Daisen, far from the hustle and bustle of the city,<br>
                             we have prepared a time for you to simply face the cuisine.
                         </p>
-                        <div style="margin-top:40px; border-top:1px solid var(--border); padding-top:20px;">
-                            <h3 style="font-family:var(--font-serif); font-size:18px; margin-bottom:10px;">The Name "Scène"</h3>
-                            <p style="font-size:13px; color:var(--text-muted);">Since we harvest vegetables and herbs from the field every day, the types of vegetables change daily. The blessings of the sea also change depending on the weather and fishing conditions. We offer a course where you can sense the ever-changing "scene" of the San'in region through our dishes.</p>
+                        <div class="concept-name-block">
+                            <h3 class="concept-name-title">The Name "Scène"</h3>
+                            <p class="concept-name-desc">Since we harvest vegetables and herbs from the field every day, the types of vegetables change daily. The blessings of the sea also change depending on the weather and fishing conditions. We offer a course where you can sense the ever-changing "scene" of the San'in region through our dishes.</p>
                         </div>
                     </div>
                     <div class="concept-visual">
                         <div class="concept-caption"><span class="vertical-text">Auberge in the forest of Daisen, Tottori.</span></div>
-                        <img src="./assets/images/concept.webp" class="concept-img" alt="Interior">
+                        <img src="./assets/images/concept.webp" class="concept-img" alt="Interior of Scène dining room with warm wooden furnishings in the Daisen forest" width="800" height="600" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -131,16 +226,22 @@
 
         <section id="cuisine" class="section-padding" style="padding-top:0;">
             <div class="cuisine-hero reveal">
-                <img src="./assets/images/cuisine.webp" class="cuisine-bg" alt="Cuisine">
+                <img src="./assets/images/cuisine.webp" class="cuisine-bg" alt="French course cuisine using seasonal San'in ingredients at Scène" width="1200" height="800" loading="lazy">
                 <div class="cuisine-content">
                     <span class="section-num">02 / Cuisine</span>
                     <h2 class="heading-lg">The blessings of San'in,<br>through French techniques.</h2>
-                    <p style="color:var(--text-muted);">
+                    <p class="text-muted-block">
                         The ingredients used are from the San'in region at that moment.<br>
                         Vegetables, fish, meat. We assemble the day's course while facing the season.<br>
                         We create a "Scène" of the land—where no two days are the same—upon the plate.
                     </p>
-                    <p style="margin-top:20px; font-size:13px;">*The cuisine is created by Hotaka Maeda, a chef from Tottori Prefecture. While working as a head chef at a bistro in Tokyo, he also supported the kitchen as an assistant at a Michelin-starred restaurant, learning fundamental techniques and the attitude towards the craft. Considering his cooking journey still in progress, he continues to refine his skills, aiming for a better dish by facing the local ingredients and the materials themselves.</p>
+                    <p class="chef-desc">*The cuisine is created by Hotaka Maeda, a chef from Tottori Prefecture. While working as a head chef at a bistro in Tokyo, he also supported the kitchen as an assistant at a Michelin-starred restaurant, learning fundamental techniques and the attitude towards the craft. Considering his cooking journey still in progress, he continues to refine his skills, aiming for a better dish by facing the local ingredients and the materials themselves.</p>
+                    <div class="cuisine-cta-wrap">
+                        <a href="https://www.tablecheck.com/ja/scene-sanin" target="_blank" rel="noopener" class="btn-outline">
+                            Reserve Dining (TableCheck)
+                        </a>
+                        <p class="cuisine-note">*Restaurant offers course meals only.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -151,21 +252,21 @@
                 <div class="concept-block reverse">
                     <div class="concept-text">
                         <h2 class="heading-lg">Enjoying the margins,<br>a space of silence.</h2>
-                        <p style="color:var(--text-muted); margin-bottom:40px;">
+                        <p class="text-muted-block">
                             The guest rooms at Scène are places to immerse yourself in the afterglow of the meal and the silence of Daisen.<br>
                             We have not provided excessive decorations or facilities,<br>
                             but rather prepared a view of the forest framed by the window and a margin where you can take a deep breath.<br>
                             It is a space solely for sleeping peacefully.
                         </p>
-                        <ul style="font-size:13px; color:var(--text-muted); list-style:none; padding:0;">
-                            <li>・Free Wi-Fi</li>
-                            <li>・Shower booth / Towels / Hairdryer / Original Pajamas</li>
+                        <ul class="amenity-list">
+                            <li>Free Wi-Fi</li>
+                            <li>Shower booth / Towels / Hairdryer / Original Pajamas</li>
                             <li>*You can also use the private ceramic bath within the facility.</li>
                         </ul>
                     </div>
                     <div class="concept-visual">
                         <div class="concept-caption"><span class="vertical-text">A place just for sleeping.</span></div>
-                        <img src="./assets/images/room.webp" class="concept-img" alt="Guest Room">
+                        <img src="./assets/images/room.webp" class="concept-img" alt="Scène guest room with forest view through the window" width="800" height="600" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -174,24 +275,24 @@
         <section id="news" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">04 / News</span>
-                <div id="newsList">
-                    <div class="list-row" onclick="openModal('Staff Recruitment', '2025.12.21', 'Scène is currently looking for staff to work with us.<br><br>[Qualifications]<br>Age and experience are not required, but we are looking for those who can handle general cooking and polite customer service.<br>*We ask for a 3-day (20 hours) trial period before hiring.<br><br>Details will be explained via email. Please feel free to contact us if you are interested.')">
+                <div id="newsList" role="list">
+                    <button class="list-row" role="listitem" data-title="Staff Recruitment" data-date="2025.12.21" data-content="Scène is currently looking for staff to work with us.&lt;br&gt;&lt;br&gt;[Qualifications]&lt;br&gt;Age and experience are not required, but we are looking for those who can handle general cooking and polite customer service.&lt;br&gt;*We ask for a 3-day (20 hours) trial period before hiring.&lt;br&gt;&lt;br&gt;Details will be explained via email. Please feel free to contact us if you are interested.">
                         <span class="list-date">2025.12.21</span>
                         <span class="list-title">Staff Recruitment</span>
-                        <span class="list-arrow">→</span>
-                    </div>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
 
-                    <div class="list-row" onclick="openModal('Official Website Release', '2025.12.21', 'We have renewed the official website of Scène.<br>We will continue to improve the site content so that you can feel the worldview of Scène more deeply.<br>We plan to send out the latest information from the foot of Mt. Daisen, such as seasonal menus.')">
+                    <button class="list-row" role="listitem" data-title="Official Website Release" data-date="2025.12.21" data-content="We have renewed the official website of Scène.&lt;br&gt;We will continue to improve the site content so that you can feel the worldview of Scène more deeply.&lt;br&gt;We plan to send out the latest information from the foot of Mt. Daisen, such as seasonal menus.">
                         <span class="list-date">2025.12.21</span>
                         <span class="list-title">Official Website Release</span>
-                        <span class="list-arrow">→</span>
-                    </div>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
 
-                    <div class="list-row" onclick="openModal('Scène Grand Opening', '2024.10.10', 'We are pleased to announce the opening of Scène on the Daisen Sando.<br>It is an auberge equipped with a restaurant and guest rooms where you can enjoy the afterglow in a quiet forest.<br><br>Scène means scene, sight, or stage.<br>Capturing the history of San\'in—past and future—as a single story, we express the San\'in of the day guests visit as a \'single scene\' on a plate.<br><br>Our staff will do their utmost so that you can feel the rich ingredients of Tottori and Shimane and the sensibilities of that moment.<br>We look forward to your visit.')">
+                    <button class="list-row" role="listitem" data-title="Scène Grand Opening" data-date="2024.10.10" data-content="We are pleased to announce the opening of Scène on the Daisen Sando.&lt;br&gt;It is an auberge equipped with a restaurant and guest rooms where you can enjoy the afterglow in a quiet forest.&lt;br&gt;&lt;br&gt;Scène means scene, sight, or stage.&lt;br&gt;Capturing the history of San'in—past and future—as a single story, we express the San'in of the day guests visit as a 'single scene' on a plate.&lt;br&gt;&lt;br&gt;Our staff will do their utmost so that you can feel the rich ingredients of Tottori and Shimane and the sensibilities of that moment.&lt;br&gt;We look forward to your visit.">
                         <span class="list-date">2024.10.10</span>
                         <span class="list-title">Scène Grand Opening</span>
-                        <span class="list-arrow">→</span>
-                    </div>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -199,13 +300,13 @@
         <section id="faq" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">05 / FAQ</span>
-                <div style="max-width:800px; margin-left:auto;">
-                    <p style="margin-bottom:40px; color:var(--text-muted);">We cherish being a place where adults can spend time quietly.</p>
-                    
-                    <details><summary><span class="faq-q">Can children stay?</span><span class="faq-toggle">+</span></summary><div class="faq-a">Dining is limited to guests aged 9 and older. To value the quiet environment, we do not provide meals or facilities for small children.</div></details>
-                    <details><summary><span class="faq-q">What kind of meal is served?</span><span class="faq-toggle">+</span></summary><div class="faq-a">Dinner is a course meal featuring ingredients from the San'in region. The content changes depending on the season and the situation of the day.</div></details>
-                    <details><summary><span class="faq-q">Is allergy support available?</span><span class="faq-toggle">+</span></summary><div class="faq-a">If you let us know in advance, we will respond as much as possible.</div></details>
-                    <details><summary><span class="faq-q">Please tell me the cancellation policy.</span><span class="faq-toggle">+</span></summary><div class="faq-a">Please check the cancellation policy on the reservation screen when booking.</div></details>
+                <div class="faq-wrap">
+                    <p class="faq-intro">We cherish being a place where adults can spend time quietly.</p>
+
+                    <details><summary><span class="faq-q">Can children stay?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Dining is limited to guests aged 9 and older. To value the quiet environment, we do not provide meals or facilities for small children.</div></details>
+                    <details><summary><span class="faq-q">What kind of meal is served?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Dinner is a course meal featuring ingredients from the San'in region. The content changes depending on the season and the situation of the day.</div></details>
+                    <details><summary><span class="faq-q">Is allergy support available?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">If you let us know in advance, we will respond as much as possible.</div></details>
+                    <details><summary><span class="faq-q">What is the cancellation policy?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Please check the cancellation policy on the reservation screen when booking.</div></details>
                 </div>
             </div>
         </section>
@@ -213,20 +314,20 @@
         <section id="contact" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">06 / Contact</span>
-                <div style="max-width: 600px; margin: 0 auto;">
-                    <p style="margin-bottom: 40px; color: var(--text-muted); text-align: center;">
+                <div class="contact-wrap">
+                    <p class="contact-intro">
                         For inquiries other than reservations,<br>please use this form.
                     </p>
 
-                    <form 
-                        action="https://docs.google.com/forms/d/e/1FAIpQLScRzg6QJBRIZvw1A0U1DYl0pVPRGr378meTbQjecFFTpLrcfw/formResponse" 
-                        method="POST" 
+                    <form
+                        action="https://docs.google.com/forms/d/e/1FAIpQLScRzg6QJBRIZvw1A0U1DYl0pVPRGr378meTbQjecFFTpLrcfw/formResponse"
+                        method="POST"
                         target="hidden_iframe"
                         onsubmit="submitted=true;"
                     >
                         <div class="form-group">
-                            <label class="form-label">Inquiry Type</label>
-                            <div class="radio-group">
+                            <label class="form-label" id="label-type-en">Inquiry Type</label>
+                            <div class="radio-group" role="radiogroup" aria-labelledby="label-type-en">
                                 <label class="radio-label">
                                     <input type="radio" name="entry.1160218439" value="お客様からの問い合わせ" required checked>
                                     Customer
@@ -239,28 +340,27 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Name</label>
-                            <input type="text" name="entry.625061255" class="form-input" required placeholder="Taro Yamada">
+                            <label class="form-label" for="field-name-en">Name</label>
+                            <input type="text" id="field-name-en" name="entry.625061255" class="form-input" required placeholder="Taro Yamada" autocomplete="name">
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Email Address</label>
-                            <input type="email" name="entry.1292085174" class="form-input" required placeholder="example@email.com">
+                            <label class="form-label" for="field-email-en">Email Address</label>
+                            <input type="email" id="field-email-en" name="entry.1292085174" class="form-input" required placeholder="example@email.com" autocomplete="email" spellcheck="false">
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea name="entry.2097370578" class="form-textarea" rows="5" required></textarea>
+                            <label class="form-label" for="field-message-en">Message</label>
+                            <textarea id="field-message-en" name="entry.2097370578" class="form-textarea" rows="5" required></textarea>
                         </div>
-
-                        <div style="text-align: center; margin-top: 40px;">
+                        <div class="form-submit-wrap">
                             <button type="submit" class="btn-submit">SEND MESSAGE</button>
                         </div>
                     </form>
-                    
-                    <div id="formMessage">
+
+                    <div id="formMessage" role="status" aria-live="polite">
                         Thank you for your inquiry.<br>We will contact you after confirming the content.<br>
-                        <span style="font-size:12px; opacity:0.7;">*An automatic reply email has been sent for confirmation.</span>
+                        <span class="form-note">*An automatic reply email has been sent for confirmation.</span>
                     </div>
                 </div>
             </div>
@@ -269,30 +369,31 @@
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {document.querySelector('form').style.display='none'; document.getElementById('formMessage').style.display='block';}"></iframe>
         <script>var submitted = false;</script>
 
-      <section id="access" class="section-padding">
+        <section id="access" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">07 / Access</span>
-                
-                <div class="access-layout" style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start; margin-top: 40px;">
-                    
-                    <div class="access-info" style="flex: 1; min-width: 300px;">
-                        <h2 style="font-family:var(--font-display); font-size:32px; margin-bottom:30px;">Scène</h2>
-                        <div style="font-size:13px; color:var(--text-muted); line-height:2.4;">
+
+                <div class="access-layout-grid">
+
+                    <div class="access-info">
+                        <h2 class="access-title">Scène</h2>
+                        <div class="access-details">
                             <p>115-7 Daisen, Daisen-cho, Saihaku-gun, Tottori 689-3318</p>
-                            <p style="margin-top:20px;">[ Car ]<br>Approx. 20 min from Mizokuchi IC (Yonago Expressway)</p>
-                            <p style="margin-top:20px;">[ Public Transport ]<br>Approx. 50 min from JR Yonago Station by bus<br>5 min walk from "Daisen-ji" bus stop</p>
+                            <p class="access-direction">[ Car ]<br>Approx. 20 min from Mizokuchi IC (Yonago Expressway)</p>
+                            <p class="access-direction">[ Public Transport ]<br>Approx. 50 min from JR Yonago Station by bus<br>5 min walk from "Daisen-ji" bus stop</p>
                         </div>
-                        <a href="https://goo.gl/maps/PlaceHolderLink" target="_blank" rel="noopener" style="display:inline-block; border:1px solid var(--border); padding:12px 30px; font-size:12px; margin-top:40px;">Google Maps</a>
+                        <a href="https://goo.gl/maps/PlaceHolderLink" target="_blank" rel="noopener" class="btn-outline-subtle">Google Maps</a>
                     </div>
 
-                    <div class="access-map" style="flex: 1; min-width: 300px; height: 400px; position: relative; filter: grayscale(100%) invert(90%) contrast(90%);">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.543026338573!2d133.5350!3d35.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3556885366453959%3A0xc6657c66705600c0!2z44CSNjg5LTMzMTgg6bOl5Y-W55yM6KW_5L-v6YKh5aSn5bGx55S65aSn5bGx!5e0!3m2!1sja!2sjp!4v1703162700000!5m2!1sja!2sjp" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0; width:100%; height:100%;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
+                    <div class="access-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.543026338573!2d133.5350!3d35.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3556885366453959%3A0xc6657c66705600c0!2z44CSNjg5LTMzMTgg6bOl5Y-W55yM6KW_5L-v6YKh5aSn5bGx55S65aSn5bGx!5e0!3m2!1sja!2sjp!4v1703162700000!5m2!1sja!2sjp"
+                            width="100%"
+                            height="100%"
+                            style="border:0; width:100%; height:100%;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Scène location - Daisen, Tottori">
                         </iframe>
                     </div>
 
@@ -304,28 +405,28 @@
     <footer class="footer">
         <div class="wrap footer-inner">
             <div>
-                <span style="font-family:var(--font-display); font-size:20px;">Scène</span>
-                <p style="margin-top:10px; opacity:0.5;">Cuisine-first auberge in the forest of Daisen.</p>
+                <span class="footer-brand">Scène</span>
+                <p class="footer-tagline">Cuisine-first auberge in the forest of Daisen.</p>
             </div>
-            <div style="display:flex; gap:30px;">
+            <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="#concept">Concept</a>
                 <a href="#cuisine">Cuisine</a>
                 <a href="#rooms">Rooms</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
-            </div>
-            <div style="font-family:var(--font-display);">© Scène</div>
+            </nav>
+            <div class="footer-copy">© Scène</div>
         </div>
     </footer>
 
-    <a href="https://www.booking.com/hotel/jp/scene-da-shan-ting.ja.html" target="_blank" class="cta-fixed">
+    <a href="https://www.booking.com/hotel/jp/scene-da-shan-ting.ja.html" target="_blank" class="cta-fixed" rel="noopener">
         <span class="cta-main">Check Availability</span>
         <span class="cta-sub">Reserve Now</span>
     </a>
-    
-    <div class="modal-overlay" id="newsModal">
+
+    <div class="modal-overlay" id="newsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <button onclick="closeModal()" style="position:absolute; top:20px; right:20px; background:none; border:none; color:#fff; cursor:pointer; font-size:24px;">×</button>
+            <button class="modal-close" aria-label="Close">×</button>
             <div id="modalBody"></div>
         </div>
     </div>
