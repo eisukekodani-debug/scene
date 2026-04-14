@@ -385,7 +385,7 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 20px); }
 .cuisine-content {
     position: absolute; bottom: 0; right: 0;
     background: var(--bg-color);
-    padding: 48px 80px 0 80px;
+    padding: 28px 80px 0 80px;
     max-width: 600px;
 }
 .chef-desc {
