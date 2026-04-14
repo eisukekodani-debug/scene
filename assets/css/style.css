@@ -406,8 +406,9 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 20px); }
     padding-bottom: 0;
 }
 @media (max-width: 768px) {
-    .cuisine-hero { height: 60vh; }
-    .cuisine-content { position: relative; padding: 40px 20px; max-width: 100%; }
+    .cuisine-hero { height: auto; overflow: visible; }
+    .cuisine-bg { height: 55vh; object-position: 25% center; }
+    .cuisine-content { position: relative; bottom: auto; right: auto; padding: 30px 20px 0; max-width: 100%; }
 }
 
 /* =========================================
