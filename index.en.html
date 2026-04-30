@@ -245,22 +245,17 @@
                 <h2 class="heading-lg">The blessings of San'in,<br>through French techniques.</h2>
                 <p class="cuisine-note" style="margin-bottom: 48px;">* The menu shown is an example. Dishes change daily based on seasonal availability.</p>
 
-                <div class="cuisine-two-col">
-                    <div class="cuisine-photo">
-                        <img src="./assets/images/cuisine.webp" alt="Scène course menu" width="1200" height="800" loading="lazy">
-                    </div>
-                    <div class="cuisine-text">
-                        <p class="text-muted-block">
-                            Ingredients nurtured by the sea, mountains,<br>
-                            and villages of San'in, refined through French technique.<br>
-                            The chef personally visits local producers,<br>
-                            selecting only ingredients born from trusted relationships.
-                        </p>
-                        <p class="text-muted-block" style="margin-top: 16px;">
-                            From amuse-bouche to dessert,<br>
-                            each plate reveals a different expression of this land.
-                        </p>
-                    </div>
+                <div class="cuisine-intro">
+                    <p class="text-muted-block">
+                        Ingredients nurtured by the sea, mountains,<br>
+                        and villages of San'in, refined through French technique.<br>
+                        The chef personally visits local producers,<br>
+                        selecting only ingredients born from trusted relationships.
+                    </p>
+                    <p class="text-muted-block" style="margin-top: 16px;">
+                        From amuse-bouche to dessert,<br>
+                        each plate reveals a different expression of this land.
+                    </p>
                 </div>
             </div>
 
@@ -295,8 +290,16 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     @scene_sanin
                 </a>
-                <p class="chef-desc">*The cuisine is crafted by Hotaka Maeda, a chef from Tottori Prefecture. After serving as head chef at a Tokyo bistro, he further honed his skills at a Michelin-starred restaurant, deepening his mastery of French technique and his philosophy toward ingredients. Believing his culinary journey is still unfolding, he continues to pursue the perfect dish through a sincere commitment to the ingredients of his homeland, San'in.</p>
-                <p class="cuisine-note">*Restaurant offers course meals only.</p>
+                <p class="cuisine-note cuisine-note-end">*Restaurant offers course meals only.</p>
+            </div>
+
+            <div class="wrap reveal">
+                <div class="chef-block">
+                    <span class="chef-label">— Chef</span>
+                    <h3 class="chef-name">Hotaka Maeda<span class="chef-name-en">前田 帆貴</span></h3>
+                    <p class="chef-bio">A chef from Tottori Prefecture. After serving as head chef at a Tokyo bistro, he further honed his skills at a Michelin-starred restaurant, deepening his mastery of French technique and his philosophy toward ingredients. Believing his culinary journey is still unfolding, he continues to pursue the perfect dish through a sincere commitment to the ingredients of his homeland, San'in.</p>
+                    <p class="chef-quote">"The San'in of that day, on a single plate."</p>
+                </div>
             </div>
         </section>
 
@@ -330,23 +333,32 @@
             <div class="wrap reveal">
                 <span class="section-num">04 / News</span>
                 <div id="newsList">
-                    <div class="list-row" onclick="openModal('Staff Recruitment','2025.12.21','Scène is currently looking for staff to work with us.<br><br>[Qualifications]<br>Age and experience are not required, but we are looking for those who can handle general cooking and polite customer service.<br>*We ask for a 3-day (20 hours) trial period before hiring.<br><br>Details will be explained via email. Please feel free to contact us if you are interested.')">
+                    <button type="button" class="list-row"
+                        data-title="Staff Recruitment"
+                        data-date="2025.12.21"
+                        data-content="Scène is currently looking for staff to work with us.<br><br>[Qualifications]<br>Age and experience are not required, but we are looking for those who can handle general cooking and polite customer service.<br>*We ask for a 3-day (20 hours) trial period before hiring.<br><br>Details will be explained via email. Please feel free to contact us if you are interested.">
                         <span class="list-date">2025.12.21</span>
                         <span class="list-title">Staff Recruitment</span>
-                        <span class="list-arrow">→</span>
-                    </div>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
 
-                    <div class="list-row" onclick="openModal('Official Website Release','2025.12.21','We have renewed the official website of Scène.<br>We will continue to improve the site content so that you can feel the worldview of Scène more deeply.<br>We plan to send out the latest information from the foot of Mt. Daisen, such as seasonal menus.')">
+                    <button type="button" class="list-row"
+                        data-title="Official Website Release"
+                        data-date="2025.12.21"
+                        data-content="We have renewed the official website of Scène.<br>We will continue to improve the site content so that you can feel the worldview of Scène more deeply.<br>We plan to send out the latest information from the foot of Mt. Daisen, such as seasonal menus.">
                         <span class="list-date">2025.12.21</span>
                         <span class="list-title">Official Website Release</span>
-                        <span class="list-arrow">→</span>
-                    </div>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
 
-                    <div class="list-row" onclick="openModal('Scène Grand Opening','2024.10.10','We are pleased to announce the opening of Scène on the Daisen Sando.<br>It is an auberge equipped with a restaurant and guest rooms where you can enjoy the afterglow in a quiet forest.<br><br>Scène means scene, sight, or stage.<br>Capturing the history of San'in—past and future—as a single story, we express the San'in of the day guests visit as a single scene on a plate.<br><br>Our staff will do their utmost so that you can feel the rich ingredients of Tottori and Shimane and the sensibilities of that moment.<br>We look forward to your visit.')">
+                    <button type="button" class="list-row"
+                        data-title="Scène Grand Opening"
+                        data-date="2024.10.10"
+                        data-content="We are pleased to announce the opening of Scène on the Daisen Sando.<br>It is an auberge equipped with a restaurant and guest rooms where you can enjoy the afterglow in a quiet forest.<br><br>Scène means scene, sight, or stage.<br>Capturing the history of San'in—past and future—as a single story, we express the San'in of the day guests visit as a single scene on a plate.<br><br>Our staff will do their utmost so that you can feel the rich ingredients of Tottori and Shimane and the sensibilities of that moment.<br>We look forward to your visit.">
                         <span class="list-date">2024.10.10</span>
                         <span class="list-title">Scène Grand Opening</span>
-                        <span class="list-arrow">→</span>
-                    </div>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -437,7 +449,7 @@
                             <p class="access-direction">[ Parking ]<br>2 spaces available in front of the building (first-come, free)<br>If full, please ask our staff for nearby free parking options.</p>
                             <p class="access-direction">[ Public Transport ]<br>Approx. 50 min from JR Yonago Station by bus<br>5 min walk from "Daisen-ji" bus stop</p>
                         </div>
-                        <a href="https://goo.gl/maps/PlaceHolderLink" target="_blank" rel="noopener" class="btn-outline-subtle">Google Maps</a>
+                        <a href="https://maps.app.goo.gl/nVwHqy7FLRFMXQKW9" target="_blank" rel="noopener" class="btn-outline-subtle">Open in Google Maps</a>
                     </div>
 
                     <div class="access-map">
