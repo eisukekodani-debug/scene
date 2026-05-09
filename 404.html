@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja" style="color-scheme: dark;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Scène（セヌ）</title>
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/images/favicon.png">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .stage {
+      max-width: 720px; width: 100%; padding: 80px 48px;
+      text-align: center;
+      position: relative;
+    }
+    .nf-eyebrow {
+      font-family: var(--font-display); font-size: 11px;
+      letter-spacing: 0.5em; text-transform: uppercase;
+      color: var(--accent-warm); font-style: italic;
+      display: inline-flex; align-items: center; gap: 18px;
+      margin-bottom: 56px;
+    }
+    .nf-eyebrow::before {
+      content: ''; display: inline-block;
+      width: 40px; height: 1px; background: currentColor; opacity: 0.6;
+    }
+    .nf-num {
+      font-family: var(--font-display);
+      font-size: clamp(140px, 24vw, 220px);
+      font-weight: 300;
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+      margin: 0 0 32px;
+      color: var(--accent);
+    }
+    .nf-rule {
+      display: block;
+      width: 1px; height: 48px;
+      background: var(--accent-warm);
+      opacity: 0.55;
+      margin: 0 auto 36px;
+    }
+    .nf-title {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: 0.12em;
+      margin: 0 0 32px;
+      color: var(--text-main);
+    }
+    .nf-body {
+      font-family: var(--font-serif);
+      font-size: 14px;
+      color: var(--text-soft);
+      line-height: 2.1;
+      letter-spacing: 0.06em;
+      margin: 0 0 72px;
+    }
+    .nf-link {
+      display: inline-flex; align-items: center; gap: 14px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      padding: 16px 0;
+      border-top: 1px solid var(--border-strong);
+      border-bottom: 1px solid var(--border-strong);
+      min-width: 240px;
+      justify-content: center;
+      transition: color 0.5s var(--ease-soft), letter-spacing 0.5s var(--ease-soft), border-color 0.5s var(--ease-soft);
+    }
+    .nf-link::after { content: '→'; font-style: italic; transition: transform 0.5s var(--ease-soft); }
+    .nf-link:hover {
+      color: var(--accent-warm);
+      border-color: var(--accent-warm);
+      letter-spacing: 0.4em;
+      opacity: 1;
+    }
+    .nf-link:hover::after { transform: translateX(8px); }
+    .nf-lang {
+      margin-top: 80px;
+      font-family: var(--font-display);
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .nf-lang a {
+      color: var(--text-muted);
+      margin: 0 14px;
+      transition: color 0.4s var(--ease-soft);
+    }
+    .nf-lang a:hover { color: var(--accent-warm); opacity: 1; }
+    .vertical-mark {
+      position: absolute;
+      top: 50%; left: -8px;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-family: var(--font-serif);
+      font-size: 11px;
+      letter-spacing: 0.5em;
+      color: var(--text-muted);
+      opacity: 0.45;
+    }
+    @media (max-width: 768px) {
+      .vertical-mark { display: none; }
+      .stage { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <main class="stage">
+    <span class="vertical-mark" aria-hidden="true">Scène — Daisen, Tottori</span>
+    <span class="nf-eyebrow">Page Not Found</span>
+    <p class="nf-num" aria-hidden="true">404</p>
+    <span class="nf-rule" aria-hidden="true"></span>
+    <h1 class="nf-title">お探しのページは<br>見つかりませんでした。</h1>
+    <p class="nf-body">
+      URL が変更されたか、削除された可能性があります。<br>
+      トップページから、改めてご覧ください。
+    </p>
+    <a class="nf-link" href="/">Return to Top</a>
+    <div class="nf-lang">
+      <a href="/" lang="ja">JP</a>
+      <span aria-hidden="true">/</span>
+      <a href="/index.en.html" lang="en">EN</a>
+      <span aria-hidden="true">/</span>
+      <a href="/zh/" lang="zh-Hant">ZH</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -5,8 +5,9 @@
     <loc>https://scene-daisen.com/</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/index.en.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/" />
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,9 +15,124 @@
     <loc>https://scene-daisen.com/index.en.html</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/index.en.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/" />
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://scene-daisen.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/index.en.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://scene-daisen.com/guides/daisen-area-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/daisen-area-guide.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scene-daisen.com/en/guides/daisen-area-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/daisen-area-guide.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scene-daisen.com/zh/guides/daisen-area-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/daisen-area-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/daisen-area-guide.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://scene-daisen.com/guides/sanin-ingredients-story.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/sanin-ingredients-story.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scene-daisen.com/en/guides/sanin-ingredients-story.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/sanin-ingredients-story.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scene-daisen.com/zh/guides/sanin-ingredients-story.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/sanin-ingredients-story.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/sanin-ingredients-story.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://scene-daisen.com/guides/access-from-tokyo-osaka.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/access-from-tokyo-osaka.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scene-daisen.com/en/guides/access-from-tokyo-osaka.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/access-from-tokyo-osaka.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scene-daisen.com/zh/guides/access-from-tokyo-osaka.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/guides/access-from-tokyo-osaka.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/guides/access-from-tokyo-osaka.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://scene-daisen.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://scene-daisen.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/privacy.html" />
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

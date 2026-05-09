@@ -79,7 +79,7 @@
                 "name": "Scène（セヌ）",
                 "alternateName": "セヌ",
                 "url": "https://scene-daisen.com/",
-                "inLanguage": ["ja", "en"],
+                "inLanguage": ["ja", "en", "zh-Hant"],
                 "description": "鳥取県大山町にあるフレンチ・オーベルジュ Scène（セヌ）の公式サイト"
             },
             {
@@ -117,43 +117,118 @@
             {
                 "@type": "FAQPage",
                 "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "子どもは宿泊できますか？",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "お食事は、9歳以上のお客様を対象としています。静かな環境を大切にするため、小さなお子様向けのお食事や設備は提供していません。"
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "食事はどのような内容ですか？",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "夕食は、山陰の食材を主役にしたコース料理です。内容は季節やその日の状況により変わります。"
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "アレルギー対応は可能ですか？",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "事前にお知らせいただければ、可能な範囲で対応します。"
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "キャンセル規定を教えてください",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "キャンセル規定は、ご予約時の予約画面にてご確認ください。"
-                        }
-                    }
+                    { "@type": "Question", "name": "お子様は利用できますか？", "acceptedAnswer": { "@type": "Answer", "text": "コース料理の特性上、9歳以上のお子様よりご利用いただけます。幼いお子様連れの場合は、事前にご相談ください。" } },
+                    { "@type": "Question", "name": "食事の内容はどのようなものですか？", "acceptedAnswer": { "@type": "Answer", "text": "山陰の海・山・里が育んだ食材を使ったフレンチのコース料理です。隠岐の島の岩牡蠣、宍道湖の蜆、木次乳業のチーズ、毎朝収穫した畑の野菜やハーブなど、その日の大山の「情景」を一皿に表現します。" } },
+                    { "@type": "Question", "name": "アレルギーがあります。対応できますか？", "acceptedAnswer": { "@type": "Answer", "text": "ご予約の際に事前にお知らせください。可能な範囲で対応いたします。アレルギーの種類や程度によってはお断りする場合もございますので、あらかじめご了承ください。" } },
+                    { "@type": "Question", "name": "キャンセルポリシーを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "キャンセルポリシーは予約プラットフォーム（ディナーはTableCheck、宿泊はじゃらん・Booking.com）の規定に準じます。詳細は予約時にご確認ください。" } },
+                    { "@type": "Question", "name": "駐車場はありますか？", "acceptedAnswer": { "@type": "Answer", "text": "建物前に2台分の無料駐車スペースをご用意しています。先着順のため、満車の場合は近隣の駐車場をご案内します。大山参道沿いですので、お早めのご到着をおすすめします。" } },
+                    { "@type": "Question", "name": "米子駅・米子鬼太郎空港からのアクセスを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "JR米子駅から日本交通バス「大山寺」行きにご乗車いただき、約50分で大山寺バス停へ。そこから徒歩約5分です。お車の場合は米子自動車道「溝口IC」から約20分です。" } },
+                    { "@type": "Question", "name": "ディナーのみの利用はできますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、宿泊なしのディナーのみでもご利用いただけます。ご予約はTableCheckからお申し込みください。営業は木・金・土・日曜日の18:00〜22:00（ディナーのみ）です。" } },
+                    { "@type": "Question", "name": "冬の積雪・凍結時のアクセスはどうなりますか？", "acceptedAnswer": { "@type": "Answer", "text": "大山は豪雪地帯です。冬季（11月〜3月頃）は積雪・路面凍結の可能性があります。スタッドレスタイヤまたはチェーンをご用意の上、余裕をもってお越しください。バスは運行していますが、天候によって遅延する場合があります。" } },
+                    { "@type": "Question", "name": "周辺の観光スポットを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "大山参道沿いに位置するため、大山寺・大神山神社奥宮（徒歩圏内）が近く、四季折々の自然を楽しめます。車で30分圏内に皆生温泉、境港の水木しげるロード、松江城などがあります。" } },
+                    { "@type": "Question", "name": "客室の設備を教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "全3室にWi-Fi、シャワーブース、洗面台、タオル、ドライヤー、パジャマを完備しています。また、貸切の陶器風呂バスルームをご利用いただけます（時間予約制）。静かな森の中でゆったりとお過ごしください。" } }
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://scene-daisen.com/" }
                 ]
             }
         ]
     }
     </script>
+
+    <!-- ===== HM Analytics START =====
+      GA4 (G-VFZ2G0VZPV) + Consent Mode v2 (default denied for GDPR) + Cookie Banner (ja/en/zh) + CV Trackers
+      Maintained via inject_ga4.py — do not edit by hand inside this block.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+      try {
+        if (localStorage.getItem('hm_consent') === 'granted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch(e){}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VFZ2G0VZPV"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-VFZ2G0VZPV', {
+        'anonymize_ip': true,
+        'allow_google_signals': false,
+        'page_language': document.documentElement.lang || 'ja'
+      });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      // Cookie consent banner (ja/en/zh)
+      (function(){
+        try { if (localStorage.getItem('hm_consent')) return; } catch(e){}
+        var lang = (document.documentElement.lang || 'ja').slice(0,2);
+        var msgs = {
+          ja: { text: 'このサイトはGoogle Analyticsを使用してサイトの利用状況を測定します。', privacy: 'プライバシーポリシー', accept: '同意する', decline: '拒否' },
+          en: { text: 'This site uses Google Analytics to measure site usage.', privacy: 'Privacy Policy', accept: 'Accept', decline: 'Decline' },
+          zh: { text: '本網站使用 Google Analytics 來測量網站使用情況。', privacy: '隱私政策', accept: '同意', decline: '拒絕' }
+        };
+        var m = msgs[lang] || msgs.ja;
+        var prefix = (lang === 'ja') ? '' : '/' + lang;
+        var wrap = document.createElement('div');
+        wrap.id = 'hm-cookie-banner';
+        wrap.setAttribute('role', 'dialog');
+        wrap.setAttribute('aria-label', 'Cookie consent');
+        wrap.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:rgba(15,15,15,0.96);color:#f5f3ee;padding:18px 24px;z-index:99999;font-size:14px;line-height:1.6;box-shadow:0 -4px 20px rgba(0,0,0,0.4);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Sans",sans-serif;';
+        wrap.innerHTML = '<div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;"><div style="flex:1 1 60%;">' + m.text + ' <a href="' + prefix + '/privacy.html" style="color:#c8b88a;text-decoration:underline;">' + m.privacy + '</a></div><div style="flex:0 0 auto;display:flex;gap:8px;"><button id="hm-accept" style="padding:10px 22px;border:none;cursor:pointer;font-size:14px;font-weight:500;border-radius:2px;background:#c8b88a;color:#0f0f0f;">' + m.accept + '</button><button id="hm-decline" style="padding:10px 22px;border:1px solid rgba(245,243,238,0.4);cursor:pointer;font-size:14px;font-weight:500;border-radius:2px;background:transparent;color:#f5f3ee;">' + m.decline + '</button></div></div>';
+        document.body.appendChild(wrap);
+        document.getElementById('hm-accept').onclick = function(){
+          try { localStorage.setItem('hm_consent', 'granted'); } catch(e){}
+          if (typeof gtag === 'function') gtag('consent', 'update', { 'analytics_storage': 'granted' });
+          var b = document.getElementById('hm-cookie-banner'); if (b) b.remove();
+        };
+        document.getElementById('hm-decline').onclick = function(){
+          try { localStorage.setItem('hm_consent', 'denied'); } catch(e){}
+          var b = document.getElementById('hm-cookie-banner'); if (b) b.remove();
+        };
+      })();
+      // Conversion trackers
+      (function(){
+        if (typeof gtag !== 'function') return;
+        var bookingPatterns = ['airbnb', 'booking.com', 'rakuten.travel', 'jalan.net', 'ikyu.com', 'expedia', 'agoda', 'hotels.com', 'tripadvisor', 'vrbo', 'tablecheck.com'];
+        document.addEventListener('click', function(e){
+          var a = e.target.closest && e.target.closest('a');
+          if (!a) return;
+          var href = a.getAttribute('href') || '';
+          if (bookingPatterns.some(function(p){ return href.indexOf(p) > -1; })) {
+            gtag('event', 'click_outbound_booking', {
+              'destination_url': href,
+              'destination_text': (a.textContent || '').trim().slice(0, 80),
+              'page_language': document.documentElement.lang || 'ja'
+            });
+          }
+          if (href.indexOf('tel:') === 0) {
+            gtag('event', 'click_phone', { 'phone': href.replace('tel:', '') });
+          }
+          if (href.indexOf('mailto:') === 0) {
+            gtag('event', 'click_email', { 'email_domain': (href.split('@')[1] || '').replace(/[?#].*/, '') });
+          }
+        });
+        document.addEventListener('submit', function(e){
+          var f = e.target;
+          if (!(f && f.tagName === 'FORM')) return;
+          gtag('event', 'form_submit', { 'form_id': f.id || 'unknown' });
+        });
+      })();
+    });
+    </script>
+    <!-- ===== HM Analytics END ===== -->
 </head>
 <body>
     <div class="noise-overlay"></div>
@@ -201,7 +276,9 @@
             <div class="hero-mist" aria-hidden="true"></div>
 
             <div class="hero-content">
+                <span class="hero-eyebrow">Auberge — Daisen, Tottori</span>
                 <h1 class="hero-main">Scène</h1>
+                <span class="hero-rule" aria-hidden="true"></span>
                 <p class="hero-sub">料理のために用意された、<br>静かな一夜。</p>
             </div>
             <div class="scroll-down" aria-hidden="true">
@@ -368,10 +445,16 @@
             <div class="wrap reveal">
                 <span class="section-num">05 / FAQ</span>
                 <div class="faq-wrap">
-                    <details><summary><span class="faq-q">子どもは宿泊できますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">お食事は、9歳以上のお客様を対象としています。静かな環境を大切にするため、小さなお子様向けのお食事や設備は提供していません。</div></details>
-                    <details><summary><span class="faq-q">食事はどのような内容ですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">夕食は、山陰の食材を主役にしたコース料理です。内容は季節やその日の状況により変わります。</div></details>
-                    <details><summary><span class="faq-q">アレルギー対応は可能ですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">事前にお知らせいただければ、可能な範囲で対応します。</div></details>
-                    <details><summary><span class="faq-q">キャンセル規定を教えてください</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">キャンセル規定は、ご予約時の予約画面にてご確認ください。</div></details>
+                    <details><summary><span class="faq-q">お子様は利用できますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">コース料理の特性上、9歳以上のお子様よりご利用いただけます。幼いお子様連れの場合は、事前にご相談ください。</div></details>
+                    <details><summary><span class="faq-q">食事の内容はどのようなものですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">山陰の海・山・里が育んだ食材を使ったフレンチのコース料理です。隠岐の島の岩牡蠣、宍道湖の蜆、木次乳業のチーズ、毎朝収穫した畑の野菜やハーブなど、その日の大山の「情景」を一皿に表現します。</div></details>
+                    <details><summary><span class="faq-q">アレルギーがあります。対応できますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">ご予約の際に事前にお知らせください。可能な範囲で対応いたします。アレルギーの種類や程度によってはお断りする場合もございますので、あらかじめご了承ください。</div></details>
+                    <details><summary><span class="faq-q">キャンセルポリシーを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">キャンセルポリシーは予約プラットフォーム（ディナーはTableCheck、宿泊はじゃらん・Booking.com）の規定に準じます。詳細は予約時にご確認ください。</div></details>
+                    <details><summary><span class="faq-q">駐車場はありますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">建物前に2台分の無料駐車スペースをご用意しています。先着順のため、満車の場合は近隣の駐車場をご案内します。大山参道沿いですので、お早めのご到着をおすすめします。</div></details>
+                    <details><summary><span class="faq-q">米子駅・米子鬼太郎空港からのアクセスを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">JR米子駅から日本交通バス「大山寺」行きにご乗車いただき、約50分で大山寺バス停へ。そこから徒歩約5分です。お車の場合は米子自動車道「溝口IC」から約20分です。</div></details>
+                    <details><summary><span class="faq-q">ディナーのみの利用はできますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">はい、宿泊なしのディナーのみでもご利用いただけます。ご予約はTableCheckからお申し込みください。営業は木・金・土・日曜日の18:00〜22:00（ディナーのみ）です。</div></details>
+                    <details><summary><span class="faq-q">冬の積雪・凍結時のアクセスはどうなりますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">大山は豪雪地帯です。冬季（11月〜3月頃）は積雪・路面凍結の可能性があります。スタッドレスタイヤまたはチェーンをご用意の上、余裕をもってお越しください。バスは運行していますが、天候によって遅延する場合があります。</div></details>
+                    <details><summary><span class="faq-q">周辺の観光スポットを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">大山参道沿いに位置するため、大山寺・大神山神社奥宮（徒歩圏内）が近く、四季折々の自然を楽しめます。車で30分圏内に皆生温泉、境港の水木しげるロード、松江城などがあります。詳しくは<a href="/guides/daisen-area-guide.html" style="color:#c8b88a;">大山周辺の観光ガイド</a>をご覧ください。</div></details>
+                    <details><summary><span class="faq-q">客室の設備を教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">全3室にWi-Fi、シャワーブース、洗面台、タオル、ドライヤー、パジャマを完備しています。また、貸切の陶器風呂バスルームをご利用いただけます（時間予約制）。静かな森の中でゆったりとお過ごしください。</div></details>
                 </div>
             </div>
         </section>

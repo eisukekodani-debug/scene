@@ -1,0 +1,15 @@
+# Local-only Claude Code config
+.claude/
+
+# Screenshots / image scratch (keep delivered images explicitly)
+assets/images/スクリーンショット*.png
+assets/images/177492.jpg
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logs
+*.log

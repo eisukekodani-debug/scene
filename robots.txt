@@ -1,4 +1,46 @@
+# Scène (scene-daisen.com) robots.txt
+# Public site: https://scene-daisen.com/
+
 User-agent: *
+Allow: /
+
+# AI search bots: explicitly allow citation and indexing
+# (auberge / hospitality sites benefit from being cited by generative AI engines)
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://scene-daisen.com/sitemap.xml
