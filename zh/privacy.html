@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" style="color-scheme: dark;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隱私政策 | Scène（セヌ）</title>
+  <meta name="description" content="Scène（位於日本鳥取大山的法式 Auberge）官方網站的隱私政策。包含 Google Analytics 4 的使用、Cookie 處理、以及諮詢回覆相關說明。">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="canonical" href="https://scene-daisen.com/zh/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://scene-daisen.com/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/privacy.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/images/favicon.png">
+  <style>
+    body { font-family: "Noto Sans TC", "Noto Sans JP", sans-serif; }
+    .legal-page { padding: 140px 0 120px; }
+    .legal-wrap { max-width: 760px; margin: 0 auto; padding: 0 48px; position: relative; }
+    .legal-eyebrow {
+      font-family: var(--font-display); font-size: 11px;
+      letter-spacing: 0.5em; text-transform: uppercase;
+      color: var(--accent-warm); font-style: italic;
+      display: block; margin-bottom: 28px;
+    }
+    .legal-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 64px);
+      letter-spacing: 0.04em; font-weight: 400;
+      line-height: 1.1; margin: 0 0 24px;
+      color: var(--text-main);
+    }
+    .legal-meta {
+      font-family: var(--font-display); font-style: italic;
+      font-size: 13px; letter-spacing: 0.18em;
+      color: var(--text-muted); margin: 0 0 80px;
+    }
+    .legal-lead {
+      font-family: "Noto Sans TC", var(--font-serif); font-size: 16px;
+      color: var(--text-soft); line-height: 2.1;
+      letter-spacing: 0.06em;
+      margin-bottom: 80px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .legal-lead::after {
+      content: ''; position: absolute; bottom: -1px; left: 0;
+      width: 48px; height: 1px; background: var(--accent-warm);
+    }
+    .legal-section { margin-bottom: 72px; position: relative; }
+    .legal-num {
+      font-family: var(--font-display); font-style: italic;
+      font-size: 12px; letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: inline-flex; align-items: center; gap: 18px;
+      margin-bottom: 24px;
+    }
+    .legal-num::before {
+      content: ''; display: inline-block;
+      width: 40px; height: 1px; background: currentColor; opacity: 0.5;
+    }
+    .legal-h2 {
+      font-family: "Noto Sans TC", var(--font-serif);
+      font-size: 20px; font-weight: 500;
+      letter-spacing: 0.06em;
+      line-height: 1.6;
+      margin: 0 0 24px;
+      color: var(--text-main);
+    }
+    .legal-section p, .legal-section li {
+      font-size: 14px; color: var(--text-soft);
+      line-height: 2.1; letter-spacing: 0.05em;
+    }
+    .legal-section ul { list-style: none; padding: 0; margin: 16px 0; }
+    .legal-section ul li { padding-left: 22px; position: relative; margin-bottom: 10px; }
+    .legal-section ul li::before {
+      content: ''; position: absolute; left: 0; top: 16px;
+      width: 10px; height: 1px; background: var(--accent-warm);
+    }
+    .legal-section a {
+      color: var(--accent-warm);
+      border-bottom: 1px solid rgba(216,201,163,0.4);
+      padding-bottom: 1px;
+      transition: border-color 0.4s var(--ease-soft);
+    }
+    .legal-section a:hover { border-color: var(--accent-warm); opacity: 1; }
+    .legal-footer {
+      margin-top: 96px; padding-top: 56px;
+      border-top: 1px solid var(--border);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 32px;
+    }
+    .legal-back {
+      display: inline-flex; align-items: center; gap: 14px;
+      font-family: var(--font-display);
+      font-size: 12px; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--text-main);
+      transition: color 0.4s var(--ease-soft), letter-spacing 0.4s var(--ease-soft);
+    }
+    .legal-back::before { content: '←'; font-style: italic; transition: transform 0.4s var(--ease-soft); }
+    .legal-back:hover { color: var(--accent-warm); letter-spacing: 0.4em; opacity: 1; }
+    .legal-back:hover::before { transform: translateX(-6px); }
+    .legal-lang {
+      display: flex; gap: 18px;
+      font-family: var(--font-display); font-size: 12px;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .legal-lang a { transition: color 0.4s var(--ease-soft); }
+    .legal-lang a:hover { color: var(--accent-warm); opacity: 1; }
+    .legal-lang .active { color: var(--text-main); cursor: default; }
+    .vertical-mark {
+      position: absolute; top: 200px; left: -64px;
+      writing-mode: vertical-rl; text-orientation: mixed;
+      font-family: "Noto Sans TC", var(--font-serif);
+      font-size: 11px; letter-spacing: 0.4em;
+      color: var(--text-muted); opacity: 0.5;
+    }
+    @media (max-width: 900px) {
+      .vertical-mark { display: none; }
+      .legal-wrap { padding: 0 24px; }
+      .legal-page { padding: 100px 0 80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="/zh/" class="brand">Scène</a>
+    <nav class="nav-desktop" aria-label="主導覽">
+      <a href="/zh/#concept">Concept</a>
+      <a href="/zh/#cuisine">Cuisine</a>
+      <a href="/zh/#rooms">Rooms</a>
+      <a href="/zh/#access">Access</a>
+      <div class="lang-switch">
+        <a href="/privacy.html">JP</a>
+        <a href="/en/privacy.html">EN</a>
+        <a href="/zh/privacy.html" aria-current="page" class="lang-active">ZH</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="legal-page">
+    <div class="legal-wrap">
+      <span class="vertical-mark" aria-hidden="true">Scène — Daisen, Tottori</span>
+
+      <span class="legal-eyebrow">— Privacy Policy</span>
+      <h1 class="legal-title">隱私政策</h1>
+      <p class="legal-meta">Last updated · 2026.05.09</p>
+
+      <p class="legal-lead">
+        由 NPO法人 結（以下簡稱「本法人」）營運的 Scène（以下簡稱「本店」），就其官方網站 scene-daisen.com（以下簡稱「本網站」）所收集的個人資料處理方式，制定下列隱私政策。
+      </p>
+
+      <section class="legal-section">
+        <span class="legal-num">01 / Information</span>
+        <h2 class="legal-h2">收集的資訊</h2>
+        <p>本網站可能收集以下資訊：</p>
+        <ul>
+          <li>透過 Cookie 及類似技術所收集的瀏覽紀錄、來源、裝置資訊、停留時間等</li>
+          <li>透過聯絡表單等方式提供的姓名、電子郵件地址、諮詢內容</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">02 / Analytics</span>
+        <h2 class="legal-h2">分析工具的使用</h2>
+        <p>本網站為改善服務之目的，使用 Google LLC 提供的 Google Analytics 4。Google Analytics 透過 Cookie 收集流量資料，但 IP 位址已匿名化（anonymize_ip），且 Google Signals 已停用。</p>
+        <p>所收集的資料僅用於分析網站使用情形，不會用於識別個人。如欲停止 Google 收集資料，請在瀏覽器安裝 <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics 退出瀏覽器外掛程式</a>。</p>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">03 / Cookies</span>
+        <h2 class="legal-h2">Cookie 的使用與同意</h2>
+        <p>本網站於初次造訪時會顯示要求同意使用 Cookie 的橫幅。若選擇「拒絕」，Google Analytics 將不會進行測量。同意狀態會儲存於瀏覽器的本機儲存空間，可隨時透過瀏覽器設定清除。</p>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">04 / Purpose</span>
+        <h2 class="legal-h2">使用目的</h2>
+        <p>所收集的資訊將用於下列目的：</p>
+        <ul>
+          <li>了解網站使用情形並改善服務</li>
+          <li>回覆諮詢及預約相關聯繫</li>
+          <li>依據法令的應對</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">05 / Disclosure</span>
+        <h2 class="legal-h2">向第三方提供</h2>
+        <p>除經當事人同意或依據法令的情形外，本法人不會將所收集的個人資料提供予第三方。惟預約相關資訊可能會提供給預約平台營運業者（Jalan、Booking.com、TableCheck 等）。</p>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">06 / Rights</span>
+        <h2 class="legal-h2">揭露、更正、刪除的請求</h2>
+        <p>當事人提出揭露、更正、停止使用或刪除其保有個人資料的請求時，本法人將於確認本人身分後，於合理範圍內迅速處理。聯絡方式請使用本網站的聯絡表單。</p>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">07 / Revisions</span>
+        <h2 class="legal-h2">修訂</h2>
+        <p>本政策可能因應法令變更等情形進行修訂。修訂後的政策自刊登於本頁時起生效。</p>
+      </section>
+
+      <div class="legal-footer">
+        <a class="legal-back" href="/zh/">Return to Top</a>
+        <div class="legal-lang">
+          <a href="/privacy.html">JP</a>
+          <a href="/en/privacy.html">EN</a>
+          <a class="active" href="/zh/privacy.html">ZH</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

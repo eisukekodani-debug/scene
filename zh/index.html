@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" style="color-scheme: dark;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scène（セヌ）| 鳥取大山森林中的法式 Auberge</title>
+    <meta name="description" content="Scène（セヌ）位於日本鳥取大山，是一家以山陰地方當季食材烹製法式料理的 Auberge。遠離城市喧囂，在靜謐的大山森林中，享受一段只屬於您的住宿與套餐時光。">
+    <meta name="theme-color" content="#0f0f0f">
+
+    <link rel="canonical" href="https://scene-daisen.com/zh/">
+    <link rel="alternate" hreflang="ja" href="https://scene-daisen.com/">
+    <link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/">
+
+    <meta name="google-site-verification" content="krqxI5Z12SwAkh32O1LW0gjpWUuoNK4HvNqL0GFwKU8" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Scène（セヌ）| 鳥取大山森林中的法式 Auberge">
+    <meta property="og:description" content="以山陰地方當季食材精心調製的法式料理，搭配大山森林中的靜謐住宿體驗。鳥取大山山麓，一夜難忘的 Auberge。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scene-daisen.com/zh/">
+    <meta property="og:image" content="https://scene-daisen.com/assets/images/main.webp">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Scène">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Scène（セヌ）| 鳥取大山 法式 Auberge">
+    <meta name="twitter:description" content="日本鳥取大山山麓，法式料理套餐與森林住宿的靜謐體驗。">
+    <meta name="twitter:image" content="https://scene-daisen.com/assets/images/main.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="icon" href="../assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+
+    <style>
+        img { max-width: 100%; height: auto; }
+        .hero { position: relative; height: 100vh; width: 100%; overflow: hidden; }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; background-size: cover; background-position: center;
+        }
+
+        /* Contact Form Styles */
+        .form-group { margin-bottom: 24px; }
+        .form-label { display: block; font-size: 13px; color: var(--text-muted, #aaa); margin-bottom: 8px; }
+        .form-input, .form-textarea {
+            width: 100%; box-sizing: border-box;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);
+            color: #fff; padding: 12px; font-size: 14px; font-family: inherit;
+        }
+        .form-input:focus-visible, .form-textarea:focus-visible { outline: 2px solid rgba(255,255,255,0.6); outline-offset: 2px; border-color: #fff; background: rgba(255,255,255,0.1); }
+        .radio-group { display: flex; gap: 20px; margin-top: 5px; }
+        .radio-label { display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; color: #fff; }
+        .btn-submit {
+            background: #fff; color: #000; border: none; padding: 12px 40px;
+            font-family: var(--font-display, serif); letter-spacing: 0.1em; cursor: pointer; transition: opacity 0.3s;
+        }
+        .btn-submit:hover { opacity: 0.8; }
+        .btn-submit:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+        #formMessage { display: none; margin-top: 20px; color: #fff; font-size: 14px; text-align: center; line-height: 1.8; }
+
+        /* Chinese Specific Adjustments */
+        body { font-family: 'Noto Sans TC', 'Cormorant Garamond', 'Noto Sans JP', serif; }
+        p { line-height: 1.9; letter-spacing: 0.04em; }
+    </style>
+
+    <!-- Structured Data: @graph (WebSite + Restaurant/LodgingBusiness + FAQPage) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": "Scène",
+                "url": "https://scene-daisen.com/",
+                "inLanguage": ["ja", "en", "zh-Hant"],
+                "description": "Scène 官方網站。日本鳥取大山的法式 Auberge。"
+            },
+            {
+                "@type": ["Restaurant", "LodgingBusiness"],
+                "@id": "https://scene-daisen.com/#restaurant",
+                "name": "Scène",
+                "image": "https://scene-daisen.com/assets/images/main.webp",
+                "url": "https://scene-daisen.com/zh/",
+                "description": "位於日本鳥取大山的法式 Auberge。以山陰地方當季食材精心烹製的法式料理套餐，以及森林中的靜謐客房。",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "115-7 Daisen",
+                    "addressLocality": "Daisen-cho",
+                    "addressRegion": "Tottori",
+                    "postalCode": "689-3318",
+                    "addressCountry": "JP"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 35.3920,
+                    "longitude": 133.5350
+                },
+                "servesCuisine": "法式料理",
+                "priceRange": "¥¥¥",
+                "acceptsReservations": true,
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
+                    "opens": "18:00",
+                    "closes": "22:00"
+                },
+                "hasMap": "https://maps.app.goo.gl/nVwHqy7FLRFMXQKW9",
+                "keywords": "Auberge, 法式料理, 大山, 鳥取, 套餐, 住宿, 山陰地方, 日本美食"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    { "@type": "Question", "name": "兒童可以用餐嗎？", "acceptedAnswer": { "@type": "Answer", "text": "基於法式套餐料理的特性，僅接受9歲以上的賓客。若攜帶較小的孩童同行，請於預訂時事先告知，我們將盡量協助安排。" } },
+                    { "@type": "Question", "name": "餐廳提供什麼樣的料理？", "acceptedAnswer": { "@type": "Answer", "text": "主廚前田帆貴以山陰的海、山、里為靈感，呈現法式懷石套餐。食材涵蓋隱岐島的岩牡蠣、宍道湖的蜆貝、木次乳業的起司，以及每日早晨現摘的庭院蔬菜與香草。每一道菜都是當天大山風情的一幅畫。" } },
+                    { "@type": "Question", "name": "可以對應食物過敏嗎？", "acceptedAnswer": { "@type": "Answer", "text": "請於預訂時事先告知過敏原。我們將在可能的範圍內盡力配合，但依過敏種類與程度，有時無法完全對應，敬請見諒。" } },
+                    { "@type": "Question", "name": "取消訂位的規定是什麼？", "acceptedAnswer": { "@type": "Answer", "text": "取消政策依預訂平台規定執行：晚餐請透過TableCheck預訂，住宿請透過じゃらん或Booking.com。詳細取消條款請於預訂時確認。" } },
+                    { "@type": "Question", "name": "餐廳有停車場嗎？", "acceptedAnswer": { "@type": "Answer", "text": "建築物前方提供2個免費停車位，採先到先得方式。若停車位已滿，我們將引導您前往鄰近停車場。建議提早抵達，尤其大山參道沿途假日較為熱鬧。" } },
+                    { "@type": "Question", "name": "從米子站或米子鬼太郎機場如何前往？", "acceptedAnswer": { "@type": "Answer", "text": "從JR米子站搭乘日本交通巴士「大山寺」方向，約50分鐘後於大山寺站下車，步行約5分鐘即可抵達。若自駕，請由米子自動車道「溝口IC」下交流道，行駛約20分鐘即可。" } },
+                    { "@type": "Question", "name": "只用晚餐、不住宿可以嗎？", "acceptedAnswer": { "@type": "Answer", "text": "當然可以。歡迎只預訂晚餐。請透過TableCheck預約。營業時間為週四至週日，18:00至22:00（僅供應晚餐）。" } },
+                    { "@type": "Question", "name": "冬天積雪路滑時，交通狀況如何？", "acceptedAnswer": { "@type": "Answer", "text": "大山是鳥取縣著名的豪雪地帶，11月至3月間路面可能積雪或結冰。自駕前往請務必安裝雪地胎或備妥雪鏈。巴士雖照常行駛，但可能因天候而延誤，建議預留充裕的交通時間並出發前確認道路狀況。" } },
+                    { "@type": "Question", "name": "周邊有什麼值得一遊的景點？", "acceptedAnswer": { "@type": "Answer", "text": "Scène位於大山參道沿線，大山寺與大神山神社奧宮步行即可抵達，四季自然景色各有魅力。驅車30分鐘內可到達皆生溫泉、境港的水木茂之路（鬼太郎故鄉），以及列入國寶的松江城。" } },
+                    { "@type": "Question", "name": "客房設備有哪些？", "acceptedAnswer": { "@type": "Answer", "text": "全3間客房均備有Wi-Fi、淋浴間、毛巾、吹風機及睡衣。另設有專屬陶器風呂包場浴室（採時段預約制），讓您在靜謐森林中泡湯放鬆，是晚餐後最完美的收尾。" } }
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://scene-daisen.com/zh/" }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <!-- ===== HM Analytics START =====
+      GA4 (G-VFZ2G0VZPV) + Consent Mode v2 (default denied for GDPR) + Cookie Banner (ja/en/zh) + CV Trackers
+      Maintained via inject_ga4.py — do not edit by hand inside this block.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+      try {
+        if (localStorage.getItem('hm_consent') === 'granted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch(e){}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VFZ2G0VZPV"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-VFZ2G0VZPV', {
+        'anonymize_ip': true,
+        'allow_google_signals': false,
+        'page_language': 'zh'
+      });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      (function(){
+        try { if (localStorage.getItem('hm_consent')) return; } catch(e){}
+        var lang = (document.documentElement.lang || 'zh').slice(0,2);
+        var msgs = {
+          ja: { text: 'このサイトはGoogle Analyticsを使用してサイトの利用状況を測定します。', privacy: 'プライバシーポリシー', accept: '同意する', decline: '拒否' },
+          en: { text: 'This site uses Google Analytics to measure site usage.', privacy: 'Privacy Policy', accept: 'Accept', decline: 'Decline' },
+          zh: { text: '本網站使用 Google Analytics 來測量網站使用情況。', privacy: '隱私政策', accept: '同意', decline: '拒絕' }
+        };
+        var m = msgs[lang] || msgs.zh;
+        var wrap = document.createElement('div');
+        wrap.id = 'hm-cookie-banner';
+        wrap.setAttribute('role', 'dialog');
+        wrap.setAttribute('aria-label', 'Cookie consent');
+        wrap.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:rgba(15,15,15,0.96);color:#f5f3ee;padding:18px 24px;z-index:99999;font-size:14px;line-height:1.6;box-shadow:0 -4px 20px rgba(0,0,0,0.4);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Noto Sans JP","Hiragino Sans",sans-serif;';
+        wrap.innerHTML = '<div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;"><div style="flex:1 1 60%;">' + m.text + ' <a href="../privacy.html" style="color:#c8b88a;text-decoration:underline;">' + m.privacy + '</a></div><div style="flex:0 0 auto;display:flex;gap:8px;"><button id="hm-accept" style="padding:10px 22px;border:none;cursor:pointer;font-size:14px;font-weight:500;border-radius:2px;background:#c8b88a;color:#0f0f0f;">' + m.accept + '</button><button id="hm-decline" style="padding:10px 22px;border:1px solid rgba(245,243,238,0.4);cursor:pointer;font-size:14px;font-weight:500;border-radius:2px;background:transparent;color:#f5f3ee;">' + m.decline + '</button></div></div>';
+        document.body.appendChild(wrap);
+        document.getElementById('hm-accept').onclick = function(){
+          try { localStorage.setItem('hm_consent', 'granted'); } catch(e){}
+          if (typeof gtag === 'function') gtag('consent', 'update', { 'analytics_storage': 'granted' });
+          var b = document.getElementById('hm-cookie-banner'); if (b) b.remove();
+        };
+        document.getElementById('hm-decline').onclick = function(){
+          try { localStorage.setItem('hm_consent', 'denied'); } catch(e){}
+          var b = document.getElementById('hm-cookie-banner'); if (b) b.remove();
+        };
+      })();
+      (function(){
+        if (typeof gtag !== 'function') return;
+        var bookingPatterns = ['airbnb', 'booking.com', 'rakuten.travel', 'jalan.net', 'ikyu.com', 'expedia', 'agoda', 'hotels.com', 'tripadvisor', 'vrbo', 'tablecheck.com'];
+        document.addEventListener('click', function(e){
+          var a = e.target.closest && e.target.closest('a');
+          if (!a) return;
+          var href = a.getAttribute('href') || '';
+          if (bookingPatterns.some(function(p){ return href.indexOf(p) > -1; })) {
+            gtag('event', 'click_outbound_booking', {
+              'destination_url': href,
+              'destination_text': (a.textContent || '').trim().slice(0, 80),
+              'page_language': 'zh'
+            });
+          }
+          if (href.indexOf('tel:') === 0) {
+            gtag('event', 'click_phone', { 'phone': href.replace('tel:', '') });
+          }
+          if (href.indexOf('mailto:') === 0) {
+            gtag('event', 'click_email', { 'email_domain': (href.split('@')[1] || '').replace(/[?#].*/, '') });
+          }
+        });
+        document.addEventListener('submit', function(e){
+          var f = e.target;
+          if (!(f && f.tagName === 'FORM')) return;
+          gtag('event', 'form_submit', { 'form_id': f.id || 'unknown' });
+        });
+      })();
+    });
+    </script>
+    <!-- ===== HM Analytics END ===== -->
+</head>
+<body>
+    <div class="noise-overlay"></div>
+
+    <header class="site-header">
+        <a href="../index.html" class="brand">Scène</a>
+        <nav class="nav-desktop" aria-label="主要導覽">
+            <a href="#concept">概念</a>
+            <a href="#cuisine">料理</a>
+            <a href="#rooms">客房</a>
+            <a href="#news">最新消息</a>
+            <a href="#faq">常見問題</a>
+            <a href="#contact">聯絡我們</a>
+            <a href="#access">交通資訊</a>
+
+            <div class="lang-switch">
+                <a href="../index.html">JP</a>
+                <a href="../en/">EN</a>
+                <a href="../zh/" aria-current="page" class="lang-active">ZH</a>
+            </div>
+        </nav>
+        <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="行動裝置導覽">
+        <a href="#concept" onclick="toggleMenu()">概念</a>
+        <a href="#cuisine" onclick="toggleMenu()">料理</a>
+        <a href="#rooms" onclick="toggleMenu()">客房</a>
+        <a href="#news" onclick="toggleMenu()">最新消息</a>
+        <a href="#faq" onclick="toggleMenu()">常見問題</a>
+        <a href="#contact" onclick="toggleMenu()">聯絡我們</a>
+        <a href="#access" onclick="toggleMenu()">交通資訊</a>
+
+        <div class="mobile-lang-switch">
+            <a href="../index.html">JP</a>
+            <a href="../en/">EN</a>
+            <a href="../zh/" aria-current="page" class="lang-active">ZH</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <div class="hero-bg" style="background-image: url('../assets/images/main.webp'); background-size: cover; background-position: center; width: 100%; height: 100vh;" role="img" aria-label="夜晚，Scène 靜靜矗立於大山森林之中"></div>
+            <div class="hero-light" aria-hidden="true"></div>
+            <div class="hero-light-secondary" aria-hidden="true"></div>
+            <div class="hero-mist" aria-hidden="true"></div>
+
+            <div class="hero-content">
+                <span class="hero-eyebrow">Auberge — Daisen, Tottori</span>
+                <h1 class="hero-main">Scène</h1>
+                <span class="hero-rule" aria-hidden="true"></span>
+                <p class="hero-sub">一個靜謐的夜晚，<br>為料理而準備。</p>
+            </div>
+            <div class="scroll-down" aria-hidden="true">
+                <div class="scroll-line"></div>
+                <span class="scroll-label">SCROLL</span>
+            </div>
+        </div>
+
+        <section id="concept" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">01 / Concept</span>
+                <div class="concept-block">
+                    <div class="concept-text">
+                        <h2 class="heading-lg">一個場景，<br>為靜默與料理而備。</h2>
+                        <p class="text-muted-block">
+                            「Scène」在法語中意指「場景」或「舞台」。<br><br>
+                            當日的天氣、氣溫、空氣中的氣息。<br>
+                            從田野與海洋抵達的食材，每一天都是獨一無二的。<br>
+                            將這一切，化為「盤中的一個場景」。<br><br>
+                            遠離城市的喧囂，在大山山麓，<br>
+                            我們為您準備了一段只需專心面對料理的時光。
+                        </p>
+                        <div class="concept-name-block">
+                            <h3 class="concept-name-title">「Scène」這個名字</h3>
+                            <p class="concept-name-desc">由於每天都從田地現採蔬菜與香草，蔬菜的種類每日不同。海洋的恩惠也隨天候與漁獲狀況而變化。我們提供的套餐，讓您透過每道料理，感受山陰地方不斷流轉的「場景」。</p>
+                        </div>
+                    </div>
+                    <div class="concept-visual">
+                        <div class="concept-caption"><span class="vertical-text">鳥取大山森林中的 Auberge。</span></div>
+                        <img src="../assets/images/concept.webp" class="concept-img" alt="Scène 餐廳內部，大山森林中溫暖的木質裝潢" width="800" height="600" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cuisine" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">02 / Cuisine</span>
+                <h2 class="heading-lg">山陰地方的恩惠，<br>透過法式技藝呈現。</h2>
+                <p class="cuisine-note" style="margin-bottom: 48px;">＊ 圖片中的菜單為示例。料理依當季食材每日更換。</p>
+
+                <div class="cuisine-intro">
+                    <p class="text-muted-block">
+                        山陰的海洋、山巒與鄉村孕育的食材，<br>
+                        以法式技法精心提煉。<br>
+                        主廚親自拜訪在地生產者，<br>
+                        只選用建立在信賴關係之上的食材。
+                    </p>
+                    <p class="text-muted-block" style="margin-top: 16px;">
+                        從 amuse-bouche 到甜點，<br>
+                        每一道料理都呈現這片土地不同的表情。
+                    </p>
+                </div>
+            </div>
+
+            <div class="wrap cuisine-below reveal">
+                <div class="cuisine-gallery">
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-01.webp" alt="穴子 / 香草 / 大山葉 / 芹菜" width="400" height="400" loading="lazy">
+                        <figcaption>穴子 / 香草 / 大山葉 / 芹菜</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-02.webp" alt="竹莢魚 / 魚白 / 紫蘇葉" width="400" height="400" loading="lazy">
+                        <figcaption>竹莢魚 / 魚白 / 紫蘇葉</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-03.webp" alt="庭園蔬菜 / 宍道湖蜆仔 / 木次乳酪" width="400" height="400" loading="lazy">
+                        <figcaption>庭園蔬菜 / 宍道湖蜆仔 / 木次乳酪</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-04.webp" alt="無花果葉奶凍 / 蘭姆酒冰淇淋" width="400" height="400" loading="lazy">
+                        <figcaption>無花果葉奶凍 / 蘭姆酒冰淇淋</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-05.webp" alt="甜蝦 / 半乾番茄 / 坂田芹菜" width="400" height="400" loading="lazy">
+                        <figcaption>甜蝦 / 半乾番茄 / 芹菜</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-06.webp" alt="隱岐島岩牡蠣 / 蘿蔓生菜" width="400" height="400" loading="lazy">
+                        <figcaption>隱岐島岩牡蠣 / 蘿蔓生菜</figcaption>
+                    </figure>
+                </div>
+                <a href="https://www.instagram.com/scene_sanin/" target="_blank" rel="noopener" class="cuisine-ig-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    @scene_sanin
+                </a>
+                <p class="cuisine-note cuisine-note-end">＊ 餐廳僅提供套餐（全餐）。</p>
+            </div>
+
+            <div class="wrap reveal">
+                <div class="chef-block">
+                    <span class="chef-label">— Chef</span>
+                    <h3 class="chef-name">前田 帆貴<span class="chef-name-en">Hotaka Maeda</span></h3>
+                    <p class="chef-bio">出身鳥取縣的主廚。曾任東京餐酒館主廚，後於米其林星級餐廳精進廚藝，深化了對法式技法的掌握與食材哲學。深信自己的廚藝之旅仍在進行中，他以對山陰故鄉食材的真摯態度，持續追求完美的料理。</p>
+                    <p class="chef-quote">「那一天的山陰，盡在一碟之中。」</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="rooms" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">03 / Guest Rooms</span>
+                <div class="concept-block reverse">
+                    <div class="concept-text">
+                        <h2 class="heading-lg">享受留白，<br>靜謐的空間。</h2>
+                        <p class="text-muted-block">
+                            Scène 的客房，是讓您沉浸於餐後餘韻與大山靜謐之中的場所。<br>
+                            我們刻意不設過多裝飾與設施，<br>
+                            而是準備了一扇可將森林美景框入的窗，以及讓您得以深呼吸的留白。<br>
+                            這是一個專為安眠而存在的空間。
+                        </p>
+                        <ul class="amenity-list">
+                            <li>免費 Wi-Fi</li>
+                            <li>淋浴間 / 毛巾 / 吹風機 / 睡衣</li>
+                            <li>＊館內設有私人陶瓷浴缸，可供使用。</li>
+                        </ul>
+                    </div>
+                    <div class="concept-visual">
+                        <div class="concept-caption"><span class="vertical-text">一個專為安眠而存在的空間。</span></div>
+                        <img src="../assets/images/room.webp" class="concept-img" alt="Scène 客房，窗外是大山森林的景致" width="800" height="600" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">04 / News</span>
+                <div id="newsList">
+                    <button type="button" class="list-row"
+                        data-title="員工招募"
+                        data-date="2025.12.21"
+                        data-content="Scène 目前招募工作夥伴。<br><br>【應徵條件】<br>不限年齡與經驗，但需能勝任一般料理工作並提供親切的顧客服務。<br>＊錄用前需進行 3 天（20 小時）的試用期。<br><br>詳細事宜將以電子郵件說明。有興趣者歡迎隨時與我們聯繫。">
+                        <span class="list-date">2025.12.21</span>
+                        <span class="list-title">員工招募</span>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
+
+                    <button type="button" class="list-row"
+                        data-title="官方網站上線"
+                        data-date="2025.12.21"
+                        data-content="Scène 官方網站全面更新。<br>我們將持續完善網站內容，讓您更深入感受 Scène 的世界觀。<br>未來將從大山山麓持續發布當季菜單等最新資訊。">
+                        <span class="list-date">2025.12.21</span>
+                        <span class="list-title">官方網站上線</span>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
+
+                    <button type="button" class="list-row"
+                        data-title="Scène 正式開業"
+                        data-date="2024.10.10"
+                        data-content="Scène 於大山參道正式開業。<br>這是一家設有餐廳與客房的 Auberge，讓您在靜謐的森林中盡情享受餐後的悠閒時光。<br><br>Scène 意指場景、景象或舞台。<br>我們將山陰的過去與未來——這片土地的歷史——化為一個完整的故事，把每位賓客到訪之日的山陰，呈現為盤中的一個場景。<br><br>我們的員工將竭盡所能，讓您感受鳥取與島根豐饒的食材，以及那一刻獨特的感性。<br>期待您的蒞臨。">
+                        <span class="list-date">2024.10.10</span>
+                        <span class="list-title">Scène 正式開業</span>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">05 / FAQ</span>
+                <div class="faq-wrap">
+                    <p class="faq-intro">我們珍視這裡是讓大人靜靜度過時光的場所。</p>
+
+                    <details><summary><span class="faq-q">兒童可以用餐嗎？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">基於法式套餐料理的特性，僅接受9歲以上的賓客。若攜帶較小的孩童同行，請於預訂時事先告知，我們將盡量協助安排。</div></details>
+                    <details><summary><span class="faq-q">餐廳提供什麼樣的料理？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">主廚前田帆貴以山陰的海、山、里為靈感，呈現法式懷石套餐。食材涵蓋隱岐島的岩牡蠣、宍道湖的蜆貝、木次乳業的起司，以及每日早晨現摘的庭院蔬菜與香草。每一道菜都是當天大山風情的一幅畫。</div></details>
+                    <details><summary><span class="faq-q">可以對應食物過敏嗎？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">請於預訂時事先告知過敏原。我們將在可能的範圍內盡力配合，但依過敏種類與程度，有時無法完全對應，敬請見諒。</div></details>
+                    <details><summary><span class="faq-q">取消訂位的規定是什麼？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">取消政策依預訂平台規定執行：晚餐請透過TableCheck預訂，住宿請透過じゃらん或Booking.com。詳細取消條款請於預訂時確認。</div></details>
+                    <details><summary><span class="faq-q">餐廳有停車場嗎？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">建築物前方提供2個免費停車位，採先到先得方式。若停車位已滿，我們將引導您前往鄰近停車場。建議提早抵達，尤其大山參道沿途假日較為熱鬧。</div></details>
+                    <details><summary><span class="faq-q">從米子站或米子鬼太郎機場如何前往？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">從JR米子站搭乘日本交通巴士「大山寺」方向，約50分鐘後於大山寺站下車，步行約5分鐘即可抵達。若自駕，請由米子自動車道「溝口IC」下交流道，行駛約20分鐘即可。詳情請參閱<a href="/zh/guides/access-from-tokyo-osaka.html" style="color:#c8b88a;">交通指南</a>。</div></details>
+                    <details><summary><span class="faq-q">只用晚餐、不住宿可以嗎？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">當然可以。歡迎只預訂晚餐。請透過TableCheck預約。營業時間為週四至週日，18:00至22:00（僅供應晚餐）。</div></details>
+                    <details><summary><span class="faq-q">冬天積雪路滑時，交通狀況如何？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">大山是鳥取縣著名的豪雪地帶，11月至3月間路面可能積雪或結冰。自駕前往請務必安裝雪地胎或備妥雪鏈。巴士雖照常行駛，但可能因天候而延誤，建議預留充裕的交通時間並出發前確認道路狀況。</div></details>
+                    <details><summary><span class="faq-q">周邊有什麼值得一遊的景點？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Scène位於大山參道沿線，大山寺與大神山神社奧宮步行即可抵達，四季自然景色各有魅力。驅車30分鐘內可到達皆生溫泉、境港的水木茂之路（鬼太郎故鄉），以及列入國寶的松江城。詳見<a href="/zh/guides/daisen-area-guide.html" style="color:#c8b88a;">大山周邊觀光指南</a>。</div></details>
+                    <details><summary><span class="faq-q">客房設備有哪些？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">全3間客房均備有Wi-Fi、淋浴間、毛巾、吹風機及睡衣。另設有專屬陶器風呂包場浴室（採時段預約制），讓您在靜謐森林中泡湯放鬆，是晚餐後最完美的收尾。</div></details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">06 / Contact</span>
+                <div class="contact-wrap">
+                    <p class="contact-intro">
+                        訂位以外的諮詢，<br>請使用以下表單。
+                    </p>
+
+                    <form
+                        action="https://docs.google.com/forms/d/e/1FAIpQLScRzg6QJBRIZvw1A0U1DYl0pVPRGr378meTbQjecFFTpLrcfw/formResponse"
+                        method="POST"
+                        target="hidden_iframe"
+                        onsubmit="submitted=true;"
+                    >
+                        <div class="form-group">
+                            <label class="form-label" id="label-type-zh">諮詢類型</label>
+                            <div class="radio-group" role="radiogroup" aria-labelledby="label-type-zh">
+                                <label class="radio-label">
+                                    <input type="radio" name="entry.1160218439" value="お客様からの問い合わせ" required checked>
+                                    一般顧客
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="entry.1160218439" value="メディアからの問い合わせ" required>
+                                    媒體採訪
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="field-name-zh">姓名</label>
+                            <input type="text" id="field-name-zh" name="entry.625061255" class="form-input" required placeholder="王小明" autocomplete="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="field-email-zh">電子郵件地址</label>
+                            <input type="email" id="field-email-zh" name="entry.1292085174" class="form-input" required placeholder="example@email.com" autocomplete="email" spellcheck="false">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="field-message-zh">訊息內容</label>
+                            <textarea id="field-message-zh" name="entry.2097370578" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        <div class="form-submit-wrap">
+                            <button type="submit" class="btn-submit">送出訊息</button>
+                        </div>
+                    </form>
+
+                    <div id="formMessage" role="status" aria-live="polite">
+                        感謝您的諮詢。<br>確認內容後，我們將盡快與您聯繫。<br>
+                        <span class="form-note">＊ 系統已自動寄送確認信至您的信箱。</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {document.querySelector('form').style.display='none'; document.getElementById('formMessage').style.display='block';}"></iframe>
+        <script>var submitted = false;</script>
+
+        <section id="access" class="section-padding">
+            <div class="wrap reveal">
+                <span class="section-num">07 / Access</span>
+
+                <div class="access-layout-grid">
+
+                    <div class="access-info">
+                        <h2 class="access-title">Scène</h2>
+                        <div class="access-details">
+                            <p>〒689-3318 鳥取縣西伯郡大山町大山 115-7</p>
+                            <p class="access-direction">【自駕】<br>從米子道路溝口 IC 約 20 分鐘</p>
+                            <p class="access-direction">【停車場】<br>建築物前方有 2 個停車位（先到先得，免費）<br>停滿時，請向工作人員詢問附近免費停車場。</p>
+                            <p class="access-direction">【大眾運輸】<br>從 JR 米子站搭乘巴士約 50 分鐘<br>「大山寺」站下車後步行約 5 分鐘</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/nVwHqy7FLRFMXQKW9" target="_blank" rel="noopener" class="btn-outline-subtle">在 Google Maps 中開啟</a>
+                    </div>
+
+                    <div class="access-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.543026338573!2d133.5350!3d35.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3556885366453959%3A0xc6657c66705600c0!2z44CSNjg5LTMzMTgg6bOl5Y-W55yM6KW_5L-v6YKh5aSn5bGx55S65aSn5bGx!5e0!3m2!1sja!2sjp!4v1703162700000!5m2!1sja!2sjp"
+                            width="100%"
+                            height="100%"
+                            style="border:0; width:100%; height:100%;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Scène 位置 - 鳥取大山">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <div>
+                <span class="footer-brand">Scène</span>
+                <p class="footer-tagline">大山森林中以料理為核心的 Auberge。</p>
+            </div>
+            <nav class="footer-nav" aria-label="頁尾導覽">
+                <a href="#concept">概念</a>
+                <a href="#cuisine">料理</a>
+                <a href="#rooms">客房</a>
+                <a href="#faq">常見問題</a>
+                <a href="#contact">聯絡我們</a>
+            </nav>
+            <div class="footer-copy">© Scène</div>
+        </div>
+    </footer>
+
+    <div class="cta-fixed-wrap">
+        <a href="https://www.tablecheck.com/ja/scene-sanin" target="_blank" class="cta-fixed cta-dining" rel="noopener" aria-label="預訂晚餐 - TableCheck">
+            <span class="cta-main">預訂晚餐</span>
+            <span class="cta-sub">TableCheck</span>
+        </a>
+        <a href="https://www.booking.com/hotel/jp/scene-da-shan-ting.ja.html" target="_blank" class="cta-fixed cta-stay" rel="noopener" aria-label="查詢空房 - Booking.com">
+            <span class="cta-main">查詢空房</span>
+            <span class="cta-sub">預訂住宿</span>
+        </a>
+    </div>
+
+    <div class="modal-overlay" id="newsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="關閉">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Scène</title>
+  <meta name="description" content="Privacy policy for Scène (scene-daisen.com), a French auberge in Daisen, Tottori. Covers Google Analytics 4 usage, cookie handling, and inquiry data.">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="canonical" href="https://scene-daisen.com/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://scene-daisen.com/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://scene-daisen.com/en/privacy.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/images/favicon.png">
+  <style>
+    .legal-page { padding: 140px 0 120px; }
+    .legal-wrap { max-width: 760px; margin: 0 auto; padding: 0 48px; position: relative; }
+    .legal-eyebrow {
+      font-family: var(--font-display); font-size: 11px;
+      letter-spacing: 0.5em; text-transform: uppercase;
+      color: var(--accent-warm); font-style: italic;
+      display: block; margin-bottom: 28px;
+    }
+    .legal-title {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 64px);
+      letter-spacing: 0.04em; font-weight: 400;
+      line-height: 1.1; margin: 0 0 24px;
+      color: var(--text-main);
+    }
+    .legal-meta {
+      font-family: var(--font-display); font-style: italic;
+      font-size: 13px; letter-spacing: 0.18em;
+      color: var(--text-muted); margin: 0 0 80px;
+    }
+    .legal-lead {
+      font-family: var(--font-serif); font-size: 16px;
+      color: var(--text-soft); line-height: 2.1;
+      letter-spacing: 0.06em;
+      margin-bottom: 80px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .legal-lead::after {
+      content: ''; position: absolute; bottom: -1px; left: 0;
+      width: 48px; height: 1px; background: var(--accent-warm);
+    }
+    .legal-section { margin-bottom: 72px; position: relative; }
+    .legal-num {
+      font-family: var(--font-display); font-style: italic;
+      font-size: 12px; letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: inline-flex; align-items: center; gap: 18px;
+      margin-bottom: 24px;
+    }
+    .legal-num::before {
+      content: ''; display: inline-block;
+      width: 40px; height: 1px; background: currentColor; opacity: 0.5;
+    }
+    .legal-h2 {
+      font-family: var(--font-serif);
+      font-size: 20px; font-weight: 500;
+      letter-spacing: 0.06em;
+      line-height: 1.6;
+      margin: 0 0 24px;
+      color: var(--text-main);
+    }
+    .legal-section p, .legal-section li {
+      font-size: 14px; color: var(--text-soft);
+      line-height: 2.1; letter-spacing: 0.04em;
+    }
+    .legal-section ul { list-style: none; padding: 0; margin: 16px 0; }
+    .legal-section ul li { padding-left: 22px; position: relative; margin-bottom: 10px; }
+    .legal-section ul li::before {
+      content: ''; position: absolute; left: 0; top: 16px;
+      width: 10px; height: 1px; background: var(--accent-warm);
+    }
+    .legal-section a {
+      color: var(--accent-warm);
+      border-bottom: 1px solid rgba(216,201,163,0.4);
+      padding-bottom: 1px;
+      transition: border-color 0.4s var(--ease-soft);
+    }
+    .legal-section a:hover { border-color: var(--accent-warm); opacity: 1; }
+    .legal-footer {
+      margin-top: 96px; padding-top: 56px;
+      border-top: 1px solid var(--border);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 32px;
+    }
+    .legal-back {
+      display: inline-flex; align-items: center; gap: 14px;
+      font-family: var(--font-display);
+      font-size: 12px; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--text-main);
+      transition: color 0.4s var(--ease-soft), letter-spacing 0.4s var(--ease-soft);
+    }
+    .legal-back::before { content: '←'; font-style: italic; transition: transform 0.4s var(--ease-soft); }
+    .legal-back:hover { color: var(--accent-warm); letter-spacing: 0.4em; opacity: 1; }
+    .legal-back:hover::before { transform: translateX(-6px); }
+    .legal-lang {
+      display: flex; gap: 18px;
+      font-family: var(--font-display); font-size: 12px;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .legal-lang a { transition: color 0.4s var(--ease-soft); }
+    .legal-lang a:hover { color: var(--accent-warm); opacity: 1; }
+    .legal-lang .active { color: var(--text-main); cursor: default; }
+    .vertical-mark {
+      position: absolute; top: 200px; left: -64px;
+      writing-mode: vertical-rl; text-orientation: mixed;
+      font-family: var(--font-serif);
+      font-size: 11px; letter-spacing: 0.4em;
+      color: var(--text-muted); opacity: 0.5;
+    }
+    @media (max-width: 900px) {
+      .vertical-mark { display: none; }
+      .legal-wrap { padding: 0 24px; }
+      .legal-page { padding: 100px 0 80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="/index.en.html" class="brand">Scène</a>
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="/index.en.html#concept">Concept</a>
+      <a href="/index.en.html#cuisine">Cuisine</a>
+      <a href="/index.en.html#rooms">Rooms</a>
+      <a href="/index.en.html#access">Access</a>
+      <div class="lang-switch">
+        <a href="/privacy.html">JP</a>
+        <a href="/en/privacy.html" aria-current="page" class="lang-active">EN</a>
+        <a href="/zh/privacy.html">ZH</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="legal-page">
+    <div class="legal-wrap">
+      <span class="vertical-mark" aria-hidden="true">Scène — Daisen, Tottori</span>
+
+      <span class="legal-eyebrow">— Privacy Policy</span>
+      <h1 class="legal-title">Privacy Policy</h1>
+      <p class="legal-meta">Last updated · 2026.05.09</p>
+
+      <p class="legal-lead">
+        Scène (hereafter "the restaurant"), operated by NPO Yui (NPO法人 結), establishes the following privacy policy regarding the handling of personal information on its official website scene-daisen.com (hereafter "this site").
+      </p>
+
+      <section class="legal-section">
+        <span class="legal-num">01 / Information</span>
+        <h2 class="legal-h2">Information collected</h2>
+        <p>This site may collect the following information:</p>
+        <ul>
+          <li>Page views, referrer, device information, time on site, and similar data collected via cookies and similar technologies</li>
+          <li>Name, email address, and inquiry content provided through the contact form</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">02 / Analytics</span>
+        <h2 class="legal-h2">Use of analytics tools</h2>
+        <p>This site uses Google Analytics 4 provided by Google LLC for site improvement purposes. Google Analytics uses cookies to collect traffic data; IP addresses are anonymized (anonymize_ip) and Google Signals is disabled.</p>
+        <p>Collected data is used solely to analyze site usage and is not used to identify individuals. To opt out of Google's data collection, install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">03 / Cookies</span>
+        <h2 class="legal-h2">Cookies and consent</h2>
+        <p>This site displays a banner requesting consent to cookie use on the first visit. If you choose "Decline", Google Analytics will not track your activity. Consent status is saved in your browser's local storage and can be cleared anytime via browser settings.</p>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">04 / Purpose</span>
+        <h2 class="legal-h2">Purpose of use</h2>
+        <p>Information collected is used for the following purposes:</p>
+        <ul>
+          <li>Understanding site usage and improving services</li>
+          <li>Responding to inquiries and reservation-related communication</li>
+          <li>Compliance with applicable laws</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">05 / Disclosure</span>
+        <h2 class="legal-h2">Third-party disclosure</h2>
+        <p>NPO Yui will not provide collected personal information to third parties except with the consent of the individual or as required by law. Reservation-related information may be shared with reservation platform operators (Jalan, Booking.com, TableCheck, etc.).</p>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">06 / Rights</span>
+        <h2 class="legal-h2">Disclosure, correction, and deletion requests</h2>
+        <p>Upon request from the individual concerned for disclosure, correction, suspension of use, or deletion of held personal data, we will respond promptly within reasonable scope after verifying identity. Please contact us via the contact form on this site.</p>
+      </section>
+
+      <section class="legal-section">
+        <span class="legal-num">07 / Revisions</span>
+        <h2 class="legal-h2">Revisions</h2>
+        <p>This policy may be revised in response to changes in laws and regulations. Revised policies take effect from the time they are posted on this page.</p>
+      </section>
+
+      <div class="legal-footer">
+        <a class="legal-back" href="/index.en.html">Return to Top</a>
+        <div class="legal-lang">
+          <a href="/privacy.html">JP</a>
+          <a class="active" href="/en/privacy.html">EN</a>
+          <a href="/zh/privacy.html">ZH</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
