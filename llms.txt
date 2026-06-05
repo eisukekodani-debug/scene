@@ -49,6 +49,21 @@
 - [Home (zh-Hant)](https://scene-daisen.com/zh/)
 - [Privacy Policy](https://scene-daisen.com/privacy.html)
 
+## Guides (long-form articles, JP / EN / zh-Hant)
+
+- **Daisen area sightseeing guide** — Daisenji Temple, the sacred mountain, and what to see around Scène
+  - JP: https://scene-daisen.com/guides/daisen-area-guide.html
+  - EN: https://scene-daisen.com/en/guides/daisen-area-guide.html
+  - zh-Hant: https://scene-daisen.com/zh/guides/daisen-area-guide.html
+- **San'in ingredients story** — the producers and regional ingredients behind the cuisine
+  - JP: https://scene-daisen.com/guides/sanin-ingredients-story.html
+  - EN: https://scene-daisen.com/en/guides/sanin-ingredients-story.html
+  - zh-Hant: https://scene-daisen.com/zh/guides/sanin-ingredients-story.html
+- **Access from Tokyo & Osaka** — how to reach Mt. Daisen / Scène from major cities
+  - JP: https://scene-daisen.com/guides/access-from-tokyo-osaka.html
+  - EN: https://scene-daisen.com/en/guides/access-from-tokyo-osaka.html
+  - zh-Hant: https://scene-daisen.com/zh/guides/access-from-tokyo-osaka.html
+
 ## External listings
 
 - Dinner reservation: https://www.tablecheck.com/ja/scene-sanin

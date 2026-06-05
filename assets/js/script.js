@@ -3,7 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     setupModal();
     setupNewsButtons();
+    setupFormLang();
 });
+
+/* ページ言語の判定（ja / en / zh） */
+function pageLang() {
+    return (document.documentElement.lang || 'ja').toLowerCase().slice(0, 2);
+}
 
 /* 1. スクロールアニメーション & ヘッダー制御 */
 function setupScroll() {
@@ -58,7 +64,13 @@ function setupMobileMenu() {
             const isActive = mobileMenu.classList.toggle('active');
             toggle.classList.toggle('active');
             toggle.setAttribute('aria-expanded', isActive);
-            toggle.setAttribute('aria-label', isActive ? 'メニューを閉じる' : 'メニューを開く');
+            const menuLabels = {
+                ja: ['メニューを開く', 'メニューを閉じる'],
+                en: ['Open menu', 'Close menu'],
+                zh: ['開啟選單', '關閉選單']
+            };
+            const L = menuLabels[pageLang()] || menuLabels.ja;
+            toggle.setAttribute('aria-label', isActive ? L[1] : L[0]);
         }
     };
 
@@ -163,7 +175,23 @@ function setupModal() {
     }
 }
 
-/* 4. ニュースボタンのイベント設定（data属性ベース） */
+/* 4b. 多言語フォーム: 送信時にメッセージ先頭へ言語タグを付与
+   （Google Form側の項目追加不要。EN/ZHからの問い合わせを回答一覧で識別できる） */
+function setupFormLang() {
+    const lang = pageLang();
+    if (lang === 'ja') return;
+    const form = document.querySelector('form[target="hidden_iframe"]');
+    if (!form) return;
+    form.addEventListener('submit', () => {
+        // IDは言語別(field-message / -en / -zh)なので name で拾う
+        const msg = form.querySelector('textarea[name="entry.2097370578"]');
+        if (msg && msg.value.indexOf('[lang:') !== 0) {
+            msg.value = '[lang:' + lang + '] ' + msg.value;
+        }
+    });
+}
+
+/* 5. ニュースボタンのイベント設定（data属性ベース） */
 function setupNewsButtons() {
     document.querySelectorAll('.list-row[data-title]').forEach(btn => {
         btn.addEventListener('click', () => {

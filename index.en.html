@@ -11,6 +11,7 @@
     <link rel="canonical" href="https://scene-daisen.com/index.en.html">
     <link rel="alternate" hreflang="ja" href="https://scene-daisen.com/">
     <link rel="alternate" hreflang="en" href="https://scene-daisen.com/index.en.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://scene-daisen.com/zh/">
     <link rel="alternate" hreflang="x-default" href="https://scene-daisen.com/">
 
     <meta name="google-site-verification" content="krqxI5Z12SwAkh32O1LW0gjpWUuoNK4HvNqL0GFwKU8" />
@@ -34,10 +35,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
+    <link rel="preload" as="image" href="./assets/images/main.webp" fetchpriority="high">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <link rel="icon" href="./assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
 
     <style>
         img { max-width: 100%; height: auto; }
@@ -68,7 +70,7 @@
         #formMessage { display: none; margin-top: 20px; color: #fff; font-size: 14px; text-align: center; line-height: 1.8; }
 
         /* English Specific Adjustments */
-        body { font-family: 'Cormorant Garamond', 'Noto Sans JP', serif; }
+        body { font-family: 'Noto Sans JP', sans-serif; }
         p { line-height: 1.8; letter-spacing: 0.05em; }
     </style>
 
@@ -256,6 +258,7 @@
             <div class="lang-switch">
                 <a href="./index.html">JP</a>
                 <a href="./index.en.html" aria-current="page" class="lang-active">EN</a>
+                <a href="./zh/">中文</a>
             </div>
         </nav>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -274,6 +277,7 @@
         <div class="mobile-lang-switch">
             <a href="./index.html">JP</a>
             <a href="./index.en.html" aria-current="page" class="lang-active">EN</a>
+                <a href="./zh/">中文</a>
         </div>
     </nav>
 
@@ -516,7 +520,7 @@
 
                     <div id="formMessage" role="status" aria-live="polite">
                         Thank you for your inquiry.<br>We will contact you after confirming the content.<br>
-                        <span class="form-note">*An automatic reply email has been sent for confirmation.</span>
+                        <span class="form-note">*We usually reply within 2-3 days.</span>
                     </div>
                 </div>
             </div>
