@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-    <link rel="preload" as="image" href="./assets/images/main.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./assets/images/hero-poster.webp" fetchpriority="high">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <link rel="icon" href="./assets/images/favicon.png">
@@ -255,21 +255,29 @@
     </nav>
 
     <main>
-        <div class="hero">
-            <div class="hero-bg" style="background-image: url('./assets/images/main.webp'); background-size: cover; background-position: center; width: 100%; height: 100vh;" role="img" aria-label="Exterior of Scène nestled in the forest of Mt. Daisen at night"></div>
-            <div class="hero-light" aria-hidden="true"></div>
-            <div class="hero-light-secondary" aria-hidden="true"></div>
-            <div class="hero-mist" aria-hidden="true"></div>
-
-            <div class="hero-content">
-                <span class="hero-eyebrow">Auberge — Daisen, Tottori</span>
-                <h1 class="hero-main">Scène</h1>
-                <span class="hero-rule" aria-hidden="true"></span>
-                <p class="hero-sub">A quiet night,<br>prepared for cuisine.</p>
+        <div class="hero hero-split">
+            <div class="hero-text">
+                <div class="hero-content">
+                    <span class="hero-eyebrow">Auberge — Daisen, Tottori</span>
+                    <h1 class="hero-main">Scène</h1>
+                    <span class="hero-rule" aria-hidden="true"></span>
+                    <p class="hero-sub">A quiet night for cuisine</p>
+                </div>
+                <div class="scroll-down" aria-hidden="true">
+                    <div class="scroll-line"></div>
+                    <span class="scroll-label">SCROLL</span>
+                </div>
             </div>
-            <div class="scroll-down" aria-hidden="true">
-                <div class="scroll-line"></div>
-                <span class="scroll-label">SCROLL</span>
+            <div class="hero-media">
+                <video class="hero-video-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                    <source src="./assets/video/hero-cuisine-course.mp4" type="video/mp4">
+                </video>
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+                       poster="./assets/images/hero-poster.webp"
+                       aria-label="Scène's course cuisine, from amuse-bouche to dessert">
+                    <source src="./assets/video/hero-cuisine-course.mp4" type="video/mp4">
+                </video>
+                <div class="hero-media-scrim" aria-hidden="true"></div>
             </div>
         </div>
 
@@ -278,14 +286,12 @@
                 <span class="section-num">01 / Concept</span>
                 <div class="concept-block">
                     <div class="concept-text">
-                        <h2 class="heading-lg">A single scene,<br>prepared for silence and cuisine.</h2>
+                        <h2 class="heading-lg">Far from the city's noise —<br>time to simply face the cuisine</h2>
                         <p class="text-muted-block">
                             "Scène" means "scene" or "setting" in French.<br><br>
                             The weather of the day, the temperature, the scent of the air.<br>
                             Ingredients that arrive from the fields and the sea, unique to that day.<br>
-                            To express all of these as a "scene on a plate".<br><br>
-                            At the foot of Mt. Daisen, far from the hustle and bustle of the city,<br>
-                            we have prepared a time for you to simply face the cuisine.
+                            To express all of these as a "scene on a plate".
                         </p>
                         <div class="concept-name-block">
                             <h3 class="concept-name-title">The Name "Scène"</h3>
@@ -294,7 +300,7 @@
                     </div>
                     <div class="concept-visual">
                         <div class="concept-caption"><span class="vertical-text">Auberge in the forest of Daisen, Tottori.</span></div>
-                        <img src="./assets/images/concept.webp" class="concept-img" alt="Interior of Scène dining room with warm wooden furnishings in the Daisen forest" width="800" height="600" loading="lazy">
+                        <img src="./assets/images/concept-dining.webp" class="concept-img" alt="Interior of Scène's dining room — greenery through the window and warm pendant light" width="1050" height="1400" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -303,7 +309,7 @@
         <section id="cuisine" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">02 / Cuisine</span>
-                <h2 class="heading-lg">The blessings of San'in,<br>through French techniques.</h2>
+                <h2 class="heading-lg">The blessings of San'in,<br>through French techniques</h2>
                 <p class="cuisine-note" style="margin-bottom: 48px;">* The menu shown is an example. Dishes change daily based on seasonal availability.</p>
 
                 <div class="cuisine-intro">
@@ -323,28 +329,27 @@
             <div class="wrap cuisine-below reveal">
                 <div class="cuisine-gallery">
                     <figure class="gallery-item">
-                        <img src="./assets/images/dish-01.webp" alt="Conger eel / Herbs / Daisen Leaf / Celery" width="400" height="400" loading="lazy">
-                        <figcaption>Conger Eel / Herbs / Daisen Leaf / Celery</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="./assets/images/dish-02.webp" alt="Horse Mackerel / Milt / Perilla Leaf" width="400" height="400" loading="lazy">
-                        <figcaption>Horse Mackerel / Milt / Perilla Leaf</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="./assets/images/dish-03.webp" alt="Garden Vegetables / Lake Shinji Clams / Kisuki Dairy Cheese" width="400" height="400" loading="lazy">
-                        <figcaption>Garden Vegetables / Shinji Clams / Kisuki Cheese</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="./assets/images/dish-04.webp" alt="Fig Leaf Blancmange / Rum Ice Cream" width="400" height="400" loading="lazy">
-                        <figcaption>Fig Leaf Blancmange / Rum Ice Cream</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="./assets/images/dish-05.webp" alt="Sweet Shrimp / Semi-dried Tomato / Sakata's Celery" width="400" height="400" loading="lazy">
-                        <figcaption>Sweet Shrimp / Semi-dried Tomato / Celery</figcaption>
+                        <img src="./assets/images/dish-amuse-flower.webp" alt="Amuse-bouche garnished with edible flowers" width="750" height="1000" loading="lazy">
+                        <figcaption>Amuse-bouche with Edible Flowers</figcaption>
                     </figure>
                     <figure class="gallery-item">
                         <img src="./assets/images/dish-06.webp" alt="Oki Island Rock Oysters / Romaine Lettuce" width="400" height="400" loading="lazy">
                         <figcaption>Oki Island Rock Oysters / Romaine</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./assets/images/dish-01.webp" alt="Conger eel / Herbs / Daisen Leaf / Celery" width="400" height="400" loading="lazy">
+                        <figcaption>Conger Eel / Herbs / Daisen Leaf / Celery</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./assets/images/dish-pasta.webp" alt="Pasta" width="750" height="1000" loading="lazy">
+                        <figcaption>Pasta</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./assets/images/dish-beef.webp" alt="Beef fillet with beetroot" width="750" height="1000" loading="lazy">
+                        <figcaption>Beef Fillet / Beetroot</figcaption>
+                    </figure>                    <figure class="gallery-item">
+                        <img src="./assets/images/dish-04.webp" alt="Fig Leaf Blancmange / Rum Ice Cream" width="400" height="400" loading="lazy">
+                        <figcaption>Fig Leaf Blancmange / Rum Ice Cream</figcaption>
                     </figure>
                 </div>
                 <a href="https://www.instagram.com/scene_sanin/" target="_blank" rel="noopener" class="cuisine-ig-link">
@@ -359,7 +364,7 @@
                     <span class="chef-label">— Chef</span>
                     <h3 class="chef-name">Hotaka Maeda<span class="chef-name-en">前田 帆貴</span></h3>
                     <p class="chef-bio">A chef from Tottori Prefecture. After serving as head chef at a Tokyo bistro, he further honed his skills at a Michelin-starred restaurant, deepening his mastery of French technique and his philosophy toward ingredients. Believing his culinary journey is still unfolding, he continues to pursue the perfect dish through a sincere commitment to the ingredients of his homeland, San'in.</p>
-                    <p class="chef-quote">"The San'in of that day, on a single plate."</p>
+                    <p class="chef-quote">"The San'in of that day, on a single plate"</p>
                 </div>
             </div>
         </section>
@@ -367,25 +372,80 @@
         <section id="rooms" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">03 / Guest Rooms</span>
-                <div class="concept-block reverse">
-                    <div class="concept-text">
-                        <h2 class="heading-lg">Enjoying the margins,<br>a space of silence.</h2>
-                        <p class="text-muted-block">
-                            The guest rooms at Scène are places to immerse yourself in the afterglow of the meal and the silence of Daisen.<br>
-                            We have not provided excessive decorations or facilities,<br>
-                            but rather prepared a view of the forest framed by the window and a margin where you can take a deep breath.<br>
-                            It is a space solely for sleeping peacefully.
-                        </p>
-                        <ul class="amenity-list">
-                            <li>Free Wi-Fi</li>
-                            <li>Shower booth / Towels / Hairdryer / Pajamas</li>
-                            <li>*You can also use the private ceramic bath within the facility.</li>
-                        </ul>
-                    </div>
-                    <div class="concept-visual">
-                        <div class="concept-caption"><span class="vertical-text">A place just for sleeping.</span></div>
-                        <img src="./assets/images/room.webp" class="concept-img" alt="Scène guest room with forest view through the window" width="800" height="600" loading="lazy">
-                    </div>
+                <h2 class="heading-lg">Three rooms,<br>steeped in silence</h2>
+                <p class="text-muted-block" style="max-width: 640px;">
+                    Three guest rooms for savoring the afterglow of dinner and the stillness of Daisen.
+                    Free of excess decoration — a view of the forest framed by the window, and room to breathe.
+                </p>
+            </div>
+
+            <div class="wrap reveal">
+                <div class="rooms-list">
+
+                    <article class="room-card">
+                        <div class="room-card-media duo">
+                            <figure class="room-photo">
+                                <img src="./assets/images/room-010.webp" alt="Room 010, twin beds" width="1400" height="1051" loading="lazy">
+                                <figcaption>Guest room (twin)</figcaption>
+                            </figure>
+                            <figure class="room-photo">
+                                <img src="./assets/images/room-010-bath.webp" alt="Room 010, private ceramic bath" width="1400" height="1051" loading="lazy">
+                                <figcaption>Private ceramic bath</figcaption>
+                            </figure>
+                        </div>
+                        <div class="room-card-body">
+                            <span class="room-eyebrow">Room 010</span>
+                            <h3 class="room-name">A private bathroom<br>with a ceramic bath</h3>
+                            <p class="text-muted-block">Just outside the room, a private bathroom with a ceramic soaking tub. Soak in the bath and unwind slowly in the stillness of the forest.</p>
+                            <ul class="room-spec">
+                                <li><span class="spec-label">Beds</span><span>Twin + extra bed (up to 3 guests)</span></li>
+                                <li><span class="spec-label">Bath</span><span>Private bathroom · ceramic soaking tub (outdoor)</span></li>
+                                <li><span class="spec-label">Facilities</span><span>Shower · toilet</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="room-card reverse">
+                        <div class="room-card-media">
+                            <figure class="room-photo">
+                                <img src="./assets/images/room-020.webp" alt="Room 020, double bed" width="901" height="1200" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="room-card-body">
+                            <span class="room-eyebrow">Room 020</span>
+                            <h3 class="room-name">A quiet room<br>for two</h3>
+                            <p class="text-muted-block">A simple room with a single double bed. Pared back to the essentials — a space simply for resting well.</p>
+                            <ul class="room-spec">
+                                <li><span class="spec-label">Bed</span><span>Double bed × 1 (1–2 guests)</span></li>
+                                <li><span class="spec-label">Facilities</span><span>Shower · toilet (in-room)</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="room-card">
+                        <div class="room-card-media">
+                            <figure class="room-photo">
+                                <img src="./assets/images/room-030.webp" alt="Room 030, twin beds" width="1400" height="1051" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="room-card-body">
+                            <span class="room-eyebrow">Room 030</span>
+                            <h3 class="room-name">A twin room<br>with room to breathe</h3>
+                            <p class="text-muted-block">A twin room with an extra bed, accommodating up to three guests. Rest gently while sensing the forest beyond the window.</p>
+                            <ul class="room-spec">
+                                <li><span class="spec-label">Beds</span><span>Twin + extra bed (up to 3 guests)</span></li>
+                                <li><span class="spec-label">Facilities</span><span>Shower · toilet (no bathtub)</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="rooms-common">
+                    <figure class="room-photo room-photo--shower">
+                        <img src="./assets/images/room-shower.webp" alt="Shower and toilet, common to all rooms" width="825" height="1100" loading="lazy">
+                    </figure>
+                    <p class="text-muted-block">All rooms include a shower and toilet, Wi-Fi, towels, a hair dryer, and pajamas. The ceramic soaking tub is available only in Room 010's private bathroom.</p>
                 </div>
             </div>
         </section>
@@ -506,6 +566,12 @@
             <div class="wrap reveal">
                 <span class="section-num">07 / Access</span>
 
+                <div class="access-gallery">
+                    <figure class="access-photo">
+                        <img src="./assets/images/main.webp" alt="Scène exterior at night, windows glowing under a starry sky" width="2400" height="1792" loading="lazy">
+                    </figure>
+                </div>
+
                 <div class="access-layout-grid">
 
                     <div class="access-info">
@@ -540,7 +606,7 @@
         <div class="wrap footer-inner">
             <div>
                 <span class="footer-brand">Scène</span>
-                <p class="footer-tagline">Cuisine-first auberge in the forest of Daisen.</p>
+                <p class="footer-tagline">Cuisine-first auberge in the forest of Daisen</p>
             </div>
             <nav class="footer-nav" aria-label="Footer navigation">
                 <a href="#concept">Concept</a>

@@ -30,7 +30,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 
 img { max-width: 100%; height: auto; }
 
@@ -253,7 +253,7 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 20px); }
     position: absolute;
     inset: 0;
     top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1;
+    z-index: 0; /* 負値を避け、他ページ流用時もページ全体の裏側へ潜らないようにする(他のheroレイヤーは1以上) */
     background-size: cover; background-position: center;
     opacity: 0.55;
     transform: scale(1.08);
@@ -394,6 +394,80 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 20px); }
     .scroll-down { opacity: 1; }
     .hero-bg { animation: none; transform: scale(1.1); }
     .hero-light, .hero-light-secondary, .hero-mist { display: none; }
+    /* 動きに敏感なユーザーには動画を止め、ポスター静止画を表示（WCAG配慮） */
+    .hero-video { display: none; }
+    .hero-media {
+        background-image: url('../images/hero-poster.webp');
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* =========================================
+   Hero — 全画面の料理動画 ＋ 文字オーバーレイ（PC・スマホ共通）
+   ========================================= */
+.hero.hero-split {
+    position: relative;
+    height: 100vh;
+    height: 100dvh; /* iOS Safari等のアドレスバー対策 */
+    overflow: hidden;
+    display: block;
+}
+.hero.hero-split::after { display: none; }
+
+.hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+.hero-video, .hero-video-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.hero-video { object-fit: cover; z-index: 1; filter: saturate(1.08); }
+.hero-video-bg { display: none; z-index: 0; } /* PC幅でのみ背景フィルとして表示 */
+.hero-media-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    /* 上下を締めつつ中央もうっすら落として白文字の可読性を確保 */
+    background:
+        linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.16) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.58) 100%),
+        radial-gradient(ellipse 78% 68% at 50% 48%, rgba(0,0,0,0.3), transparent 80%);
+}
+.hero-text {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 0 24px;
+    text-align: center;
+}
+/* PC: 縦動画を横長の全画面に出すとき、料理全体が見えるよう中央は contain で
+   ほぼ等倍（自然）に表示し、左右の余白は同じ映像をぼかし拡大したもので埋める。
+   黒帯を出さず奥行きのある背景に見せつつ、料理本体はぼかさず自然に見せる。
+   （モバイルは画面が縦長で cover でもほぼ全体が見えるため従来どおり） */
+@media (min-width: 901px) {
+    .hero-video-bg {
+        display: block;
+        object-fit: cover;
+        transform: scale(1.15);
+        filter: blur(36px) brightness(0.55) saturate(1.1); /* 左右は強くぼかし暗くして後退させる */
+    }
+    .hero-video {
+        object-fit: contain;
+        filter: saturate(1.22) contrast(1.06); /* 中央の料理は色を鮮やかに */
+    }
 }
 
 /* =========================================
@@ -488,7 +562,7 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 20px); }
     .concept-visual { order: 2 !important; }
     .concept-visual {
         height: 350px;
-        width: 100vw;
+        width: calc(100% + 40px); /* 100vwだとスクロールバー幅ぶん横にはみ出すため、余白(20px×2)を足して全幅にする */
         margin-left: -20px;
         margin-right: -20px;
         max-width: none;
@@ -835,8 +909,99 @@ details[open] .faq-toggle { transform: rotate(45deg); }
 }
 
 /* =========================================
+   Guest Rooms — 3部屋
+   ========================================= */
+.rooms-list { display: flex; flex-direction: column; gap: 80px; margin-top: 56px; }
+.room-card { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.room-card.reverse .room-card-media { order: 2; }
+.room-card-media { display: grid; gap: 12px; }
+.room-card-media.duo { grid-template-columns: 1fr 1fr; }
+.room-photo { margin: 0; position: relative; overflow: hidden; }
+.room-photo img {
+    width: 100%; height: 400px; object-fit: cover; display: block;
+    filter: grayscale(10%) contrast(102%) brightness(0.96);
+    transition: filter 1.2s var(--ease-soft), transform 1.4s var(--ease-soft);
+    transform: scale(1.01);
+}
+.room-card-media.duo .room-photo img { height: 300px; }
+.room-card:hover .room-photo img { filter: grayscale(0%) contrast(104%) brightness(1); transform: scale(1.04); }
+.room-photo figcaption {
+    position: absolute; left: 0; bottom: 0; padding: 6px 13px;
+    background: rgba(15, 15, 15, 0.86); color: #f5f3ee;
+    font-size: 11px; letter-spacing: 0.12em;
+}
+.room-eyebrow {
+    font-family: var(--font-display); font-style: italic;
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--accent-warm);
+}
+.room-name {
+    font-family: var(--font-serif); font-weight: 500;
+    font-size: clamp(21px, 2.6vw, 28px); line-height: 1.5;
+    margin: 14px 0 18px;
+}
+.room-spec { list-style: none; padding: 0; margin: 24px 0 0; }
+.room-spec li {
+    display: flex; gap: 18px; align-items: baseline;
+    padding: 12px 0; border-top: 1px solid rgba(245, 243, 238, 0.1);
+    font-size: 14px; line-height: 1.7;
+}
+.room-spec li:last-child { border-bottom: 1px solid rgba(245, 243, 238, 0.1); }
+.room-spec .spec-label {
+    flex: 0 0 76px; color: var(--accent-warm);
+    font-size: 12px; letter-spacing: 0.14em;
+}
+.rooms-common {
+    display: grid; grid-template-columns: 0.5fr 1fr; gap: 40px;
+    align-items: center; margin-top: 72px;
+    padding-top: 48px; border-top: 1px solid rgba(245, 243, 238, 0.1);
+}
+.room-photo--shower img { height: 320px; }
+@media (max-width: 900px) {
+    .room-card, .room-card.reverse .room-card-media { grid-template-columns: 1fr; }
+    .room-card.reverse .room-card-media { order: 0; }
+    .room-card-media.duo { grid-template-columns: 1fr 1fr; }
+    .room-photo img { height: 280px; }
+    .room-card-media.duo .room-photo img { height: 190px; }
+    .rooms-common { grid-template-columns: 1fr; gap: 24px; }
+    .room-photo--shower img { height: 340px; }
+}
+/* スマホでは010の2枚並びを縦積みに（横幅が細くなりすぎないように） */
+@media (max-width: 560px) {
+    .room-card-media.duo { grid-template-columns: 1fr; }
+    .room-card-media.duo .room-photo img { height: 240px; }
+}
+
+/* =========================================
    Access
    ========================================= */
+.access-gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 夜の外観1枚を全幅で表示 */
+    gap: 16px;
+    margin: 40px 0 0;
+}
+.access-photo {
+    margin: 0;
+    overflow: hidden;
+}
+.access-photo img {
+    width: 100%;
+    height: clamp(240px, 38vh, 420px);
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: grayscale(8%) contrast(102%) brightness(0.97);
+    transition: filter 1.2s var(--ease-soft), transform 1.4s var(--ease-soft);
+    transform: scale(1.01);
+}
+.access-photo:hover img {
+    filter: grayscale(0%) contrast(104%) brightness(1);
+    transform: scale(1.04);
+}
+@media (max-width: 900px) {
+    .access-gallery { grid-template-columns: 1fr; }
+}
 .access-layout-grid {
     display: grid;
     grid-template-columns: 0.85fr 1fr;

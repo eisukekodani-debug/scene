@@ -37,7 +37,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-    <link rel="preload" as="image" href="../assets/images/main.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="../assets/images/hero-poster.webp" fetchpriority="high">
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <link rel="icon" href="../assets/images/favicon.png">
@@ -256,21 +256,29 @@
     </nav>
 
     <main>
-        <div class="hero">
-            <div class="hero-bg" style="background-image: url('../assets/images/main.webp'); background-size: cover; background-position: center; width: 100%; height: 100vh;" role="img" aria-label="夜晚，Scène 靜靜矗立於大山森林之中"></div>
-            <div class="hero-light" aria-hidden="true"></div>
-            <div class="hero-light-secondary" aria-hidden="true"></div>
-            <div class="hero-mist" aria-hidden="true"></div>
-
-            <div class="hero-content">
-                <span class="hero-eyebrow">Auberge — Daisen, Tottori</span>
-                <h1 class="hero-main">Scène</h1>
-                <span class="hero-rule" aria-hidden="true"></span>
-                <p class="hero-sub">一個靜謐的夜晚，<br>為料理而準備。</p>
+        <div class="hero hero-split">
+            <div class="hero-text">
+                <div class="hero-content">
+                    <span class="hero-eyebrow">Auberge — Daisen, Tottori</span>
+                    <h1 class="hero-main">Scène</h1>
+                    <span class="hero-rule" aria-hidden="true"></span>
+                    <p class="hero-sub">為料理而備的靜謐一夜</p>
+                </div>
+                <div class="scroll-down" aria-hidden="true">
+                    <div class="scroll-line"></div>
+                    <span class="scroll-label">SCROLL</span>
+                </div>
             </div>
-            <div class="scroll-down" aria-hidden="true">
-                <div class="scroll-line"></div>
-                <span class="scroll-label">SCROLL</span>
+            <div class="hero-media">
+                <video class="hero-video-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                    <source src="../assets/video/hero-cuisine-course.mp4" type="video/mp4">
+                </video>
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+                       poster="../assets/images/hero-poster.webp"
+                       aria-label="Scène 的套餐料理，從前菜到甜點">
+                    <source src="../assets/video/hero-cuisine-course.mp4" type="video/mp4">
+                </video>
+                <div class="hero-media-scrim" aria-hidden="true"></div>
             </div>
         </div>
 
@@ -279,14 +287,12 @@
                 <span class="section-num">01 / Concept</span>
                 <div class="concept-block">
                     <div class="concept-text">
-                        <h2 class="heading-lg">一個場景，<br>為靜默與料理而備。</h2>
+                        <h2 class="heading-lg">遠離塵囂，<br>只為專心面對料理的時光</h2>
                         <p class="text-muted-block">
                             「Scène」在法語中意指「場景」或「舞台」。<br><br>
                             當日的天氣、氣溫、空氣中的氣息。<br>
                             從田野與海洋抵達的食材，每一天都是獨一無二的。<br>
-                            將這一切，化為「盤中的一個場景」。<br><br>
-                            遠離城市的喧囂，在大山山麓，<br>
-                            我們為您準備了一段只需專心面對料理的時光。
+                            將這一切，化為「盤中的一個場景」。
                         </p>
                         <div class="concept-name-block">
                             <h3 class="concept-name-title">「Scène」這個名字</h3>
@@ -295,7 +301,7 @@
                     </div>
                     <div class="concept-visual">
                         <div class="concept-caption"><span class="vertical-text">鳥取大山森林中的 Auberge。</span></div>
-                        <img src="../assets/images/concept.webp" class="concept-img" alt="Scène 餐廳內部，大山森林中溫暖的木質裝潢" width="800" height="600" loading="lazy">
+                        <img src="../assets/images/concept-dining.webp" class="concept-img" alt="Scène 餐廳內部 — 窗外綠意與溫暖的吊燈光" width="1050" height="1400" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -304,7 +310,7 @@
         <section id="cuisine" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">02 / Cuisine</span>
-                <h2 class="heading-lg">山陰地方的恩惠，<br>透過法式技藝呈現。</h2>
+                <h2 class="heading-lg">山陰地方的恩惠，<br>透過法式技藝呈現</h2>
                 <p class="cuisine-note" style="margin-bottom: 48px;">＊ 圖片中的菜單為示例。料理依當季食材每日更換。</p>
 
                 <div class="cuisine-intro">
@@ -324,28 +330,27 @@
             <div class="wrap cuisine-below reveal">
                 <div class="cuisine-gallery">
                     <figure class="gallery-item">
-                        <img src="../assets/images/dish-01.webp" alt="穴子 / 香草 / 大山葉 / 芹菜" width="400" height="400" loading="lazy">
-                        <figcaption>穴子 / 香草 / 大山葉 / 芹菜</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/dish-02.webp" alt="竹莢魚 / 魚白 / 紫蘇葉" width="400" height="400" loading="lazy">
-                        <figcaption>竹莢魚 / 魚白 / 紫蘇葉</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/dish-03.webp" alt="庭園蔬菜 / 宍道湖蜆仔 / 木次乳酪" width="400" height="400" loading="lazy">
-                        <figcaption>庭園蔬菜 / 宍道湖蜆仔 / 木次乳酪</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/dish-04.webp" alt="無花果葉奶凍 / 蘭姆酒冰淇淋" width="400" height="400" loading="lazy">
-                        <figcaption>無花果葉奶凍 / 蘭姆酒冰淇淋</figcaption>
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/dish-05.webp" alt="甜蝦 / 半乾番茄 / 坂田芹菜" width="400" height="400" loading="lazy">
-                        <figcaption>甜蝦 / 半乾番茄 / 芹菜</figcaption>
+                        <img src="../assets/images/dish-amuse-flower.webp" alt="綴以食用花的前菜" width="750" height="1000" loading="lazy">
+                        <figcaption>食用花前菜</figcaption>
                     </figure>
                     <figure class="gallery-item">
                         <img src="../assets/images/dish-06.webp" alt="隱岐島岩牡蠣 / 蘿蔓生菜" width="400" height="400" loading="lazy">
                         <figcaption>隱岐島岩牡蠣 / 蘿蔓生菜</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-01.webp" alt="穴子 / 香草 / 大山葉 / 芹菜" width="400" height="400" loading="lazy">
+                        <figcaption>穴子 / 香草 / 大山葉 / 芹菜</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-pasta.webp" alt="義大利麵" width="750" height="1000" loading="lazy">
+                        <figcaption>義大利麵</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-beef.webp" alt="牛菲力與甜菜根" width="750" height="1000" loading="lazy">
+                        <figcaption>牛菲力 / 甜菜根</figcaption>
+                    </figure>                    <figure class="gallery-item">
+                        <img src="../assets/images/dish-04.webp" alt="無花果葉奶凍 / 蘭姆酒冰淇淋" width="400" height="400" loading="lazy">
+                        <figcaption>無花果葉奶凍 / 蘭姆酒冰淇淋</figcaption>
                     </figure>
                 </div>
                 <a href="https://www.instagram.com/scene_sanin/" target="_blank" rel="noopener" class="cuisine-ig-link">
@@ -360,7 +365,7 @@
                     <span class="chef-label">— Chef</span>
                     <h3 class="chef-name">前田 帆貴<span class="chef-name-en">Hotaka Maeda</span></h3>
                     <p class="chef-bio">出身鳥取縣的主廚。曾任東京餐酒館主廚，後於米其林星級餐廳精進廚藝，深化了對法式技法的掌握與食材哲學。深信自己的廚藝之旅仍在進行中，他以對山陰故鄉食材的真摯態度，持續追求完美的料理。</p>
-                    <p class="chef-quote">「那一天的山陰，盡在一碟之中。」</p>
+                    <p class="chef-quote">「那一天的山陰，盡在一碟之中」</p>
                 </div>
             </div>
         </section>
@@ -368,25 +373,81 @@
         <section id="rooms" class="section-padding">
             <div class="wrap reveal">
                 <span class="section-num">03 / Guest Rooms</span>
-                <div class="concept-block reverse">
-                    <div class="concept-text">
-                        <h2 class="heading-lg">享受留白，<br>靜謐的空間。</h2>
-                        <p class="text-muted-block">
-                            Scène 的客房，是讓您沉浸於餐後餘韻與大山靜謐之中的場所。<br>
-                            我們刻意不設過多裝飾與設施，<br>
-                            而是準備了一扇可將森林美景框入的窗，以及讓您得以深呼吸的留白。<br>
-                            這是一個專為安眠而存在的空間。
-                        </p>
-                        <ul class="amenity-list">
-                            <li>免費 Wi-Fi</li>
-                            <li>淋浴間 / 毛巾 / 吹風機 / 睡衣</li>
-                            <li>＊館內設有私人陶瓷浴缸，可供使用。</li>
-                        </ul>
-                    </div>
-                    <div class="concept-visual">
-                        <div class="concept-caption"><span class="vertical-text">一個專為安眠而存在的空間。</span></div>
-                        <img src="../assets/images/room.webp" class="concept-img" alt="Scène 客房，窗外是大山森林的景致" width="800" height="600" loading="lazy">
-                    </div>
+                <h2 class="heading-lg">沉浸於靜謐的<br>三間客房</h2>
+                <p class="text-muted-block" style="max-width: 640px;">
+                    供您沉浸於餐後餘韻與大山靜謐之中的三間客房。<br>
+                    不設多餘裝飾，僅有一扇將森林框入的窗，<br>
+                    以及讓您得以深呼吸的留白。
+                </p>
+            </div>
+
+            <div class="wrap reveal">
+                <div class="rooms-list">
+
+                    <article class="room-card">
+                        <div class="room-card-media duo">
+                            <figure class="room-photo">
+                                <img src="../assets/images/room-010.webp" alt="客房 010 雙床" width="1400" height="1051" loading="lazy">
+                                <figcaption>客房（雙床）</figcaption>
+                            </figure>
+                            <figure class="room-photo">
+                                <img src="../assets/images/room-010-bath.webp" alt="客房 010 專用陶瓷浴缸" width="1400" height="1051" loading="lazy">
+                                <figcaption>專用陶瓷浴缸</figcaption>
+                            </figure>
+                        </div>
+                        <div class="room-card-body">
+                            <span class="room-eyebrow">Room 010</span>
+                            <h3 class="room-name">設有陶瓷浴缸的<br>專用浴室客房</h3>
+                            <p class="text-muted-block">客房外即是專用浴室，備有陶瓷浴缸。浸於浴池之中，在森林的靜謐裡緩緩舒展身心。</p>
+                            <ul class="room-spec">
+                                <li><span class="spec-label">床鋪</span><span>雙床 ＋ 加床（最多 3 名）</span></li>
+                                <li><span class="spec-label">浴室</span><span>專用浴室・陶瓷浴缸（戶外）</span></li>
+                                <li><span class="spec-label">衛浴</span><span>淋浴・廁所</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="room-card reverse">
+                        <div class="room-card-media">
+                            <figure class="room-photo">
+                                <img src="../assets/images/room-020.webp" alt="客房 020 雙人床" width="901" height="1200" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="room-card-body">
+                            <span class="room-eyebrow">Room 020</span>
+                            <h3 class="room-name">為兩人而設的<br>靜謐小房</h3>
+                            <p class="text-muted-block">僅設一張雙人床的簡約客房。捨去多餘之物，是一個專為安睡而存在的空間。</p>
+                            <ul class="room-spec">
+                                <li><span class="spec-label">床鋪</span><span>雙人床 × 1（1〜2 名）</span></li>
+                                <li><span class="spec-label">衛浴</span><span>淋浴・廁所（室內）</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="room-card">
+                        <div class="room-card-media">
+                            <figure class="room-photo">
+                                <img src="../assets/images/room-030.webp" alt="客房 030 雙床" width="1400" height="1051" loading="lazy">
+                            </figure>
+                        </div>
+                        <div class="room-card-body">
+                            <span class="room-eyebrow">Room 030</span>
+                            <h3 class="room-name">享受留白的<br>雙床客房</h3>
+                            <p class="text-muted-block">雙床加一張加床，最多可容納 3 名。在窗邊感受森林的氣息，悠然休憩。</p>
+                            <ul class="room-spec">
+                                <li><span class="spec-label">床鋪</span><span>雙床 ＋ 加床（最多 3 名）</span></li>
+                                <li><span class="spec-label">衛浴</span><span>淋浴・廁所（無浴缸）</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="rooms-common">
+                    <figure class="room-photo room-photo--shower">
+                        <img src="../assets/images/room-shower.webp" alt="全客房共通的淋浴與廁所" width="825" height="1100" loading="lazy">
+                    </figure>
+                    <p class="text-muted-block">全客房皆備有淋浴・廁所、Wi-Fi、毛巾・吹風機・睡衣。陶瓷浴缸僅設於 010 的專用浴室。</p>
                 </div>
             </div>
         </section>
@@ -507,6 +568,12 @@
             <div class="wrap reveal">
                 <span class="section-num">07 / Access</span>
 
+                <div class="access-gallery">
+                    <figure class="access-photo">
+                        <img src="../assets/images/main.webp" alt="夜晚的 Scène 外觀，星空下窗扉透出燈光" width="2400" height="1792" loading="lazy">
+                    </figure>
+                </div>
+
                 <div class="access-layout-grid">
 
                     <div class="access-info">
@@ -541,7 +608,7 @@
         <div class="wrap footer-inner">
             <div>
                 <span class="footer-brand">Scène</span>
-                <p class="footer-tagline">大山森林中以料理為核心的 Auberge。</p>
+                <p class="footer-tagline">大山森林中以料理為核心的 Auberge</p>
             </div>
             <nav class="footer-nav" aria-label="頁尾導覽">
                 <a href="#concept">概念</a>
