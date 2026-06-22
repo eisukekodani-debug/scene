@@ -911,19 +911,20 @@ details[open] .faq-toggle { transform: rotate(45deg); }
 /* =========================================
    Guest Rooms — 3部屋
    ========================================= */
-.rooms-list { display: flex; flex-direction: column; gap: 80px; margin-top: 56px; }
-.room-card { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.room-card.reverse .room-card-media { order: 2; }
-.room-card-media { display: grid; gap: 12px; }
-.room-card-media.duo { grid-template-columns: 1fr 1fr; }
+.rooms-list { display: flex; flex-direction: column; gap: 88px; margin-top: 56px; }
+/* 各部屋：情報テキストを上に、写真をその下に縦積み（どの写真がどの部屋か一目で分かるように） */
+.room-card { display: flex; flex-direction: column; gap: 28px; }
+.room-card-body { order: 1; max-width: 760px; }
+.room-card-media { order: 2; display: grid; grid-template-columns: 1fr; gap: 14px; }
+.room-card-media.duo { grid-template-columns: 1fr 1fr; } /* 010は客室＋陶器風呂の2枚を横並び */
 .room-photo { margin: 0; position: relative; overflow: hidden; }
 .room-photo img {
-    width: 100%; height: 400px; object-fit: cover; display: block;
+    width: 100%; height: 460px; object-fit: cover; display: block;
     filter: grayscale(10%) contrast(102%) brightness(0.96);
     transition: filter 1.2s var(--ease-soft), transform 1.4s var(--ease-soft);
     transform: scale(1.01);
 }
-.room-card-media.duo .room-photo img { height: 300px; }
+.room-card-media.duo .room-photo img { height: 380px; }
 .room-card:hover .room-photo img { filter: grayscale(0%) contrast(104%) brightness(1); transform: scale(1.04); }
 .room-photo figcaption {
     position: absolute; left: 0; bottom: 0; padding: 6px 13px;
@@ -957,19 +958,12 @@ details[open] .faq-toggle { transform: rotate(45deg); }
     padding-top: 48px; border-top: 1px solid rgba(245, 243, 238, 0.1);
 }
 .room-photo--shower img { height: 320px; }
-@media (max-width: 900px) {
-    .room-card, .room-card.reverse .room-card-media { grid-template-columns: 1fr; }
-    .room-card.reverse .room-card-media { order: 0; }
-    .room-card-media.duo { grid-template-columns: 1fr 1fr; }
-    .room-photo img { height: 280px; }
-    .room-card-media.duo .room-photo img { height: 190px; }
+@media (max-width: 768px) {
+    .room-photo img { height: 300px; }
+    .room-card-media.duo { grid-template-columns: 1fr; } /* 010の2枚も縦積みに */
+    .room-card-media.duo .room-photo img { height: 280px; }
     .rooms-common { grid-template-columns: 1fr; gap: 24px; }
     .room-photo--shower img { height: 340px; }
-}
-/* スマホでは010の2枚並びを縦積みに（横幅が細くなりすぎないように） */
-@media (max-width: 560px) {
-    .room-card-media.duo { grid-template-columns: 1fr; }
-    .room-card-media.duo .room-photo img { height: 240px; }
 }
 
 /* =========================================
