@@ -1304,3 +1304,30 @@ details[open] .faq-toggle { transform: rotate(45deg); }
     font-family: var(--font-serif); font-size: 24px; margin: 60px 0 30px;
     border-bottom: 1px solid var(--border); padding-bottom: 10px;
 }
+
+/* 問い合わせ先メールアドレス（フォーム下・2026-09-10 追加） */
+.contact-mail {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--text-soft);
+    font-family: var(--font-serif);
+    font-size: 13px;
+    line-height: 2;
+    letter-spacing: 0.08em;
+}
+.contact-mail a {
+    color: var(--accent-warm);
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid rgba(200, 184, 138, 0.4);
+    padding-bottom: 2px;
+}
+.contact-mail a:hover { color: var(--accent); }
+.access-details a { color: var(--accent-warm); }
+/* ハニーポット（スパム除け・利用者には見せない） */
+.form-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
