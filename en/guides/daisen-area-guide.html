@@ -329,6 +329,7 @@
         };
         document.getElementById('hm-decline').onclick = function(){
           try { localStorage.setItem('hm_consent', 'denied'); } catch(e){}
+          if (typeof gtag === 'function') gtag('consent', 'update', { 'analytics_storage': 'denied' });
           var b = document.getElementById('hm-cookie-banner'); if (b) b.remove();
         };
       })();
@@ -340,7 +341,10 @@
           if (!a) return;
           var href = a.getAttribute('href') || '';
           if (bookingPatterns.some(function(p){ return href.indexOf(p) > -1; })) {
-            gtag('event', 'click_outbound_booking', {
+            var evName = href.indexOf('airhost') > -1 ? 'reserve_button_click'
+              : href.indexOf('tablecheck.com') > -1 ? 'restaurant_reserve_click'
+              : 'click_outbound_booking';
+            gtag('event', evName, {
               'destination_url': href,
               'destination_text': (a.textContent || '').trim().slice(0, 80),
               'page_language': document.documentElement.lang || 'ja'
