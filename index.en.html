@@ -33,7 +33,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <link rel="preload" as="image" href="./assets/images/hero-poster.webp" fetchpriority="high">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -101,7 +101,7 @@
                     { "@type": "Question", "name": "Can you accommodate food allergies?", "acceptedAnswer": { "@type": "Answer", "text": "Please inform us of any allergies or dietary restrictions when making your reservation. We will do our best to accommodate within the limits of our kitchen. Depending on the nature and severity of the allergy, we may not be able to guarantee full accommodation." } },
                     { "@type": "Question", "name": "What are your check-in hours?", "acceptedAnswer": { "@type": "Answer", "text": "Check-in is available from 3:00 PM to 10:00 PM. Guests on a dinner plan are asked to check in by 6:00 PM, as dinner begins at 6:00 PM for everyone together. Room-only guests who expect to arrive after 10:00 PM should contact us in advance — with prior notice we will do our best to accommodate you. Without prior notice, we may not be able to receive you after 10:00 PM." } },
                     { "@type": "Question", "name": "What time is check-out?", "acceptedAnswer": { "@type": "Answer", "text": "Check-out is at 10:00 AM." } },
-                    { "@type": "Question", "name": "Can I add dinner or breakfast?", "acceptedAnswer": { "@type": "Answer", "text": "Dinner and breakfast are both optional and are served in the restaurant. Room-only stays are also available." } },
+                    { "@type": "Question", "name": "Can I add dinner or breakfast?", "acceptedAnswer": { "@type": "Answer", "text": "Dinner and breakfast are both optional and must be reserved in advance. They are served in the restaurant. Room-only stays are also available." } },
                     { "@type": "Question", "name": "What is your cancellation policy?", "acceptedAnswer": { "@type": "Answer", "text": "Cancellation terms follow the platform you booked through — TableCheck for dinner reservations, and our official booking system or other platforms for overnight stays. Please review the specific policy at the time of booking." } },
                     { "@type": "Question", "name": "Is there parking available?", "acceptedAnswer": { "@type": "Answer", "text": "We have two free parking spaces directly in front of the restaurant." } },
                     { "@type": "Question", "name": "How do I get to Scène from Yonago Station or Yonago Kitaro Airport?", "acceptedAnswer": { "@type": "Answer", "text": "From JR Yonago Station, take the Nihon Kotsu Bus bound for Daisen-ji (approx. 50 min) and alight at the Daisen-ji stop, then walk about 5 minutes. By car, exit at Mizokuchi IC on the Yonago Expressway and drive approximately 20 minutes toward Mt. Daisen." } },
@@ -267,14 +267,9 @@
         <div class="hero hero-split">
             <div class="hero-text">
                 <div class="hero-content">
-                    <span class="hero-eyebrow">Auberge — Daisen, Tottori</span>
+                    <span class="hero-eyebrow">An auberge in Daisen, Tottori</span>
                     <h1 class="hero-main">Scène</h1>
-                    <span class="hero-rule" aria-hidden="true"></span>
                     <p class="hero-sub">A quiet night for cuisine</p>
-                </div>
-                <div class="scroll-down" aria-hidden="true">
-                    <div class="scroll-line"></div>
-                    <span class="scroll-label">SCROLL</span>
                 </div>
             </div>
             <div class="hero-media">
@@ -292,7 +287,7 @@
 
         <section id="concept" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">01 / Concept</span>
+                <span class="section-num">Concept</span>
                 <div class="concept-block">
                     <div class="concept-text">
                         <h2 class="heading-lg">Far from the city's noise —<br>time to simply face the cuisine</h2>
@@ -315,7 +310,7 @@
 
         <section id="cuisine" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">02 / Cuisine</span>
+                <span class="section-num">Cuisine</span>
                 <h2 class="heading-lg">The blessings of San'in<br>through French techniques</h2>
                 <p class="cuisine-note" style="margin-bottom: 48px;">* The menu shown is an example. Dishes change daily based on seasonal availability.</p>
 
@@ -374,29 +369,28 @@
             </div>
 
             <div class="wrap reveal">
+                <div class="course-menu">
                 <div class="course-block">
                     <h3 class="course-heading">Courses</h3>
-                    <div class="course-grid">
-                        <div class="course-card">
-                            <span class="course-eyebrow">Lunch</span>
-                            <p class="course-name">Lunch Course</p>
-                            <p class="course-price">¥13,200<span>(tax incl.)</span></p>
-                            <p class="course-detail">7 dishes, 2 desserts, 3 petits fours, and house-made sourdough</p>
+                    <dl class="course-list">
+                        <div class="course-row">
+                            <dt>Lunch Course</dt><dd class="course-leader" aria-hidden="true"></dd><dd class="course-price">¥13,200<small>(tax incl.)</small></dd>
+                            <dd class="course-detail">7 dishes, 2 desserts, 3 petits fours, and house-made sourdough</dd>
                         </div>
-                        <div class="course-card">
-                            <span class="course-eyebrow">Dinner</span>
-                            <p class="course-name">Dinner Course</p>
-                            <p class="course-price">¥16,500<span>(tax incl.)</span></p>
-                            <p class="course-detail">8 dishes, 2 desserts, 3 petits fours, and house-made sourdough</p>
+                        <div class="course-row">
+                            <dt>Dinner Course</dt><dd class="course-leader" aria-hidden="true"></dd><dd class="course-price">¥16,500<small>(tax incl.)</small></dd>
+                            <dd class="course-detail">8 dishes, 2 desserts, 3 petits fours, and house-made sourdough</dd>
                         </div>
-                    </div>
-                    <p class="cuisine-note">Lunch and dinner share essentially the same menu; lunch has one fewer dish.</p>
+                    </dl>
+                    <p class="course-note">Lunch and dinner share essentially the same menu; lunch has one fewer dish.</p>
+                    <p class="course-reserve">For hotel guests, both dinner and breakfast must be reserved in advance.</p>
                 </div>
 
                 <div class="menu-block">
-                    <h3 class="course-heading">Sample Menu<span class="menu-season">Autumn 2026</span></h3>
+                    <h3 class="menu-heading">Sample Menu</h3>
+                    <p class="menu-season">Autumn 2026</p>
                     <dl class="menu-list">
-                        <div class="menu-item"><dt>Hōki Daisen 786m</dt><dd>786 m is the elevation of the restaurant; this dish uses ingredients gathered nearby. A fried-bread-like bite filled with béchamel infused with kuromoji (Japanese spicebush) and sansho leaves.</dd></div>
+                        <div class="menu-item"><dt>Hoki Daisen 786m</dt><dd>786 m is the elevation of the restaurant; this dish uses ingredients gathered nearby. A fried-bread-like bite filled with béchamel infused with kuromoji (Japanese spicebush) and sansho leaves.</dd></div>
                         <div class="menu-item"><dt>Daisen Komugi</dt><dd>House-made sourdough baked only with flour, salt, water and a Daisen wheat starter, served as warm French toast with a tartare of horse mackerel and herbs.</dd></div>
                         <div class="menu-item"><dt>Sakata Farm</dt><dd>Vegetables and herbs harvested at Sakata Farm in Daisen Town. The ingredients change daily, and the dish has no fixed form.</dd></div>
                         <div class="menu-item"><dt>Shirobai</dt><dd>Kelp-cured whelk and broccoli grilled over a wood fire, with fermented turnip, a broccoli and shellfish-stock purée, a foamed sauce of shellfish stock and white wine, and charred yuzu zest.</dd></div>
@@ -406,13 +400,14 @@
                         <div class="menu-item"><dt>Kaki<span class="menu-tag">Dessert</span></dt><dd>Anpo and Kitaro persimmons from Hokuei Town, with sake granita and hazelnut ice cream.</dd></div>
                         <div class="menu-item"><dt>Kuromoji<span class="menu-tag">Dessert</span></dt><dd>Kuromoji caramel ice cream and kuromoji riz au lait, with a purée of caramelized Japanese pear.</dd></div>
                     </dl>
-                    <p class="cuisine-note">* Dishes change daily with the season and availability.</p>
+                    <p class="menu-note">Dishes change daily with the season and availability.</p>
+                </div>
                 </div>
             </div>
 
             <div class="wrap reveal">
                 <div class="chef-block">
-                    <span class="chef-label">— Chef</span>
+                    <span class="chef-label">Chef</span>
                     <h3 class="chef-name">Hotaka Maeda<span class="chef-name-en">前田 帆貴</span></h3>
                     <p class="chef-bio">A chef from Tottori Prefecture. After serving as head chef at a Tokyo bistro, he further honed his skills at a Michelin-starred restaurant, deepening his mastery of French technique and his philosophy toward ingredients. Believing his culinary journey is still unfolding, he continues to pursue the perfect dish through a sincere commitment to the ingredients of his homeland, San'in.</p>
                     <p class="chef-quote">"The San'in of that day, on a single plate"</p>
@@ -422,7 +417,7 @@
 
         <section id="rooms" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">03 / Guest Rooms</span>
+                <span class="section-num">Guest Rooms</span>
                 <h2 class="heading-lg">Three rooms<br>steeped in silence</h2>
                 <p class="text-muted-block" style="max-width: 640px;">
                     Three guest rooms for savoring the afterglow of dinner and the stillness of Daisen.
@@ -531,7 +526,7 @@
                         </figure>
                     </div>
                     <ul class="room-spec">
-                        <li><span class="spec-label">Restaurant</span><span>Dinner and breakfast are served in the restaurant. Both are optional, and room-only stays are available (dinner starts at 6:00 PM for all guests).</span></li>
+                        <li><span class="spec-label">Restaurant</span><span>Dinner and breakfast are served in the restaurant. Both are optional and must be reserved in advance; room-only stays are also available (dinner starts at 6:00 PM for all guests).</span></li>
                         <li><span class="spec-label">Lobby</span><span>The front room has a sofa where you can relax.</span></li>
                         <li><span class="spec-label">Coffee</span><span>A coffee machine outside the guest rooms is free to use.</span></li>
                         <li><span class="spec-label">Minibar</span><span>The fridge outside the guest rooms is stocked with beer and soft drinks (paid; please leave payment in the box).</span></li>
@@ -546,7 +541,7 @@
 
         <section id="news" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">04 / News</span>
+                <span class="section-num">News</span>
                 <div id="newsList">
                     <button type="button" class="list-row"
                         data-title="Staff Recruitment"
@@ -580,7 +575,7 @@
 
         <section id="faq" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">05 / FAQ</span>
+                <span class="section-num">FAQ</span>
                 <div class="faq-wrap">
                     <p class="faq-intro">We cherish being a place where adults can spend time quietly.</p>
 
@@ -589,7 +584,7 @@
                     <details><summary><span class="faq-q">Can you accommodate food allergies?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Please inform us of any allergies or dietary restrictions when making your reservation. We will do our best to accommodate within the limits of our kitchen. Depending on the nature and severity of the allergy, we may not be able to guarantee full accommodation.</div></details>
                     <details><summary><span class="faq-q">What are your check-in hours?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Check-in is available from 3:00 PM to 10:00 PM. Guests on a dinner plan are asked to check in by 6:00 PM, as dinner begins at 6:00 PM for everyone together. Room-only guests who expect to arrive after 10:00 PM should contact us in advance — with prior notice we will do our best to accommodate you. Without prior notice, we may not be able to receive you after 10:00 PM.</div></details>
                     <details><summary><span class="faq-q">What time is check-out?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Check-out is at 10:00 AM.</div></details>
-                    <details><summary><span class="faq-q">Can I add dinner or breakfast?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Dinner and breakfast are both optional and are served in the restaurant. Room-only stays are also available.</div></details>
+                    <details><summary><span class="faq-q">Can I add dinner or breakfast?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Dinner and breakfast are both optional and must be reserved in advance. They are served in the restaurant. Room-only stays are also available.</div></details>
                     <details><summary><span class="faq-q">What is your cancellation policy?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Cancellation terms follow the platform you booked through — TableCheck for dinner reservations, and our official booking system or other platforms for overnight stays. Please review the specific policy at the time of booking.</div></details>
                     <details><summary><span class="faq-q">Is there parking available?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">We have two free parking spaces directly in front of the restaurant.</div></details>
                     <details><summary><span class="faq-q">How do I get to Scène from Yonago Station or Yonago Kitaro Airport?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">From JR Yonago Station, take the Nihon Kotsu Bus bound for Daisen-ji (approx. 50 min) and alight at the Daisen-ji stop, then walk about 5 minutes. By car, exit at Mizokuchi IC on the Yonago Expressway and drive approximately 20 minutes toward Mt. Daisen. See our <a href="/en/guides/access-from-tokyo-osaka.html" style="color:#c8b88a;">access guide</a> for details.</div></details>
@@ -603,7 +598,7 @@
 
         <section id="contact" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">06 / Contact</span>
+                <span class="section-num">Contact</span>
                 <div class="contact-wrap">
                     <p class="contact-intro">
                         For inquiries other than reservations,<br>please use this form.
@@ -648,7 +643,7 @@
                             <label>Please leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
                         </div>
                         <div class="form-submit-wrap">
-                            <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                            <button type="submit" class="btn-submit">Send message</button>
                         </div>
                     </form>
 
@@ -670,7 +665,7 @@
 
         <section id="access" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">07 / Access</span>
+                <span class="section-num">Access</span>
 
                 <div class="access-gallery">
                     <figure class="access-photo">
@@ -684,10 +679,10 @@
                         <h2 class="access-title">Scène</h2>
                         <div class="access-details">
                             <p>115-7 Daisen, Daisen-cho, Saihaku-gun, Tottori 689-3318</p>
-                            <p class="access-direction">[ Car ]<br>Approx. 20 min from Mizokuchi IC (Yonago Expressway)</p>
-                            <p class="access-direction">[ Parking ]<br>2 spaces available in front of the building (first-come, free)<br>If full, please ask our staff for nearby free parking options.</p>
-                            <p class="access-direction">[ Public Transport ]<br>Approx. 50 min from JR Yonago Station by bus<br>5 min walk from "Daisen-ji" bus stop</p>
-                            <p class="access-direction">[ Contact ]<br><a href="mailto:scene_reservation@npo-yui.com">scene_reservation@npo-yui.com</a></p>
+                            <p class="access-direction">Car<br>Approx. 20 min from Mizokuchi IC (Yonago Expressway)</p>
+                            <p class="access-direction">Parking<br>2 spaces available in front of the building (first-come, free)<br>If full, please ask our staff for nearby free parking options.</p>
+                            <p class="access-direction">Public Transport<br>Approx. 50 min from JR Yonago Station by bus<br>5 min walk from "Daisen-ji" bus stop</p>
+                            <p class="access-direction">Contact<br><a href="mailto:scene_reservation@npo-yui.com">scene_reservation@npo-yui.com</a></p>
                         </div>
                         <a href="https://maps.app.goo.gl/nVwHqy7FLRFMXQKW9" target="_blank" rel="noopener" class="btn-outline-subtle">Open in Google Maps</a>
                     </div>

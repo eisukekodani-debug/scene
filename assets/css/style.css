@@ -668,29 +668,37 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 20px); }
 .cuisine-point-title { font-family: var(--font-serif); font-weight: 500; font-size: 17px; letter-spacing: 0.06em; margin: 0 0 12px; color: var(--accent-warm); }
 .cuisine-point p { font-size: 14px; line-height: 2; color: var(--text-soft); margin: 0; }
 
-/* 日本語版：コースのご案内・お品書き */
-.course-block, .menu-block { margin-top: 96px; max-width: 880px; }
-.course-heading { font-family: var(--font-serif); font-weight: 500; font-size: clamp(20px, 2.4vw, 24px); letter-spacing: 0.08em; margin: 0 0 28px; }
-.course-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.course-card { border: 1px solid var(--border-strong); padding: 28px 28px 24px; background: var(--bg-sub); }
-.course-eyebrow { font-family: var(--font-display); font-style: italic; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent-warm); }
-.course-name { font-family: var(--font-serif); font-size: 17px; margin: 10px 0 6px; letter-spacing: 0.06em; }
-.course-price { font-family: var(--font-display); font-size: 34px; margin: 0 0 14px; letter-spacing: 0.04em; }
-.course-price span { font-family: var(--font-serif); font-size: 14px; margin-left: 4px; }
-.course-detail { font-size: 13px; line-height: 1.9; color: var(--text-soft); margin: 0; }
-.menu-season { font-family: var(--font-sans); font-size: 12px; color: var(--text-muted); letter-spacing: 0.12em; margin-left: 16px; }
+/* コースのご案内：品書き風の行組み（枠・英字見出しを使わない） */
+.course-menu { display: grid; grid-template-columns: 1fr minmax(0, 560px); gap: 80px; align-items: start; margin-top: 96px; }
+.course-block { position: sticky; top: calc(var(--header-height) + 40px); }
+.course-heading { font-family: var(--font-serif); font-weight: 500; font-size: 20px; letter-spacing: 0.02em; margin: 0 0 20px; }
+.course-list { margin: 0; }
+.course-row { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; column-gap: 12px; padding: 14px 0 16px; border-top: 1px solid var(--border-strong); }
+.course-row:last-child { border-bottom: 1px solid var(--border-strong); }
+.course-row dt { font-family: var(--font-serif); font-size: 17px; letter-spacing: 0.02em; }
+.course-row dd { margin: 0; }
+.course-leader { border-bottom: 1px dotted var(--text-muted); transform: translateY(-5px); }
+.course-price { font-family: var(--font-serif); font-size: 18px; letter-spacing: 0; font-feature-settings: "lnum"; }
+.course-price small { font-size: 12px; color: var(--text-soft); margin-left: 4px; }
+.course-note { margin: 14px 0 0; font-size: 12px; line-height: 1.9; color: var(--text-muted); }
+.course-reserve { margin: 18px 0 0; padding-left: 12px; border-left: 2px solid var(--accent-warm); font-size: 14px; line-height: 1.8; color: var(--text-main); }
+.course-detail { grid-column: 1 / -1; font-size: 13px; color: var(--text-soft); line-height: 1.8; margin-top: 2px !important; }
+
+/* お品書きの一例：手書きの献立表のような紙のカード */
+.menu-block { padding: 56px 52px 44px; background: #ebe5d8; color: #2a2621; text-align: center; letter-spacing: 0.02em; }
+.menu-heading { font-family: "Klee One", var(--font-serif); font-weight: 600; font-size: 22px; margin: 0; letter-spacing: 0.08em; }
+.menu-season { font-family: "Klee One", var(--font-serif); font-size: 14px; color: #6b6458; margin: 6px 0 36px; }
 .menu-list { margin: 0; }
-.menu-item { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 18px 0; border-top: 1px solid var(--border); }
-.menu-item:last-child { border-bottom: 1px solid var(--border); }
-.menu-item dt { font-family: var(--font-serif); font-size: 16px; letter-spacing: 0.06em; color: var(--text-main); }
-.menu-item dd { margin: 0; font-size: 14px; line-height: 1.95; color: var(--text-soft); }
-.menu-tag { display: block; font-family: var(--font-sans); font-size: 11px; color: var(--text-muted); letter-spacing: 0.12em; margin-top: 4px; }
+.menu-item { padding: 0 0 26px; }
+.menu-item dt { font-family: "Klee One", var(--font-serif); font-weight: 600; font-size: 19px; color: #2a2621; letter-spacing: 0.04em; }
+.menu-item dd { margin: 4px auto 0; max-width: 30em; font-family: var(--font-serif); font-size: 13px; line-height: 1.85; color: #4d473e; text-wrap: pretty; }
+.menu-tag { font-family: "Klee One", var(--font-serif); font-weight: 400; font-size: 12px; color: #6b6458; margin-left: 8px; }
+.menu-note { font-family: "Klee One", var(--font-serif); font-size: 12px; color: #6b6458; margin: 10px 0 0; }
 @media (max-width: 768px) {
     .cuisine-points { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
-    .course-block, .menu-block { margin-top: 72px; }
-    .course-grid { grid-template-columns: 1fr; }
-    .menu-item { grid-template-columns: 1fr; gap: 6px; }
-    .menu-tag { display: inline; margin: 0 0 0 10px; }
+    .course-menu { grid-template-columns: 1fr; gap: 56px; margin-top: 72px; }
+    .course-block { position: static; }
+    .menu-block { margin: 0 -8px; padding: 44px 22px 32px; }
 }
 
 /* =========================================
@@ -1377,3 +1385,135 @@ details[open] .faq-toggle { transform: rotate(45deg); }
     height: 1px;
     overflow: hidden;
 }
+
+/* =========================================
+   手づくり調整（2026-11）
+   英字の斜体ラベル・広い字間・金色の飾り線・凝った動きを外し、
+   紙の献立表や手書きの案内に近い、素朴な見せ方にそろえる。
+   この区画を丸ごと消せば元の見た目に戻る。
+   ========================================= */
+:root { --font-hand: "Klee One", var(--font-serif); }
+html[lang^="zh"] { --font-hand: var(--font-serif); } /* 繁体字の字形が欠けるため */
+body { letter-spacing: 0.03em; }
+
+/* 動き：ふわっと浮かせる演出をやめ、静かに表示する */
+.reveal { transform: none; transition: opacity 0.8s ease; }
+.hero-main, .hero-sub { animation: fadeUp 1.2s ease 0.3s forwards; }
+.scroll-down, .hero-rule { display: none; }
+
+/* 見出しまわり */
+.section-num {
+    font-family: var(--font-hand); font-style: normal; text-transform: none;
+    font-size: 15px; letter-spacing: 0.04em; color: var(--text-soft);
+    margin-bottom: 40px; gap: 0;
+}
+.section-num::before { display: none; }
+.heading-lg { letter-spacing: 0.02em; }
+.phrase { display: inline-block; } /* 見出しを語の切れ目で折り返す */
+.hero-eyebrow {
+    font-family: var(--font-serif); font-style: normal; text-transform: none;
+    font-size: 13px; letter-spacing: 0.08em; color: var(--text-soft);
+}
+.hero-sub { letter-spacing: 0.12em; }
+
+/* ナビゲーション・フッター */
+.nav-desktop {
+    font-family: var(--font-sans); font-style: normal; text-transform: none;
+    font-size: 13px; letter-spacing: 0.04em; gap: 28px;
+}
+.nav-desktop > a::after { display: none; }
+.lang-switch { letter-spacing: 0.04em; }
+.mobile-menu a { letter-spacing: 0.04em; }
+.footer-tagline { font-family: var(--font-serif); font-style: normal; letter-spacing: 0.04em; }
+.footer-nav { font-family: var(--font-sans); text-transform: none; letter-spacing: 0.04em; }
+.footer-copy { font-style: normal; letter-spacing: 0.04em; }
+
+/* 金色の飾り線をやめる */
+.concept-name-block::before, .chef-block::before { display: none; }
+.cuisine-point { border-top-color: var(--border); }
+.cuisine-point-title { color: var(--text-main); letter-spacing: 0.02em; }
+.concept-name-title { letter-spacing: 0.02em; }
+
+/* 料理長 */
+.chef-label {
+    font-family: var(--font-serif); font-style: normal; text-transform: none;
+    font-size: 13px; letter-spacing: 0.04em; color: var(--text-soft); margin-bottom: 12px;
+}
+.chef-name { letter-spacing: 0.02em; }
+.chef-name-en { font-family: var(--font-sans); font-style: normal; font-size: 13px; letter-spacing: 0.04em; }
+.chef-quote { font-family: var(--font-hand); font-style: normal; letter-spacing: 0.04em; padding-left: 0; }
+.chef-quote::before { display: none; }
+
+/* 料理写真：見出しを常に写真の下に置く */
+.cuisine-gallery { gap: 28px 14px; background: transparent; }
+.gallery-item { background: transparent; overflow: visible; }
+.gallery-item::after { display: none; }
+.gallery-item img { filter: none; transition: none; }
+.gallery-item:hover img { transform: none; }
+.gallery-item figcaption,
+.gallery-item:hover figcaption {
+    position: static; opacity: 1; transform: none;
+    padding-top: 10px; font-family: var(--font-hand); font-size: 13px;
+    letter-spacing: 0.02em; color: var(--text-soft);
+}
+.cuisine-ig-link { font-family: var(--font-sans); font-style: normal; font-size: 13px; letter-spacing: 0.04em; }
+.cuisine-ig-link:hover svg { transform: none; }
+
+/* 客室 */
+.room-eyebrow {
+    font-family: var(--font-serif); font-style: normal; text-transform: none;
+    font-size: 14px; letter-spacing: 0.04em; color: var(--text-soft);
+}
+.room-photo { overflow: visible; }
+.room-photo img, .room-card:hover .room-photo img { filter: none; transform: none; transition: none; }
+.room-photo figcaption {
+    position: static; background: none; color: var(--text-soft);
+    padding: 8px 0 0; font-family: var(--font-hand); font-size: 13px; letter-spacing: 0.02em;
+}
+.room-spec .spec-label { color: var(--text-muted); letter-spacing: 0.04em; }
+
+/* コース案内の予約の注意 */
+.course-reserve { border-left: none; padding-left: 0; font-family: var(--font-serif); font-size: 15px; }
+
+/* お品書きのカード（手書き風の書体を変数に寄せる） */
+.menu-heading, .menu-season, .menu-item dt, .menu-tag, .menu-note { font-family: var(--font-hand); }
+
+/* お知らせ */
+.list-date { font-family: var(--font-sans); font-style: normal; font-size: 13px; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+.list-title { letter-spacing: 0.02em; }
+button.list-row::before, .list-row::before { display: none; }
+button.list-row:hover, .list-row:hover { padding-left: 0; }
+.list-arrow { display: none; }
+.modal-date { font-family: var(--font-sans); font-style: normal; letter-spacing: 0.04em; color: var(--text-soft); }
+.modal-title, .modal-body-text { letter-spacing: 0.02em; }
+.modal-close { color: var(--text-soft); }
+.modal-close:hover { transform: none; }
+
+/* よくあるご質問 */
+.faq-q { letter-spacing: 0.02em; }
+.faq-toggle { font-family: var(--font-sans); color: var(--text-muted); font-size: 18px; }
+
+/* お問い合わせ */
+.contact-intro, #formMessage { letter-spacing: 0.04em; }
+.form-label {
+    font-family: var(--font-sans); font-style: normal; text-transform: none;
+    font-size: 13px; letter-spacing: 0.04em; color: var(--text-soft);
+}
+.btn-submit, .btn-submit:hover {
+    font-family: var(--font-sans); text-transform: none;
+    font-size: 14px; letter-spacing: 0.08em;
+}
+.btn-outline, .btn-outline-subtle, .btn-outline:hover, .btn-outline-subtle:hover {
+    font-family: var(--font-sans); text-transform: none; letter-spacing: 0.04em;
+}
+.btn-outline::after, .btn-outline-subtle::after { content: none; }
+
+/* アクセス */
+.access-direction:first-line { font-family: var(--font-serif); font-style: normal; color: var(--text-main); letter-spacing: 0.04em; }
+.access-photo img, .access-photo:hover img { transform: none; }
+
+/* 右下の予約ボタン：英字の添え書きと浮き上がりをやめる */
+.cta-sub { display: none; }
+.cta-main { font-size: 13px; letter-spacing: 0.06em; }
+.cta-fixed { box-shadow: none !important; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.cta-fixed:hover { transform: none; }

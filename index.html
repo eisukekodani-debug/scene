@@ -33,7 +33,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Klee+One:wght@400;600&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <link rel="preload" as="image" href="./assets/images/hero-poster.webp" fetchpriority="high">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -96,7 +96,7 @@
                     { "@type": "Question", "name": "アレルギーがあります。対応できますか？", "acceptedAnswer": { "@type": "Answer", "text": "ご予約の際に事前にお知らせください。可能な範囲で対応いたします。アレルギーの種類や程度によってはお断りする場合もございますので、あらかじめご了承ください。" } },
                     { "@type": "Question", "name": "チェックインは何時から何時までですか？", "acceptedAnswer": { "@type": "Answer", "text": "チェックインは15:00から22:00までです。ディナー付きプランをご予約のお客様は、ディナーが18:00に一斉スタートとなりますので、それまでにチェックインをお願いしております。素泊まりのお客様で22:00以降のご到着になりそうな場合も、事前にご連絡をいただければ可能な限り対応いたしますので、お早めにお知らせください。ご連絡なく22:00を過ぎてのご到着は、対応できないことがございます。" } },
                     { "@type": "Question", "name": "チェックアウトは何時ですか？", "acceptedAnswer": { "@type": "Answer", "text": "チェックアウトは10:00です。" } },
-                    { "@type": "Question", "name": "夕食・朝食は付けられますか？", "acceptedAnswer": { "@type": "Answer", "text": "夕食・朝食はいずれもオプションで、館内のレストランでお召し上がりいただけます。食事なしの素泊まりも承ります。" } },
+                    { "@type": "Question", "name": "夕食・朝食は付けられますか？", "acceptedAnswer": { "@type": "Answer", "text": "夕食・朝食はいずれもオプションで、事前のご予約が必要です。館内のレストランでお召し上がりいただけます。食事なしの素泊まりも承ります。" } },
                     { "@type": "Question", "name": "キャンセルポリシーを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "キャンセルポリシーは予約方法ごとの規定に準じます（ディナーはTableCheck、宿泊は公式予約システムまたは各予約サイト）。詳細は予約時にご確認ください。" } },
                     { "@type": "Question", "name": "駐車場はありますか？", "acceptedAnswer": { "@type": "Answer", "text": "建物前に2台分の無料駐車スペースをご用意しています。" } },
                     { "@type": "Question", "name": "米子駅・米子鬼太郎空港からのアクセスを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "JR米子駅から日本交通バス「大山寺」行きにご乗車いただき、約50分で大山寺バス停へ。そこから徒歩約5分です。お車の場合は米子自動車道「溝口IC」から約20分です。" } },
@@ -226,13 +226,13 @@
 	<header class="site-header">
         <a href="./index.html" class="brand">Scène</a>
         <nav class="nav-desktop" aria-label="メインナビゲーション">
-            <a href="#concept">Concept</a>
-            <a href="#cuisine">Cuisine</a>
-            <a href="#rooms">Rooms</a>
-            <a href="#news">News</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-            <a href="#access">Access</a>
+            <a href="#concept">Scèneのこと</a>
+            <a href="#cuisine">料理</a>
+            <a href="#rooms">客室</a>
+            <a href="#news">お知らせ</a>
+            <a href="#faq">よくあるご質問</a>
+            <a href="#contact">お問い合わせ</a>
+            <a href="#access">アクセス</a>
 
             <div class="lang-switch">
                 <a href="./index.html" aria-current="page" class="lang-active">JP</a>
@@ -245,13 +245,13 @@
         </button>
     </header>
     <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
-        <a href="#concept" onclick="toggleMenu()">Concept</a>
-        <a href="#cuisine" onclick="toggleMenu()">Cuisine</a>
-        <a href="#rooms" onclick="toggleMenu()">Rooms</a>
-        <a href="#news" onclick="toggleMenu()">News</a>
-        <a href="#faq" onclick="toggleMenu()">FAQ</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
-        <a href="#access" onclick="toggleMenu()">Access</a>
+        <a href="#concept" onclick="toggleMenu()">Scèneのこと</a>
+        <a href="#cuisine" onclick="toggleMenu()">料理</a>
+        <a href="#rooms" onclick="toggleMenu()">客室</a>
+        <a href="#news" onclick="toggleMenu()">お知らせ</a>
+        <a href="#faq" onclick="toggleMenu()">よくあるご質問</a>
+        <a href="#contact" onclick="toggleMenu()">お問い合わせ</a>
+        <a href="#access" onclick="toggleMenu()">アクセス</a>
 
         <div class="mobile-lang-switch">
             <a href="./index.html" aria-current="page" class="lang-active">JP</a>
@@ -264,14 +264,9 @@
         <div class="hero hero-split">
             <div class="hero-text">
                 <div class="hero-content">
-                    <span class="hero-eyebrow">Auberge — Daisen, Tottori</span>
+                    <span class="hero-eyebrow">鳥取県大山町のオーベルジュ</span>
                     <h1 class="hero-main">Scène</h1>
-                    <span class="hero-rule" aria-hidden="true"></span>
                     <p class="hero-sub">料理のための静かな一夜</p>
-                </div>
-                <div class="scroll-down" aria-hidden="true">
-                    <div class="scroll-line"></div>
-                    <span class="scroll-label">SCROLL</span>
                 </div>
             </div>
             <div class="hero-media">
@@ -289,10 +284,10 @@
 
         <section id="concept" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">01 / Concept</span>
+                <span class="section-num">Scèneのこと</span>
                 <div class="concept-block">
                     <div class="concept-text">
-                        <h2 class="heading-lg">街の喧騒から離れて<br>ただ料理と向き合うための時間</h2>
+                        <h2 class="heading-lg">街の喧騒から離れて<br>ただ料理と<span class="phrase">向き合うための時間</span></h2>
                         <p class="text-muted-block">
                             Scène（セヌ）は、フランス語で「情景」を意味します。<br><br>
                             その日の天気、気温、空気の匂い。畑と海から届く、その日だけの食材。それらすべてを「一皿の情景」として表現すること。
@@ -312,7 +307,7 @@
 
         <section id="cuisine" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">02 / Cuisine</span>
+                <span class="section-num">料理</span>
                 <h2 class="heading-lg">山陰の恵みを<br>フレンチという手法で</h2>
                 <p class="cuisine-note" style="margin-bottom: 48px;">※ お品書きは一例です。季節の移ろいや仕入れにより、内容は日々変わります。</p>
 
@@ -370,27 +365,26 @@
             </div>
 
             <div class="wrap reveal">
+                <div class="course-menu">
                 <div class="course-block">
                     <h3 class="course-heading">コースのご案内</h3>
-                    <div class="course-grid">
-                        <div class="course-card">
-                            <span class="course-eyebrow">Lunch</span>
-                            <p class="course-name">ランチコース</p>
-                            <p class="course-price">13,200<span>円（税込）</span></p>
-                            <p class="course-detail">料理7品・デセール2品・お茶菓子3種・自家製サワードゥ</p>
+                    <dl class="course-list">
+                        <div class="course-row">
+                            <dt>ランチコース</dt><dd class="course-leader" aria-hidden="true"></dd><dd class="course-price">13,200円<small>（税込）</small></dd>
+                            <dd class="course-detail">料理7品、デセール2品、お茶菓子3種、自家製サワードゥ</dd>
                         </div>
-                        <div class="course-card">
-                            <span class="course-eyebrow">Dinner</span>
-                            <p class="course-name">ディナーコース</p>
-                            <p class="course-price">16,500<span>円（税込）</span></p>
-                            <p class="course-detail">料理8品・デセール2品・お茶菓子3種・自家製サワードゥ</p>
+                        <div class="course-row">
+                            <dt>ディナーコース</dt><dd class="course-leader" aria-hidden="true"></dd><dd class="course-price">16,500円<small>（税込）</small></dd>
+                            <dd class="course-detail">料理8品、デセール2品、お茶菓子3種、自家製サワードゥ</dd>
                         </div>
-                    </div>
-                    <p class="cuisine-note">昼と夜で料理の内容は基本的に同じで、ランチは料理が1品少ない構成です。</p>
+                    </dl>
+                    <p class="course-note">昼と夜で料理の内容は基本的に同じです。<br>ランチは料理が1品少ない構成になります。</p>
+                    <p class="course-reserve">ご宿泊の方の夕食・朝食は、いずれも事前のご予約が必要です。</p>
                 </div>
 
                 <div class="menu-block">
-                    <h3 class="course-heading">お品書きの一例<span class="menu-season">2026年 秋</span></h3>
+                    <h3 class="menu-heading">お品書きの一例</h3>
+                    <p class="menu-season">2026年 秋</p>
                     <dl class="menu-list">
                         <div class="menu-item"><dt>伯耆大山786m</dt><dd>786mはレストランの標高。周辺で採れる食材で作る一皿です。黒文字の香りを移したベシャメルと山椒の葉を包んだ、揚げパンのような料理。</dd></div>
                         <div class="menu-item"><dt>大山こむぎ</dt><dd>小麦粉・塩・水と大山こむぎの酵母（サワー種）だけで焼いた自家製サワードゥを温かいフレンチトーストにし、鯵とハーブのタルタルを合わせて。</dd></div>
@@ -402,13 +396,14 @@
                         <div class="menu-item"><dt>柿<span class="menu-tag">デセール</span></dt><dd>北栄町のあんぽ柿と輝太郎柿に、日本酒のグラニテとヘーゼルナッツのアイス。</dd></div>
                         <div class="menu-item"><dt>黒文字<span class="menu-tag">デセール</span></dt><dd>黒文字のキャラメルアイスと黒文字のリオレに、キャラメリゼした和梨のピュレ。</dd></div>
                     </dl>
-                    <p class="cuisine-note">※ 季節と仕入れにより、内容は日々変わります。</p>
+                    <p class="menu-note">季節と仕入れにより、内容は日々変わります。</p>
+                </div>
                 </div>
             </div>
 
             <div class="wrap reveal">
                 <div class="chef-block">
-                    <span class="chef-label">— Chef</span>
+                    <span class="chef-label">料理長</span>
                     <h3 class="chef-name">前田 帆貴<span class="chef-name-en">Hotaka Maeda</span></h3>
                     <p class="chef-bio">鳥取県出身の料理人。東京のビストロで料理長を務めた後、ミシュラン星付きレストランでも研鑽を積み、フレンチの技法と食材への向き合い方を磨いてきました。自身の料理はまだ道半ばと考え、故郷・山陰の食材と真摯に向き合いながら、より良い一皿を目指し続けています。</p>
                     <p class="chef-quote">「その日の山陰を、一皿に」</p>
@@ -418,7 +413,7 @@
 
         <section id="rooms" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">03 / Guest Rooms</span>
+                <span class="section-num">客室</span>
                 <h2 class="heading-lg">静けさに浸る<br>3つの客室</h2>
                 <p class="text-muted-block" style="max-width: 640px;">
                     食事の余韻と大山の静けさに浸るための、3つの客室。過度な装飾は設けず、窓から切り取られる森の景色と、深呼吸できる余白をご用意しました。
@@ -440,7 +435,7 @@
                             </figure>
                         </div>
                         <div class="room-card-body">
-                            <span class="room-eyebrow">Room 010</span>
+                            <span class="room-eyebrow">客室 010</span>
                             <h3 class="room-name">廊下の向かいに<br>貸切の陶器風呂</h3>
                             <p class="text-muted-block">客室を出て、廊下を挟んだ向かい側に、010にご宿泊の方だけがお使いいただける貸切風呂があります。ゆったりとした陶器の浴槽を据えた室内の風呂で、露天ではありませんが、鍵をかけて一室まるごと貸切でお使いいただけます。滞在中は時間を決めずにご自由にどうぞ。</p>
                             <ul class="room-spec">
@@ -458,7 +453,7 @@
                             </figure>
                         </div>
                         <div class="room-card-body">
-                            <span class="room-eyebrow">Room 020</span>
+                            <span class="room-eyebrow">客室 020</span>
                             <h3 class="room-name">ふたりのための<br>静かなひと部屋</h3>
                             <p class="text-muted-block">ダブルベッドをひとつ備えた、シンプルな客室。余計なものを削ぎ落とし、ただ心地よく眠るためだけの空間です。</p>
                             <ul class="room-spec">
@@ -475,7 +470,7 @@
                             </figure>
                         </div>
                         <div class="room-card-body">
-                            <span class="room-eyebrow">Room 030</span>
+                            <span class="room-eyebrow">客室 030</span>
                             <h3 class="room-name">余白を楽しむ<br>ツインの客室</h3>
                             <p class="text-muted-block">ツインベッドにエキストラベッドを加え、最大3名様までご利用いただける客室。窓辺で森の気配を感じながら、ゆっくりとお休みいただけます。</p>
                             <ul class="room-spec">
@@ -526,7 +521,7 @@
                         </figure>
                     </div>
                     <ul class="room-spec">
-                        <li><span class="spec-label">レストラン</span><span>夕食・朝食はレストランでお召し上がりいただきます。いずれもオプションで、素泊まりも承ります（夕食は18:00から一斉スタート）。</span></li>
+                        <li><span class="spec-label">レストラン</span><span>夕食・朝食はレストランでお召し上がりいただきます。いずれもオプションで、事前のご予約が必要です。素泊まりも承ります（夕食は18:00から一斉スタート）。</span></li>
                         <li><span class="spec-label">フロント</span><span>ソファーを置いた、くつろぎのスペースがあります。</span></li>
                         <li><span class="spec-label">コーヒー</span><span>客室前にコーヒーマシンを設置しています。ご自由にお使いください。</span></li>
                         <li><span class="spec-label">ミニバー</span><span>客室前の冷蔵庫にビール・ソフトドリンクをご用意しています（有料・代金は料金箱へ）。</span></li>
@@ -541,7 +536,7 @@
 
         <section id="news" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">04 / News</span>
+                <span class="section-num">お知らせ</span>
                 <div id="newsList">
                     <button type="button" class="list-row"
                         data-title="スタッフ募集のお知らせ"
@@ -575,14 +570,14 @@
 
         <section id="faq" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">05 / FAQ</span>
+                <span class="section-num">よくあるご質問</span>
                 <div class="faq-wrap">
                     <details><summary><span class="faq-q">お子様は利用できますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">コース料理の特性上、9歳以上のお子様よりご利用いただけます。幼いお子様連れの場合は、事前にご相談ください。</div></details>
                     <details><summary><span class="faq-q">食事の内容はどのようなものですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">山陰の海・山・里が育んだ食材を使ったフレンチのコース料理です。隠岐の島の岩牡蠣、宍道湖の蜆、木次乳業のチーズ、毎朝収穫した畑の野菜やハーブなど、その日の山陰の「情景」を一皿に表現します。</div></details>
                     <details><summary><span class="faq-q">アレルギーがあります。対応できますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">ご予約の際に事前にお知らせください。可能な範囲で対応いたします。アレルギーの種類や程度によってはお断りする場合もございますので、あらかじめご了承ください。</div></details>
                     <details><summary><span class="faq-q">チェックインは何時から何時までですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">チェックインは15:00から22:00までです。ディナー付きプランをご予約のお客様は、ディナーが18:00に一斉スタートとなりますので、それまでにチェックインをお願いしております。素泊まりのお客様で22:00以降のご到着になりそうな場合も、事前にご連絡をいただければ可能な限り対応いたしますので、お早めにお知らせください。ご連絡なく22:00を過ぎてのご到着は、対応できないことがございます。</div></details>
                     <details><summary><span class="faq-q">チェックアウトは何時ですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">チェックアウトは10:00です。</div></details>
-                    <details><summary><span class="faq-q">夕食・朝食は付けられますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">夕食・朝食はいずれもオプションで、館内のレストランでお召し上がりいただけます。食事なしの素泊まりも承ります。</div></details>
+                    <details><summary><span class="faq-q">夕食・朝食は付けられますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">夕食・朝食はいずれもオプションで、事前のご予約が必要です。館内のレストランでお召し上がりいただけます。食事なしの素泊まりも承ります。</div></details>
                     <details><summary><span class="faq-q">キャンセルポリシーを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">キャンセルポリシーは予約方法ごとの規定に準じます（ディナーはTableCheck、宿泊は公式予約システムまたは各予約サイト）。詳細は予約時にご確認ください。</div></details>
                     <details><summary><span class="faq-q">駐車場はありますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">建物前に2台分の無料駐車スペースをご用意しています。</div></details>
                     <details><summary><span class="faq-q">米子駅・米子鬼太郎空港からのアクセスを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">JR米子駅から日本交通バス「大山寺」行きにご乗車いただき、約50分で大山寺バス停へ。そこから徒歩約5分です。お車の場合は米子自動車道「溝口IC」から約20分です。</div></details>
@@ -596,7 +591,7 @@
 
         <section id="contact" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">06 / Contact</span>
+                <span class="section-num">お問い合わせ</span>
                 <div class="contact-wrap">
                     <p class="contact-intro">
                         ご予約以外のお問い合わせは<br>こちらのフォームよりお願いいたします。
@@ -641,7 +636,7 @@
                             <label>この欄は空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
                         </div>
                         <div class="form-submit-wrap">
-                            <button type="submit" class="btn-submit">SEND MESSAGE</button>
+                            <button type="submit" class="btn-submit">送信する</button>
                         </div>
                     </form>
 
@@ -663,7 +658,7 @@
 
         <section id="access" class="section-padding">
             <div class="wrap reveal">
-                <span class="section-num">07 / Access</span>
+                <span class="section-num">アクセス</span>
 
                 <div class="access-gallery">
                     <figure class="access-photo">
@@ -677,10 +672,10 @@
                         <h2 class="access-title">Scène</h2>
                         <div class="access-details">
                             <p>〒689-3318 鳥取県西伯郡大山町大山115-7</p>
-                            <p class="access-direction">[ お車 ]<br>米子自動車道「溝口IC」より約20分</p>
-                            <p class="access-direction">[ 駐車場 ]<br>建物の目の前に2台分（先着順・無料）<br>満車の場合はスタッフへお声がけください。<br>近隣の無料駐車場をご案内いたします。</p>
-                            <p class="access-direction">[ 公共交通機関 ]<br>JR米子駅より日交バス「大山寺」行 約50分<br>「大山寺」バス停下車 徒歩5分</p>
-                            <p class="access-direction">[ お問い合わせ ]<br><a href="mailto:scene_reservation@npo-yui.com">scene_reservation@npo-yui.com</a></p>
+                            <p class="access-direction">お車<br>米子自動車道「溝口IC」より約20分</p>
+                            <p class="access-direction">駐車場<br>建物の目の前に2台分（先着順・無料）<br>満車の場合はスタッフへお声がけください。<br>近隣の無料駐車場をご案内いたします。</p>
+                            <p class="access-direction">公共交通機関<br>JR米子駅より日交バス「大山寺」行 約50分<br>「大山寺」バス停下車 徒歩5分</p>
+                            <p class="access-direction">お問い合わせ<br><a href="mailto:scene_reservation@npo-yui.com">scene_reservation@npo-yui.com</a></p>
                         </div>
                         <a href="https://maps.app.goo.gl/nVwHqy7FLRFMXQKW9" target="_blank" rel="noopener" class="btn-outline-subtle">Google Mapsで開く</a>
                     </div>
@@ -706,14 +701,14 @@
         <div class="wrap footer-inner">
             <div>
                 <span class="footer-brand">Scène</span>
-                <p class="footer-tagline">Cuisine-first auberge in the forest of Daisen</p>
+                <p class="footer-tagline">鳥取県大山町、森の中のオーベルジュ</p>
             </div>
             <nav class="footer-nav" aria-label="フッターナビゲーション">
-                <a href="#concept">Concept</a>
-                <a href="#cuisine">Cuisine</a>
-                <a href="#rooms">Rooms</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
+                <a href="#concept">Scèneのこと</a>
+                <a href="#cuisine">料理</a>
+                <a href="#rooms">客室</a>
+                <a href="#faq">よくあるご質問</a>
+                <a href="#contact">お問い合わせ</a>
             </nav>
             <div class="footer-copy">© Scène</div>
         </div>
