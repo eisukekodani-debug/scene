@@ -84,6 +84,8 @@
                 "servesCuisine": "法式料理",
                 "priceRange": "¥¥¥",
                 "acceptsReservations": true,
+                "checkinTime": "15:00",
+                "checkoutTime": "10:00",
                 "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
@@ -100,13 +102,15 @@
                     { "@type": "Question", "name": "餐廳提供什麼樣的料理？", "acceptedAnswer": { "@type": "Answer", "text": "主廚前田帆貴以山陰的海、山、里為靈感，呈現法式懷石套餐。食材涵蓋隱岐島的岩牡蠣、宍道湖的蜆貝、木次乳業的起司，以及每日早晨現摘的庭院蔬菜與香草。每一道菜都是當天山陰風情的一幅畫。" } },
                     { "@type": "Question", "name": "可以對應食物過敏嗎？", "acceptedAnswer": { "@type": "Answer", "text": "請於預訂時事先告知過敏原。我們將在可能的範圍內盡力配合，但依過敏種類與程度，有時無法完全對應，敬請見諒。" } },
                     { "@type": "Question", "name": "入住時間是幾點到幾點？", "acceptedAnswer": { "@type": "Answer", "text": "入住辦理時間為15:00至22:00。預訂含晚餐方案的賓客，由於晚餐為18:00全體一同開始，敬請於18:00前完成入住。純住宿方案的賓客若預計22:00以後才會抵達，請儘早與我們聯繫，事先告知即可為您個別安排。未事先聯繫而於22:00以後抵達，恕有無法接待的情況。" } },
+                    { "@type": "Question", "name": "退房時間是幾點？", "acceptedAnswer": { "@type": "Answer", "text": "退房時間為10:00。" } },
+                    { "@type": "Question", "name": "可以加購晚餐或早餐嗎？", "acceptedAnswer": { "@type": "Answer", "text": "晚餐與早餐皆為加購選項，於館內餐廳享用。也可選擇不含餐點的純住宿。" } },
                     { "@type": "Question", "name": "取消訂位的規定是什麼？", "acceptedAnswer": { "@type": "Answer", "text": "取消政策依預訂平台規定執行：晚餐請透過TableCheck預訂，住宿請透過官方預約系統或各預約平台。詳細取消條款請於預訂時確認。" } },
                     { "@type": "Question", "name": "餐廳有停車場嗎？", "acceptedAnswer": { "@type": "Answer", "text": "建築物前方提供2個免費停車位。" } },
                     { "@type": "Question", "name": "從米子站或米子鬼太郎機場如何前往？", "acceptedAnswer": { "@type": "Answer", "text": "從JR米子站搭乘日本交通巴士「大山寺」方向，約50分鐘後於大山寺站下車，步行約5分鐘即可抵達。若自駕，請由米子自動車道「溝口IC」下交流道，行駛約20分鐘即可。" } },
                     { "@type": "Question", "name": "只用晚餐、不住宿可以嗎？", "acceptedAnswer": { "@type": "Answer", "text": "當然可以。歡迎只預訂晚餐。請透過TableCheck預約。" } },
                     { "@type": "Question", "name": "冬天積雪路滑時，交通狀況如何？", "acceptedAnswer": { "@type": "Answer", "text": "大山是鳥取縣著名的豪雪地帶，11月至3月間路面可能積雪或結冰。自駕前往請務必安裝雪地胎或備妥雪鏈。巴士雖照常行駛，但可能因天候而延誤，建議預留充裕的交通時間並出發前確認道路狀況。" } },
                     { "@type": "Question", "name": "周邊有什麼值得一遊的景點？", "acceptedAnswer": { "@type": "Answer", "text": "Scène位於大山參道沿線，大山寺與大神山神社奧宮步行即可抵達，四季自然景色各有魅力。驅車30分鐘內可到達皆生溫泉、境港的水木茂之路（鬼太郎故鄉），以及列入國寶的松江城。" } },
-                    { "@type": "Question", "name": "客房設備有哪些？", "acceptedAnswer": { "@type": "Answer", "text": "全3間客房均備有Wi-Fi、淋浴間、毛巾、吹風機及睡衣，讓您在靜謐森林中享受晚餐後最完美的收尾。" } }
+                    { "@type": "Question", "name": "客房設備有哪些？", "acceptedAnswer": { "@type": "Answer", "text": "全3間客房均備有洗臉台、淋浴間、廁所、Wi-Fi、小冰箱、電視、毛巾、吹風機、睡衣、牙刷及洗髮用品。客房前另設有咖啡機與迷你吧（啤酒與無酒精飲料，需付費）。" } }
                 ]
             },
             {
@@ -324,6 +328,21 @@
                         從 amuse-bouche 到甜點，每一道料理都呈現這片土地不同的表情。
                     </p>
                 </div>
+
+                <div class="cuisine-points">
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">以柴火完成</h3>
+                        <p>魚貝、肉類與蔬菜以柴火燒烤，層層疊加香氣後完成。</p>
+                    </div>
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">向生產者直接進貨</h3>
+                        <p>食材直接向生產者採購，趁新鮮時烹調。</p>
+                    </div>
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">剛採收的蔬菜與香草</h3>
+                        <p>蔬菜與香草皆使用剛採收的食材，菜色也隨田間狀況每日變化。</p>
+                    </div>
+                </div>
             </div>
 
             <div class="wrap cuisine-below reveal">
@@ -357,6 +376,43 @@
                     @scene_sanin
                 </a>
                 <p class="cuisine-note cuisine-note-end">＊ 餐廳僅提供套餐（全餐）。</p>
+            </div>
+
+            <div class="wrap reveal">
+                <div class="course-block">
+                    <h3 class="course-heading">套餐介紹</h3>
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <span class="course-eyebrow">Lunch</span>
+                            <p class="course-name">午間套餐</p>
+                            <p class="course-price">13,200<span>日圓（含稅）</span></p>
+                            <p class="course-detail">料理7道・甜點2道・茶點3種・自家製酸種麵包</p>
+                        </div>
+                        <div class="course-card">
+                            <span class="course-eyebrow">Dinner</span>
+                            <p class="course-name">晚間套餐</p>
+                            <p class="course-price">16,500<span>日圓（含稅）</span></p>
+                            <p class="course-detail">料理8道・甜點2道・茶點3種・自家製酸種麵包</p>
+                        </div>
+                    </div>
+                    <p class="cuisine-note">午餐與晚餐的料理內容基本相同，午餐少一道料理。</p>
+                </div>
+
+                <div class="menu-block">
+                    <h3 class="course-heading">菜單示例<span class="menu-season">2026年 秋</span></h3>
+                    <dl class="menu-list">
+                        <div class="menu-item"><dt>伯耆大山786m</dt><dd>786m是餐廳所在的海拔高度，以周邊採集的食材製作。將吸附黑文字（日本山胡椒）香氣的白醬與山椒葉包入其中，口感近似炸麵包的一道料理。</dd></div>
+                        <div class="menu-item"><dt>大山小麥</dt><dd>僅以麵粉、鹽、水與大山小麥酵母（酸種）烘焙的自家製酸種麵包，做成溫熱的法式吐司，搭配竹筴魚與香草塔塔。</dd></div>
+                        <div class="menu-item"><dt>坂田農園</dt><dd>使用大山町坂田農園田裡採收的蔬菜與香草。食材每日不同，沒有固定的樣貌。</dd></div>
+                        <div class="menu-item"><dt>白螺</dt><dd>昆布醃漬的白峨螺與青花菜以柴火燒烤，佐發酵蕪菁、青花菜與貝類高湯泥、以貝類高湯和白酒打發的醬汁，以及炭化柚子皮。</dd></div>
+                        <div class="menu-item"><dt>穴子</dt><dd>以米粉炸製的星鰻，與星鰻白蔥肉丸。搭配星鰻與蜆高湯的清湯、烤海苔及芹菜油。</dd></div>
+                        <div class="menu-item"><dt>地美惠</dt><dd>來自奧大山地美惠的山豬。以邊角肉製成肉丸，搭配米糠醃甜菜汁與切碎的米糠醃甜菜製成的醬汁。</dd></div>
+                        <div class="menu-item"><dt>大山糯米飯</dt><dd>以乾燥菇類高湯炊煮，拌入以柴火增添香氣的松葉蟹與原木栽培菇類。附松葉蟹湯。</dd></div>
+                        <div class="menu-item"><dt>柿<span class="menu-tag">甜點</span></dt><dd>北榮町的半乾柿（あんぽ柿）與輝太郎柿，搭配日本酒冰沙與榛果冰淇淋。</dd></div>
+                        <div class="menu-item"><dt>黑文字<span class="menu-tag">甜點</span></dt><dd>黑文字焦糖冰淇淋與黑文字米布丁，搭配焦糖化日本梨泥。</dd></div>
+                    </dl>
+                    <p class="cuisine-note">＊ 菜色依季節與進貨每日更換。</p>
+                </div>
             </div>
 
             <div class="wrap reveal">
@@ -440,11 +496,54 @@
 
                 </div>
 
-                <div class="rooms-common">
-                    <figure class="room-photo room-photo--shower">
-                        <img src="../assets/images/room-shower.webp" alt="全客房共通的淋浴與廁所" width="825" height="1100" loading="lazy">
-                    </figure>
-                    <p class="text-muted-block">全客房皆備有淋浴・廁所、Wi-Fi、毛巾・吹風機・睡衣。備有浴缸的僅有 010 房客專屬的包場浴室（位於走廊對面的室內陶瓷浴缸）。其餘客房僅設淋浴。</p>
+                <div class="rooms-common rooms-common--duo">
+                    <div class="rooms-common-media">
+                        <figure class="room-photo room-photo--shower">
+                            <img src="../assets/images/room-shower.webp" alt="全客房共通的洗臉台、廁所與淋浴間" width="825" height="1100" loading="lazy">
+                            <figcaption>洗臉台・廁所</figcaption>
+                        </figure>
+                        <figure class="room-photo room-photo--shower">
+                            <img src="../assets/images/amenities.webp" alt="擺放於洗臉台的毛巾、睡衣與牙刷等備品" width="1050" height="1399" loading="lazy">
+                            <figcaption>備品</figcaption>
+                        </figure>
+                    </div>
+                    <div class="rooms-common-body">
+                        <h3 class="room-name">全客房共通的衛浴與備品</h3>
+                        <p class="text-muted-block">全客房皆備有洗臉台、淋浴間與廁所。備有浴缸的僅有 010 房客專屬的包場浴室（位於走廊對面的室內陶瓷浴缸）。其餘客房僅設淋浴。</p>
+                        <ul class="room-spec">
+                            <li><span class="spec-label">衛浴</span><span>洗臉台・淋浴間・廁所（全客房・室內）</span></li>
+                            <li><span class="spec-label">備品</span><span>牙刷、洗髮用品、毛巾、睡衣</span></li>
+                            <li><span class="spec-label">設備</span><span>吹風機、小冰箱、電視、Wi-Fi</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facilities">
+                    <h3 class="room-name">館內設施</h3>
+                    <div class="facilities-media">
+                        <figure class="room-photo">
+                            <img src="../assets/images/exterior-day.webp" alt="白天的Scène外觀，被森林環繞的平房建築" width="1600" height="1201" loading="lazy">
+                            <figcaption>外觀</figcaption>
+                        </figure>
+                        <figure class="room-photo">
+                            <img src="../assets/images/facility-restaurant.webp" alt="享用晚餐與早餐的餐廳" width="1050" height="1400" loading="lazy">
+                            <figcaption>餐廳</figcaption>
+                        </figure>
+                        <figure class="room-photo">
+                            <img src="../assets/images/interior-stainedglass.webp" alt="嵌在木牆上、描繪月亮與大山的彩繪玻璃" width="1050" height="1399" loading="lazy">
+                            <figcaption>館內</figcaption>
+                        </figure>
+                    </div>
+                    <ul class="room-spec">
+                        <li><span class="spec-label">餐廳</span><span>晚餐與早餐皆於餐廳享用，兩者皆為加購選項，也可選擇純住宿（晚餐18:00全體一同開始）。</span></li>
+                        <li><span class="spec-label">櫃台</span><span>設有沙發，可在此放鬆休憩。</span></li>
+                        <li><span class="spec-label">咖啡</span><span>客房前設有咖啡機，歡迎自由取用。</span></li>
+                        <li><span class="spec-label">迷你吧</span><span>客房前的冰箱備有啤酒與無酒精飲料（需付費，請將費用投入錢箱）。</span></li>
+                        <li><span class="spec-label">包場浴室</span><span>010 房客專屬的陶瓷浴缸（位於走廊對面）</span></li>
+                        <li><span class="spec-label">Wi-Fi</span><span>全館皆可使用。</span></li>
+                        <li><span class="spec-label">停車場</span><span>建築物前方2個車位（免費）</span></li>
+                        <li><span class="spec-label">時間</span><span>入住 15:00〜22:00／退房 10:00</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -493,13 +592,15 @@
                     <details><summary><span class="faq-q">餐廳提供什麼樣的料理？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">主廚前田帆貴以山陰的海、山、里為靈感，呈現法式懷石套餐。食材涵蓋隱岐島的岩牡蠣、宍道湖的蜆貝、木次乳業的起司，以及每日早晨現摘的庭院蔬菜與香草。每一道菜都是當天山陰風情的一幅畫。</div></details>
                     <details><summary><span class="faq-q">可以對應食物過敏嗎？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">請於預訂時事先告知過敏原。我們將在可能的範圍內盡力配合，但依過敏種類與程度，有時無法完全對應，敬請見諒。</div></details>
                     <details><summary><span class="faq-q">入住時間是幾點到幾點？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">入住辦理時間為15:00至22:00。預訂含晚餐方案的賓客，由於晚餐為18:00全體一同開始，敬請於18:00前完成入住。純住宿方案的賓客若預計22:00以後才會抵達，請儘早與我們聯繫，事先告知即可為您個別安排。未事先聯繫而於22:00以後抵達，恕有無法接待的情況。</div></details>
+                    <details><summary><span class="faq-q">退房時間是幾點？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">退房時間為10:00。</div></details>
+                    <details><summary><span class="faq-q">可以加購晚餐或早餐嗎？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">晚餐與早餐皆為加購選項，於館內餐廳享用。也可選擇不含餐點的純住宿。</div></details>
                     <details><summary><span class="faq-q">取消訂位的規定是什麼？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">取消政策依預訂平台規定執行：晚餐請透過TableCheck預訂，住宿請透過官方預約系統或各預約平台。詳細取消條款請於預訂時確認。</div></details>
                     <details><summary><span class="faq-q">餐廳有停車場嗎？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">建築物前方提供2個免費停車位。</div></details>
                     <details><summary><span class="faq-q">從米子站或米子鬼太郎機場如何前往？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">從JR米子站搭乘日本交通巴士「大山寺」方向，約50分鐘後於大山寺站下車，步行約5分鐘即可抵達。若自駕，請由米子自動車道「溝口IC」下交流道，行駛約20分鐘即可。詳情請參閱<a href="/zh/guides/access-from-tokyo-osaka.html" style="color:#c8b88a;">交通指南</a>。</div></details>
                     <details><summary><span class="faq-q">只用晚餐、不住宿可以嗎？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">當然可以。歡迎只預訂晚餐。請透過TableCheck預約。</div></details>
                     <details><summary><span class="faq-q">冬天積雪路滑時，交通狀況如何？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">大山是鳥取縣著名的豪雪地帶，11月至3月間路面可能積雪或結冰。自駕前往請務必安裝雪地胎或備妥雪鏈。巴士雖照常行駛，但可能因天候而延誤，建議預留充裕的交通時間並出發前確認道路狀況。</div></details>
                     <details><summary><span class="faq-q">周邊有什麼值得一遊的景點？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Scène位於大山參道沿線，大山寺與大神山神社奧宮步行即可抵達，四季自然景色各有魅力。驅車30分鐘內可到達皆生溫泉、境港的水木茂之路（鬼太郎故鄉），以及列入國寶的松江城。詳見<a href="/zh/guides/daisen-area-guide.html" style="color:#c8b88a;">大山周邊觀光指南</a>。</div></details>
-                    <details><summary><span class="faq-q">客房設備有哪些？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">全3間客房均備有Wi-Fi、淋浴間、毛巾、吹風機及睡衣，讓您在靜謐森林中享受晚餐後最完美的收尾。</div></details>
+                    <details><summary><span class="faq-q">客房設備有哪些？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">全3間客房均備有洗臉台、淋浴間、廁所、Wi-Fi、小冰箱、電視、毛巾、吹風機、睡衣、牙刷及洗髮用品。客房前另設有咖啡機與迷你吧（啤酒與無酒精飲料，需付費）。</div></details>
                 </div>
             </div>
         </section>

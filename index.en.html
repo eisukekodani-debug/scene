@@ -82,6 +82,8 @@
                 "servesCuisine": "French",
                 "priceRange": "¥¥¥",
                 "acceptsReservations": true,
+                "checkinTime": "15:00",
+                "checkoutTime": "10:00",
                 "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
@@ -98,13 +100,15 @@
                     { "@type": "Question", "name": "What kind of food is served?", "acceptedAnswer": { "@type": "Answer", "text": "Chef Hotaka Maeda crafts French tasting-course menus inspired by the landscapes of San'in — wild rock oysters from the Oki Islands, freshwater clams from Lake Shinji, artisan cheese from Kisuki Dairy, and herbs and vegetables harvested each morning from our kitchen garden. Every plate is a portrait of that day's San'in." } },
                     { "@type": "Question", "name": "Can you accommodate food allergies?", "acceptedAnswer": { "@type": "Answer", "text": "Please inform us of any allergies or dietary restrictions when making your reservation. We will do our best to accommodate within the limits of our kitchen. Depending on the nature and severity of the allergy, we may not be able to guarantee full accommodation." } },
                     { "@type": "Question", "name": "What are your check-in hours?", "acceptedAnswer": { "@type": "Answer", "text": "Check-in is available from 3:00 PM to 10:00 PM. Guests on a dinner plan are asked to check in by 6:00 PM, as dinner begins at 6:00 PM for everyone together. Room-only guests who expect to arrive after 10:00 PM should contact us in advance — with prior notice we will do our best to accommodate you. Without prior notice, we may not be able to receive you after 10:00 PM." } },
+                    { "@type": "Question", "name": "What time is check-out?", "acceptedAnswer": { "@type": "Answer", "text": "Check-out is at 10:00 AM." } },
+                    { "@type": "Question", "name": "Can I add dinner or breakfast?", "acceptedAnswer": { "@type": "Answer", "text": "Dinner and breakfast are both optional and are served in the restaurant. Room-only stays are also available." } },
                     { "@type": "Question", "name": "What is your cancellation policy?", "acceptedAnswer": { "@type": "Answer", "text": "Cancellation terms follow the platform you booked through — TableCheck for dinner reservations, and our official booking system or other platforms for overnight stays. Please review the specific policy at the time of booking." } },
                     { "@type": "Question", "name": "Is there parking available?", "acceptedAnswer": { "@type": "Answer", "text": "We have two free parking spaces directly in front of the restaurant." } },
                     { "@type": "Question", "name": "How do I get to Scène from Yonago Station or Yonago Kitaro Airport?", "acceptedAnswer": { "@type": "Answer", "text": "From JR Yonago Station, take the Nihon Kotsu Bus bound for Daisen-ji (approx. 50 min) and alight at the Daisen-ji stop, then walk about 5 minutes. By car, exit at Mizokuchi IC on the Yonago Expressway and drive approximately 20 minutes toward Mt. Daisen." } },
                     { "@type": "Question", "name": "Can I visit for dinner without staying overnight?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Dinner-only reservations are very welcome. Book your table through TableCheck." } },
                     { "@type": "Question", "name": "What are road conditions like in winter? Is snow a concern?", "acceptedAnswer": { "@type": "Answer", "text": "Mt. Daisen receives heavy snowfall and the road can be icy from November through March. We strongly recommend snow tires or tire chains if driving. Bus services continue but may experience delays due to weather conditions. Please plan extra travel time and check road conditions before setting out." } },
                     { "@type": "Question", "name": "What are some sightseeing highlights near Scène?", "acceptedAnswer": { "@type": "Answer", "text": "Scène sits along the ancient Daisen pilgrim path, putting Daisen-ji Temple and the inner shrine of Ooyama Jinja within easy walking distance. Within a 30-minute drive you can reach Kaike Onsen hot springs, the Mizuki Shigeru Road in Sakaiminato (home of Kitaro), and the historic Matsue Castle." } },
-                    { "@type": "Question", "name": "What amenities are available in the guest rooms?", "acceptedAnswer": { "@type": "Answer", "text": "All three rooms include Wi-Fi, a shower booth, towels, a hair dryer, and pajamas — a quiet stay in the forest stillness after dinner." } }
+                    { "@type": "Question", "name": "What amenities are available in the guest rooms?", "acceptedAnswer": { "@type": "Answer", "text": "All three rooms have a washbasin, shower room and toilet, Wi-Fi, a mini fridge, a TV, towels, a hair dryer, pajamas, a toothbrush and shampoo. A coffee machine and a minibar (beer and soft drinks, paid) are located outside the guest rooms." } }
                 ]
             },
             {
@@ -323,6 +327,21 @@
                         From amuse-bouche to dessert, each plate reveals a different expression of this land.
                     </p>
                 </div>
+
+                <div class="cuisine-points">
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">Finished over a wood fire</h3>
+                        <p>Seafood, meat and vegetables are grilled over a wood fire, layering aroma into each dish.</p>
+                    </div>
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">Sourced directly from producers</h3>
+                        <p>Ingredients come directly from local producers and are cooked while at their freshest.</p>
+                    </div>
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">Vegetables and herbs, just harvested</h3>
+                        <p>Vegetables and herbs are used right after harvest, so the dishes change daily with the fields.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="wrap cuisine-below reveal">
@@ -356,6 +375,43 @@
                     @scene_sanin
                 </a>
                 <p class="cuisine-note cuisine-note-end">*Restaurant offers course meals only.</p>
+            </div>
+
+            <div class="wrap reveal">
+                <div class="course-block">
+                    <h3 class="course-heading">Courses</h3>
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <span class="course-eyebrow">Lunch</span>
+                            <p class="course-name">Lunch Course</p>
+                            <p class="course-price">¥13,200<span>(tax incl.)</span></p>
+                            <p class="course-detail">7 dishes, 2 desserts, 3 petits fours, and house-made sourdough</p>
+                        </div>
+                        <div class="course-card">
+                            <span class="course-eyebrow">Dinner</span>
+                            <p class="course-name">Dinner Course</p>
+                            <p class="course-price">¥16,500<span>(tax incl.)</span></p>
+                            <p class="course-detail">8 dishes, 2 desserts, 3 petits fours, and house-made sourdough</p>
+                        </div>
+                    </div>
+                    <p class="cuisine-note">Lunch and dinner share essentially the same menu; lunch has one fewer dish.</p>
+                </div>
+
+                <div class="menu-block">
+                    <h3 class="course-heading">Sample Menu<span class="menu-season">Autumn 2026</span></h3>
+                    <dl class="menu-list">
+                        <div class="menu-item"><dt>Hōki Daisen 786m</dt><dd>786 m is the elevation of the restaurant; this dish uses ingredients gathered nearby. A fried-bread-like bite filled with béchamel infused with kuromoji (Japanese spicebush) and sansho leaves.</dd></div>
+                        <div class="menu-item"><dt>Daisen Komugi</dt><dd>House-made sourdough baked only with flour, salt, water and a Daisen wheat starter, served as warm French toast with a tartare of horse mackerel and herbs.</dd></div>
+                        <div class="menu-item"><dt>Sakata Farm</dt><dd>Vegetables and herbs harvested at Sakata Farm in Daisen Town. The ingredients change daily, and the dish has no fixed form.</dd></div>
+                        <div class="menu-item"><dt>Shirobai</dt><dd>Kelp-cured whelk and broccoli grilled over a wood fire, with fermented turnip, a broccoli and shellfish-stock purée, a foamed sauce of shellfish stock and white wine, and charred yuzu zest.</dd></div>
+                        <div class="menu-item"><dt>Anago</dt><dd>A conger eel fritter in rice flour and a conger eel and leek tsukune, with a consommé of conger eel and shijimi clam stock, toasted nori and celery oil.</dd></div>
+                        <div class="menu-item"><dt>Jibie</dt><dd>Wild boar from Oku-Daisen Jibie: a meatball of trimmings, with a sauce of rice-bran-pickled beet juice and finely chopped pickled beets.</dd></div>
+                        <div class="menu-item"><dt>Daisen Okowa</dt><dd>Sticky rice cooked in dried mushroom stock, with matsuba crab and log-grown mushrooms finished with the aroma of the wood fire. Served with matsuba crab soup.</dd></div>
+                        <div class="menu-item"><dt>Kaki<span class="menu-tag">Dessert</span></dt><dd>Anpo and Kitaro persimmons from Hokuei Town, with sake granita and hazelnut ice cream.</dd></div>
+                        <div class="menu-item"><dt>Kuromoji<span class="menu-tag">Dessert</span></dt><dd>Kuromoji caramel ice cream and kuromoji riz au lait, with a purée of caramelized Japanese pear.</dd></div>
+                    </dl>
+                    <p class="cuisine-note">* Dishes change daily with the season and availability.</p>
+                </div>
             </div>
 
             <div class="wrap reveal">
@@ -440,11 +496,54 @@
 
                 </div>
 
-                <div class="rooms-common">
-                    <figure class="room-photo room-photo--shower">
-                        <img src="./assets/images/room-shower.webp" alt="Shower and toilet, common to all rooms" width="825" height="1100" loading="lazy">
-                    </figure>
-                    <p class="text-muted-block">All rooms include a shower and toilet, Wi-Fi, towels, a hair dryer, and pajamas. A soaking tub is available only in the private bath for Room 010 guests — an indoor ceramic tub in a room across the hall. The other rooms have a shower only.</p>
+                <div class="rooms-common rooms-common--duo">
+                    <div class="rooms-common-media">
+                        <figure class="room-photo room-photo--shower">
+                            <img src="./assets/images/room-shower.webp" alt="Washbasin, toilet and shower room, common to all rooms" width="825" height="1100" loading="lazy">
+                            <figcaption>Washbasin & toilet</figcaption>
+                        </figure>
+                        <figure class="room-photo room-photo--shower">
+                            <img src="./assets/images/amenities.webp" alt="Towels, pajamas and toothbrushes set out at the washbasin" width="1050" height="1399" loading="lazy">
+                            <figcaption>Amenities</figcaption>
+                        </figure>
+                    </div>
+                    <div class="rooms-common-body">
+                        <h3 class="room-name">Bathrooms and Amenities in Every Room</h3>
+                        <p class="text-muted-block">Every room has a washbasin, shower room and toilet. A soaking tub is available only in the private bath for Room 010 guests — an indoor ceramic tub in a room across the hall. The other rooms have a shower only.</p>
+                        <ul class="room-spec">
+                            <li><span class="spec-label">Bathroom</span><span>Washbasin, shower room and toilet (in every room)</span></li>
+                            <li><span class="spec-label">Amenities</span><span>Toothbrush, shampoo and bath products, towels, pajamas</span></li>
+                            <li><span class="spec-label">In-room</span><span>Hair dryer, mini fridge, TV, Wi-Fi</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facilities">
+                    <h3 class="room-name">Facilities</h3>
+                    <div class="facilities-media">
+                        <figure class="room-photo">
+                            <img src="./assets/images/exterior-day.webp" alt="The exterior of Scène by day, a single-story building surrounded by forest" width="1600" height="1201" loading="lazy">
+                            <figcaption>Exterior</figcaption>
+                        </figure>
+                        <figure class="room-photo">
+                            <img src="./assets/images/facility-restaurant.webp" alt="The restaurant where dinner and breakfast are served" width="1050" height="1400" loading="lazy">
+                            <figcaption>Restaurant</figcaption>
+                        </figure>
+                        <figure class="room-photo">
+                            <img src="./assets/images/interior-stainedglass.webp" alt="A stained-glass panel of the moon and Mt. Daisen set into a wooden wall" width="1050" height="1399" loading="lazy">
+                            <figcaption>Interior</figcaption>
+                        </figure>
+                    </div>
+                    <ul class="room-spec">
+                        <li><span class="spec-label">Restaurant</span><span>Dinner and breakfast are served in the restaurant. Both are optional, and room-only stays are available (dinner starts at 6:00 PM for all guests).</span></li>
+                        <li><span class="spec-label">Lobby</span><span>The front room has a sofa where you can relax.</span></li>
+                        <li><span class="spec-label">Coffee</span><span>A coffee machine outside the guest rooms is free to use.</span></li>
+                        <li><span class="spec-label">Minibar</span><span>The fridge outside the guest rooms is stocked with beer and soft drinks (paid; please leave payment in the box).</span></li>
+                        <li><span class="spec-label">Bath</span><span>Ceramic tub for Room 010 guests only (across the hall)</span></li>
+                        <li><span class="spec-label">Wi-Fi</span><span>Available throughout the building.</span></li>
+                        <li><span class="spec-label">Parking</span><span>Two spaces in front of the building (free)</span></li>
+                        <li><span class="spec-label">Hours</span><span>Check-in 3:00–10:00 PM / Check-out 10:00 AM</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -493,13 +592,15 @@
                     <details><summary><span class="faq-q">What kind of food is served?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Chef Hotaka Maeda crafts French tasting-course menus inspired by the landscapes of San'in — wild rock oysters from the Oki Islands, freshwater clams from Lake Shinji, artisan cheese from Kisuki Dairy, and herbs and vegetables harvested each morning from our kitchen garden. Every plate is a portrait of that day's San'in.</div></details>
                     <details><summary><span class="faq-q">Can you accommodate food allergies?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Please inform us of any allergies or dietary restrictions when making your reservation. We will do our best to accommodate within the limits of our kitchen. Depending on the nature and severity of the allergy, we may not be able to guarantee full accommodation.</div></details>
                     <details><summary><span class="faq-q">What are your check-in hours?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Check-in is available from 3:00 PM to 10:00 PM. Guests on a dinner plan are asked to check in by 6:00 PM, as dinner begins at 6:00 PM for everyone together. Room-only guests who expect to arrive after 10:00 PM should contact us in advance — with prior notice we will do our best to accommodate you. Without prior notice, we may not be able to receive you after 10:00 PM.</div></details>
+                    <details><summary><span class="faq-q">What time is check-out?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Check-out is at 10:00 AM.</div></details>
+                    <details><summary><span class="faq-q">Can I add dinner or breakfast?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Dinner and breakfast are both optional and are served in the restaurant. Room-only stays are also available.</div></details>
                     <details><summary><span class="faq-q">What is your cancellation policy?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Cancellation terms follow the platform you booked through — TableCheck for dinner reservations, and our official booking system or other platforms for overnight stays. Please review the specific policy at the time of booking.</div></details>
                     <details><summary><span class="faq-q">Is there parking available?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">We have two free parking spaces directly in front of the restaurant.</div></details>
                     <details><summary><span class="faq-q">How do I get to Scène from Yonago Station or Yonago Kitaro Airport?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">From JR Yonago Station, take the Nihon Kotsu Bus bound for Daisen-ji (approx. 50 min) and alight at the Daisen-ji stop, then walk about 5 minutes. By car, exit at Mizokuchi IC on the Yonago Expressway and drive approximately 20 minutes toward Mt. Daisen. See our <a href="/en/guides/access-from-tokyo-osaka.html" style="color:#c8b88a;">access guide</a> for details.</div></details>
                     <details><summary><span class="faq-q">Can I visit for dinner without staying overnight?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Absolutely. Dinner-only reservations are very welcome. Book your table through TableCheck.</div></details>
                     <details><summary><span class="faq-q">What are road conditions like in winter? Is snow a concern?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Mt. Daisen receives heavy snowfall and the road can be icy from November through March. We strongly recommend snow tires or tire chains if driving. Bus services continue but may experience delays due to weather conditions. Please plan extra travel time and check road conditions before setting out.</div></details>
                     <details><summary><span class="faq-q">What are some sightseeing highlights near Scène?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">Scène sits along the ancient Daisen pilgrim path, putting Daisen-ji Temple and the inner shrine of Ooyama Jinja within easy walking distance. Within a 30-minute drive you can reach Kaike Onsen hot springs, the Mizuki Shigeru Road in Sakaiminato (home of Kitaro), and the historic Matsue Castle. See our <a href="/en/guides/daisen-area-guide.html" style="color:#c8b88a;">Daisen area guide</a>.</div></details>
-                    <details><summary><span class="faq-q">What amenities are available in the guest rooms?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">All three rooms include Wi-Fi, a shower booth, towels, a hair dryer, and pajamas — a quiet stay in the forest stillness after dinner.</div></details>
+                    <details><summary><span class="faq-q">What amenities are available in the guest rooms?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">All three rooms have a washbasin, shower room and toilet, Wi-Fi, a mini fridge, a TV, towels, a hair dryer, pajamas, a toothbrush and shampoo. A coffee machine and a minibar (beer and soft drinks, paid) are located outside the guest rooms.</div></details>
                 </div>
             </div>
         </section>
