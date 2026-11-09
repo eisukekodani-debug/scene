@@ -663,7 +663,7 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 20px); }
 }
 
 /* 日本語版：料理の3つの特徴 */
-.cuisine-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+.cuisine-points { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; margin-top: 56px; }
 .cuisine-point { border-top: 1px solid var(--border-strong); padding-top: 20px; }
 .cuisine-point-title { font-family: var(--font-serif); font-weight: 500; font-size: 17px; letter-spacing: 0.06em; margin: 0 0 12px; color: var(--accent-warm); }
 .cuisine-point p { font-size: 14px; line-height: 2; color: var(--text-soft); margin: 0; }
