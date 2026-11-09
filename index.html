@@ -77,6 +77,8 @@
                 "servesCuisine": "French",
                 "priceRange": "¥¥¥",
                 "acceptsReservations": true,
+                "checkinTime": "15:00",
+                "checkoutTime": "10:00",
                 "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
@@ -93,13 +95,15 @@
                     { "@type": "Question", "name": "食事の内容はどのようなものですか？", "acceptedAnswer": { "@type": "Answer", "text": "山陰の海・山・里が育んだ食材を使ったフレンチのコース料理です。隠岐の島の岩牡蠣、宍道湖の蜆、木次乳業のチーズ、毎朝収穫した畑の野菜やハーブなど、その日の山陰の「情景」を一皿に表現します。" } },
                     { "@type": "Question", "name": "アレルギーがあります。対応できますか？", "acceptedAnswer": { "@type": "Answer", "text": "ご予約の際に事前にお知らせください。可能な範囲で対応いたします。アレルギーの種類や程度によってはお断りする場合もございますので、あらかじめご了承ください。" } },
                     { "@type": "Question", "name": "チェックインは何時から何時までですか？", "acceptedAnswer": { "@type": "Answer", "text": "チェックインは15:00から22:00までです。ディナー付きプランをご予約のお客様は、ディナーが18:00に一斉スタートとなりますので、それまでにチェックインをお願いしております。素泊まりのお客様で22:00以降のご到着になりそうな場合も、事前にご連絡をいただければ可能な限り対応いたしますので、お早めにお知らせください。ご連絡なく22:00を過ぎてのご到着は、対応できないことがございます。" } },
+                    { "@type": "Question", "name": "チェックアウトは何時ですか？", "acceptedAnswer": { "@type": "Answer", "text": "チェックアウトは10:00です。" } },
+                    { "@type": "Question", "name": "夕食・朝食は付けられますか？", "acceptedAnswer": { "@type": "Answer", "text": "夕食・朝食はいずれもオプションで、館内のレストランでお召し上がりいただけます。食事なしの素泊まりも承ります。" } },
                     { "@type": "Question", "name": "キャンセルポリシーを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "キャンセルポリシーは予約方法ごとの規定に準じます（ディナーはTableCheck、宿泊は公式予約システムまたは各予約サイト）。詳細は予約時にご確認ください。" } },
                     { "@type": "Question", "name": "駐車場はありますか？", "acceptedAnswer": { "@type": "Answer", "text": "建物前に2台分の無料駐車スペースをご用意しています。" } },
                     { "@type": "Question", "name": "米子駅・米子鬼太郎空港からのアクセスを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "JR米子駅から日本交通バス「大山寺」行きにご乗車いただき、約50分で大山寺バス停へ。そこから徒歩約5分です。お車の場合は米子自動車道「溝口IC」から約20分です。" } },
                     { "@type": "Question", "name": "ディナーのみの利用はできますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、宿泊なしのディナーのみでもご利用いただけます。ご予約はTableCheckからお申し込みください。" } },
                     { "@type": "Question", "name": "冬の積雪・凍結時のアクセスはどうなりますか？", "acceptedAnswer": { "@type": "Answer", "text": "大山は豪雪地帯です。冬季（11月〜3月頃）は積雪・路面凍結の可能性があります。スタッドレスタイヤまたはチェーンをご用意の上、余裕をもってお越しください。バスは運行していますが、天候によって遅延する場合があります。" } },
                     { "@type": "Question", "name": "周辺の観光スポットを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "大山参道沿いに位置するため、大山寺・大神山神社奥宮（徒歩圏内）が近く、四季折々の自然を楽しめます。車で30分圏内に皆生温泉、境港の水木しげるロード、松江城などがあります。" } },
-                    { "@type": "Question", "name": "客室の設備を教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "全3室にWi-Fi、シャワーブース、洗面台、タオル、ドライヤー、パジャマを完備しています。静かな森の中でゆったりとお過ごしください。" } }
+                    { "@type": "Question", "name": "客室の設備を教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "全3室に洗面台・シャワールーム・トイレ、Wi-Fi、ミニ冷蔵庫、テレビ、タオル、ドライヤー、パジャマ、歯ブラシ、シャンプー類を備えています。客室前にはコーヒーマシンとミニバー（ビール・ソフトドリンク、有料）があります。" } }
                 ]
             },
             {
@@ -320,6 +324,21 @@
                         アミューズからデザートまで、一皿ごとに表情を変えるコースで、この土地でしか味わえないひと時をお届けします。
                     </p>
                 </div>
+
+                <div class="cuisine-points">
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">薪の火で仕上げる</h3>
+                        <p>魚介や肉、野菜を薪の火で焼き、香りを重ねて仕上げます。</p>
+                    </div>
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">生産者から直接仕入れる</h3>
+                        <p>食材は生産者から直接仕入れ、鮮度のよいうちに調理します。</p>
+                    </div>
+                    <div class="cuisine-point">
+                        <h3 class="cuisine-point-title">収穫したての野菜とハーブ</h3>
+                        <p>野菜やハーブは収穫してすぐのものを使います。畑の様子に合わせて、皿の内容も日々変わります。</p>
+                    </div>
+                </div>
             </div>
 
             <div class="wrap cuisine-below reveal">
@@ -352,6 +371,43 @@
                     @scene_sanin
                 </a>
                 <p class="cuisine-note cuisine-note-end">※レストランはコース料理のみのご提供となります。</p>
+            </div>
+
+            <div class="wrap reveal">
+                <div class="course-block">
+                    <h3 class="course-heading">コースのご案内</h3>
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <span class="course-eyebrow">Lunch</span>
+                            <p class="course-name">ランチコース</p>
+                            <p class="course-price">13,200<span>円（税込）</span></p>
+                            <p class="course-detail">料理7品・デセール2品・お茶菓子3種・自家製サワードゥ</p>
+                        </div>
+                        <div class="course-card">
+                            <span class="course-eyebrow">Dinner</span>
+                            <p class="course-name">ディナーコース</p>
+                            <p class="course-price">16,500<span>円（税込）</span></p>
+                            <p class="course-detail">料理8品・デセール2品・お茶菓子3種・自家製サワードゥ</p>
+                        </div>
+                    </div>
+                    <p class="cuisine-note">昼と夜で料理の内容は基本的に同じで、ランチは料理が1品少ない構成です。</p>
+                </div>
+
+                <div class="menu-block">
+                    <h3 class="course-heading">お品書きの一例<span class="menu-season">2026年 秋</span></h3>
+                    <dl class="menu-list">
+                        <div class="menu-item"><dt>伯耆大山786m</dt><dd>786mはレストランの標高。周辺で採れる食材で作る一皿です。黒文字の香りを移したベシャメルと山椒の葉を包んだ、揚げパンのような料理。</dd></div>
+                        <div class="menu-item"><dt>大山こむぎ</dt><dd>小麦粉・塩・水と大山こむぎの酵母（サワー種）だけで焼いた自家製サワードゥを温かいフレンチトーストにし、鯵とハーブのタルタルを合わせて。</dd></div>
+                        <div class="menu-item"><dt>坂田農園</dt><dd>大山町の農家・坂田裕明さんの畑で収穫した野菜とハーブの一皿。食材は日々変わり、決まった形はありません。</dd></div>
+                        <div class="menu-item"><dt>白螺</dt><dd>昆布締めした白バイ貝とブロッコリーを薪火で焼き上げ、発酵させた蕪、ブロッコリーと貝出汁のピュレ、貝出汁と白ワインを泡立てたソース、炭化させた柚子の皮を添えて。</dd></div>
+                        <div class="menu-item"><dt>穴子</dt><dd>米粉で揚げた穴子のフリットと、穴子と白葱のつくね。穴子と蜆の出汁のコンソメに、焼き海苔とセロリのオイルを合わせて。</dd></div>
+                        <div class="menu-item"><dt>地美恵</dt><dd>奥大山地美恵から届く猪。端肉の肉団子に、糠漬けにしたビーツの果汁と刻んだビーツを合わせたソース。</dd></div>
+                        <div class="menu-item"><dt>大山おこわ</dt><dd>乾燥キノコの出汁で炊き上げ、薪火で香りをつけた松葉蟹と原木キノコを合わせたおこわ。松葉蟹のスープとともに。</dd></div>
+                        <div class="menu-item"><dt>柿<span class="menu-tag">デセール</span></dt><dd>北栄町のあんぽ柿と輝太郎柿に、日本酒のグラニテとヘーゼルナッツのアイス。</dd></div>
+                        <div class="menu-item"><dt>黒文字<span class="menu-tag">デセール</span></dt><dd>黒文字のキャラメルアイスと黒文字のリオレに、キャラメリゼした和梨のピュレ。</dd></div>
+                    </dl>
+                    <p class="cuisine-note">※ 季節と仕入れにより、内容は日々変わります。</p>
+                </div>
             </div>
 
             <div class="wrap reveal">
@@ -435,11 +491,54 @@
 
                 </div>
 
-                <div class="rooms-common">
-                    <figure class="room-photo room-photo--shower">
-                        <img src="./assets/images/room-shower.webp" alt="全室共通のシャワー・トイレ" width="825" height="1100" loading="lazy">
-                    </figure>
-                    <p class="text-muted-block">全室にシャワー・トイレ、Wi-Fi、タオル・ドライヤー・パジャマを完備しています。浴槽があるのは、010にご宿泊の方専用の貸切風呂（廊下の向かいにある室内の陶器風呂）だけです。その他の客室はシャワーのみとなります。</p>
+                <div class="rooms-common rooms-common--duo">
+                    <div class="rooms-common-media">
+                        <figure class="room-photo room-photo--shower">
+                            <img src="./assets/images/room-shower.webp" alt="全室共通の洗面台・トイレ・シャワールーム" width="825" height="1100" loading="lazy">
+                            <figcaption>洗面台・トイレ</figcaption>
+                        </figure>
+                        <figure class="room-photo room-photo--shower">
+                            <img src="./assets/images/amenities.webp" alt="洗面台に用意したタオル・パジャマ・歯ブラシなどのアメニティ" width="1050" height="1399" loading="lazy">
+                            <figcaption>アメニティ</figcaption>
+                        </figure>
+                    </div>
+                    <div class="rooms-common-body">
+                        <h3 class="room-name">全室共通の水回りとアメニティ</h3>
+                        <p class="text-muted-block">全室に洗面台・シャワールーム・トイレを備えています。浴槽があるのは、010にご宿泊の方専用の貸切風呂（廊下の向かいにある室内の陶器風呂）だけです。その他の客室はシャワーのみとなります。</p>
+                        <ul class="room-spec">
+                            <li><span class="spec-label">水回り</span><span>洗面台・シャワールーム・トイレ（全室・室内）</span></li>
+                            <li><span class="spec-label">アメニティ</span><span>歯ブラシ、シャンプー類、タオル、パジャマ</span></li>
+                            <li><span class="spec-label">備品</span><span>ドライヤー、ミニ冷蔵庫、テレビ、Wi-Fi</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="facilities">
+                    <h3 class="room-name">館内の設備</h3>
+                    <div class="facilities-media">
+                        <figure class="room-photo">
+                            <img src="./assets/images/exterior-day.webp" alt="昼のScène外観。森に囲まれた平屋の建物" width="1600" height="1201" loading="lazy">
+                            <figcaption>外観</figcaption>
+                        </figure>
+                        <figure class="room-photo">
+                            <img src="./assets/images/facility-restaurant.webp" alt="夕食・朝食をお召し上がりいただくレストランの内観" width="1050" height="1400" loading="lazy">
+                            <figcaption>レストラン</figcaption>
+                        </figure>
+                        <figure class="room-photo">
+                            <img src="./assets/images/interior-stainedglass.webp" alt="館内の木の壁にはめ込んだ、月と大山を描いたステンドグラス" width="1050" height="1399" loading="lazy">
+                            <figcaption>館内</figcaption>
+                        </figure>
+                    </div>
+                    <ul class="room-spec">
+                        <li><span class="spec-label">レストラン</span><span>夕食・朝食はレストランでお召し上がりいただきます。いずれもオプションで、素泊まりも承ります（夕食は18:00から一斉スタート）。</span></li>
+                        <li><span class="spec-label">フロント</span><span>ソファーを置いた、くつろぎのスペースがあります。</span></li>
+                        <li><span class="spec-label">コーヒー</span><span>客室前にコーヒーマシンを設置しています。ご自由にお使いください。</span></li>
+                        <li><span class="spec-label">ミニバー</span><span>客室前の冷蔵庫にビール・ソフトドリンクをご用意しています（有料・代金は料金箱へ）。</span></li>
+                        <li><span class="spec-label">貸切風呂</span><span>010にご宿泊の方専用の陶器風呂（廊下の向かい）</span></li>
+                        <li><span class="spec-label">Wi-Fi</span><span>全館でご利用いただけます。</span></li>
+                        <li><span class="spec-label">駐車場</span><span>建物前に2台分（無料）</span></li>
+                        <li><span class="spec-label">時間</span><span>チェックイン 15:00〜22:00／チェックアウト 10:00</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -486,13 +585,15 @@
                     <details><summary><span class="faq-q">食事の内容はどのようなものですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">山陰の海・山・里が育んだ食材を使ったフレンチのコース料理です。隠岐の島の岩牡蠣、宍道湖の蜆、木次乳業のチーズ、毎朝収穫した畑の野菜やハーブなど、その日の山陰の「情景」を一皿に表現します。</div></details>
                     <details><summary><span class="faq-q">アレルギーがあります。対応できますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">ご予約の際に事前にお知らせください。可能な範囲で対応いたします。アレルギーの種類や程度によってはお断りする場合もございますので、あらかじめご了承ください。</div></details>
                     <details><summary><span class="faq-q">チェックインは何時から何時までですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">チェックインは15:00から22:00までです。ディナー付きプランをご予約のお客様は、ディナーが18:00に一斉スタートとなりますので、それまでにチェックインをお願いしております。素泊まりのお客様で22:00以降のご到着になりそうな場合も、事前にご連絡をいただければ可能な限り対応いたしますので、お早めにお知らせください。ご連絡なく22:00を過ぎてのご到着は、対応できないことがございます。</div></details>
+                    <details><summary><span class="faq-q">チェックアウトは何時ですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">チェックアウトは10:00です。</div></details>
+                    <details><summary><span class="faq-q">夕食・朝食は付けられますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">夕食・朝食はいずれもオプションで、館内のレストランでお召し上がりいただけます。食事なしの素泊まりも承ります。</div></details>
                     <details><summary><span class="faq-q">キャンセルポリシーを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">キャンセルポリシーは予約方法ごとの規定に準じます（ディナーはTableCheck、宿泊は公式予約システムまたは各予約サイト）。詳細は予約時にご確認ください。</div></details>
                     <details><summary><span class="faq-q">駐車場はありますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">建物前に2台分の無料駐車スペースをご用意しています。</div></details>
                     <details><summary><span class="faq-q">米子駅・米子鬼太郎空港からのアクセスを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">JR米子駅から日本交通バス「大山寺」行きにご乗車いただき、約50分で大山寺バス停へ。そこから徒歩約5分です。お車の場合は米子自動車道「溝口IC」から約20分です。</div></details>
                     <details><summary><span class="faq-q">ディナーのみの利用はできますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">はい、宿泊なしのディナーのみでもご利用いただけます。ご予約はTableCheckからお申し込みください。</div></details>
                     <details><summary><span class="faq-q">冬の積雪・凍結時のアクセスはどうなりますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">大山は豪雪地帯です。冬季（11月〜3月頃）は積雪・路面凍結の可能性があります。スタッドレスタイヤまたはチェーンをご用意の上、余裕をもってお越しください。バスは運行していますが、天候によって遅延する場合があります。</div></details>
                     <details><summary><span class="faq-q">周辺の観光スポットを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">大山参道沿いに位置するため、大山寺・大神山神社奥宮（徒歩圏内）が近く、四季折々の自然を楽しめます。車で30分圏内に皆生温泉、境港の水木しげるロード、松江城などがあります。詳しくは<a href="/guides/daisen-area-guide.html" style="color:#c8b88a;">大山周辺の観光ガイド</a>をご覧ください。</div></details>
-                    <details><summary><span class="faq-q">客室の設備を教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">全3室にWi-Fi、シャワーブース、洗面台、タオル、ドライヤー、パジャマを完備しています。静かな森の中でゆったりとお過ごしください。</div></details>
+                    <details><summary><span class="faq-q">客室の設備を教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">全3室に洗面台・シャワールーム・トイレ、Wi-Fi、ミニ冷蔵庫、テレビ、タオル、ドライヤー、パジャマ、歯ブラシ、シャンプー類を備えています。客室前にはコーヒーマシンとミニバー（ビール・ソフトドリンク、有料）があります。</div></details>
                 </div>
             </div>
         </section>

@@ -662,6 +662,37 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 20px); }
     .chef-quote { font-size: 16px; }
 }
 
+/* 日本語版：料理の3つの特徴 */
+.cuisine-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px; }
+.cuisine-point { border-top: 1px solid var(--border-strong); padding-top: 20px; }
+.cuisine-point-title { font-family: var(--font-serif); font-weight: 500; font-size: 17px; letter-spacing: 0.06em; margin: 0 0 12px; color: var(--accent-warm); }
+.cuisine-point p { font-size: 14px; line-height: 2; color: var(--text-soft); margin: 0; }
+
+/* 日本語版：コースのご案内・お品書き */
+.course-block, .menu-block { margin-top: 96px; max-width: 880px; }
+.course-heading { font-family: var(--font-serif); font-weight: 500; font-size: clamp(20px, 2.4vw, 24px); letter-spacing: 0.08em; margin: 0 0 28px; }
+.course-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.course-card { border: 1px solid var(--border-strong); padding: 28px 28px 24px; background: var(--bg-sub); }
+.course-eyebrow { font-family: var(--font-display); font-style: italic; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent-warm); }
+.course-name { font-family: var(--font-serif); font-size: 17px; margin: 10px 0 6px; letter-spacing: 0.06em; }
+.course-price { font-family: var(--font-display); font-size: 34px; margin: 0 0 14px; letter-spacing: 0.04em; }
+.course-price span { font-family: var(--font-serif); font-size: 14px; margin-left: 4px; }
+.course-detail { font-size: 13px; line-height: 1.9; color: var(--text-soft); margin: 0; }
+.menu-season { font-family: var(--font-sans); font-size: 12px; color: var(--text-muted); letter-spacing: 0.12em; margin-left: 16px; }
+.menu-list { margin: 0; }
+.menu-item { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 18px 0; border-top: 1px solid var(--border); }
+.menu-item:last-child { border-bottom: 1px solid var(--border); }
+.menu-item dt { font-family: var(--font-serif); font-size: 16px; letter-spacing: 0.06em; color: var(--text-main); }
+.menu-item dd { margin: 0; font-size: 14px; line-height: 1.95; color: var(--text-soft); }
+.menu-tag { display: block; font-family: var(--font-sans); font-size: 11px; color: var(--text-muted); letter-spacing: 0.12em; margin-top: 4px; }
+@media (max-width: 768px) {
+    .cuisine-points { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
+    .course-block, .menu-block { margin-top: 72px; }
+    .course-grid { grid-template-columns: 1fr; }
+    .menu-item { grid-template-columns: 1fr; gap: 6px; }
+    .menu-tag { display: inline; margin: 0 0 0 10px; }
+}
+
 /* =========================================
    Buttons
    ========================================= */
@@ -958,12 +989,27 @@ details[open] .faq-toggle { transform: rotate(45deg); }
     padding-top: 48px; border-top: 1px solid rgba(245, 243, 238, 0.1);
 }
 .room-photo--shower img { height: 320px; }
+/* 日本語版：共通の水回り・アメニティ（写真2枚＋説明） */
+.rooms-common--duo { grid-template-columns: 1fr 1fr; }
+.rooms-common-media { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.rooms-common-body .room-name { margin-top: 0; }
+/* 日本語版：館内の設備（写真3枚＋一覧） */
+.facilities { margin-top: 72px; padding-top: 48px; border-top: 1px solid rgba(245, 243, 238, 0.1); }
+.facilities .room-name { margin-top: 0; }
+.facilities-media { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 14px; margin-bottom: 8px; }
+.facilities-media .room-photo img { height: 340px; }
+.facilities-media .room-photo:first-child img { object-position: center 80%; } /* 外観は空を削って建物を見せる */
+.facilities .room-spec { max-width: 760px; }
 @media (max-width: 768px) {
     .room-photo img { height: 300px; }
     .room-card-media.duo { grid-template-columns: 1fr; } /* 010の2枚も縦積みに */
     .room-card-media.duo .room-photo img { height: 280px; }
     .rooms-common { grid-template-columns: 1fr; gap: 24px; }
     .room-photo--shower img { height: 340px; }
+    .rooms-common-media .room-photo--shower img { height: 260px; }
+    .facilities-media { grid-template-columns: 1fr 1fr; }
+    .facilities-media .room-photo:first-child { grid-column: 1 / -1; }
+    .facilities-media .room-photo img { height: 240px; }
 }
 
 /* =========================================
