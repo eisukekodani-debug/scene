@@ -94,7 +94,7 @@
                     { "@type": "Question", "name": "お子様は利用できますか？", "acceptedAnswer": { "@type": "Answer", "text": "コース料理の特性上、9歳以上のお子様よりご利用いただけます。幼いお子様連れの場合は、事前にご相談ください。" } },
                     { "@type": "Question", "name": "食事の内容はどのようなものですか？", "acceptedAnswer": { "@type": "Answer", "text": "山陰の海・山・里が育んだ食材を使ったフレンチのコース料理です。隠岐の島の岩牡蠣、宍道湖の蜆、木次乳業のチーズ、毎朝収穫した畑の野菜やハーブなど、その日の山陰の「情景」を一皿に表現します。" } },
                     { "@type": "Question", "name": "アレルギーがあります。対応できますか？", "acceptedAnswer": { "@type": "Answer", "text": "ご予約の際に事前にお知らせください。可能な範囲で対応いたします。アレルギーの種類や程度によってはお断りする場合もございますので、あらかじめご了承ください。" } },
-                    { "@type": "Question", "name": "チェックインは何時から何時までですか？", "acceptedAnswer": { "@type": "Answer", "text": "チェックインは15:00から22:00までです。ディナー付きプランをご予約のお客様は、ディナーが18:00に一斉スタートとなりますので、それまでにチェックインをお願いしております。素泊まりのお客様で22:00以降のご到着になりそうな場合も、事前にご連絡をいただければ可能な限り対応いたしますので、お早めにお知らせください。ご連絡なく22:00を過ぎてのご到着は、対応できないことがございます。" } },
+                    { "@type": "Question", "name": "チェックインは何時から何時までですか？", "acceptedAnswer": { "@type": "Answer", "text": "チェックインは15:00から22:00までです。ディナー付きプランをご予約のお客様は、ディナーコースが18:00からのスタートとなりますので、それまでにチェックインをお願いしております。素泊まりのお客様で22:00以降のご到着になりそうな場合も、事前にご連絡をいただければ可能な限り対応いたしますので、お早めにお知らせください。ご連絡なく22:00を過ぎてのご到着は、対応できないことがございます。" } },
                     { "@type": "Question", "name": "チェックアウトは何時ですか？", "acceptedAnswer": { "@type": "Answer", "text": "チェックアウトは10:00です。" } },
                     { "@type": "Question", "name": "夕食・朝食は付けられますか？", "acceptedAnswer": { "@type": "Answer", "text": "夕食・朝食はいずれもオプションで、事前のご予約が必要です。館内のレストランでお召し上がりいただけます。食事なしの素泊まりも承ります。" } },
                     { "@type": "Question", "name": "キャンセルポリシーを教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "キャンセルポリシーは予約方法ごとの規定に準じます（ディナーはTableCheck、宿泊は公式予約システムまたは各予約サイト）。詳細は予約時にご確認ください。" } },
@@ -521,7 +521,7 @@
                         </figure>
                     </div>
                     <ul class="room-spec">
-                        <li><span class="spec-label">レストラン</span><span>夕食・朝食はレストランでお召し上がりいただきます。いずれもオプションで、事前のご予約が必要です。素泊まりも承ります（夕食は18:00から一斉スタート）。</span></li>
+                        <li><span class="spec-label">レストラン</span><span>夕食・朝食はレストランでお召し上がりいただきます。いずれもオプションで、事前のご予約が必要です。素泊まりも承ります（ディナーコースは18:00からのスタートとなります）。</span></li>
                         <li><span class="spec-label">フロント</span><span>ソファーを置いた、くつろぎのスペースがあります。</span></li>
                         <li><span class="spec-label">コーヒー</span><span>客室前にコーヒーマシンを設置しています。ご自由にお使いください。</span></li>
                         <li><span class="spec-label">ミニバー</span><span>客室前の冷蔵庫にビール・ソフトドリンクをご用意しています（有料・代金は料金箱へ）。</span></li>
@@ -538,6 +538,15 @@
             <div class="wrap reveal">
                 <span class="section-num">お知らせ</span>
                 <div id="newsList">
+                    <button type="button" class="list-row"
+                        data-title="大山スキー場 2026-2027シーズンの営業予定とリフト券"
+                        data-date="2026.11.11"
+                        data-content="大山のスキー場は今シーズンから「大山マウンテンリゾート」（旧だいせんホワイトリゾート）に名前が変わりました。<br><br>オープンは12月18日の予定で、リフト1日券は大人6,300円です。シーズン券の早期割引は11月27日まで、早割1日券の5枚綴りは11月30日までの販売です。<br><br>くわしくは<a href='guides/daisen-ski-2026-2027.html'>こちらの記事</a>にまとめました。">
+                        <span class="list-date">2026.11.11</span>
+                        <span class="list-title">大山スキー場 2026-2027シーズンの営業予定とリフト券</span>
+                        <span class="list-arrow" aria-hidden="true">→</span>
+                    </button>
+
                     <button type="button" class="list-row"
                         data-title="スタッフ募集のお知らせ"
                         data-date="2025.12.21"
@@ -575,7 +584,7 @@
                     <details><summary><span class="faq-q">お子様は利用できますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">コース料理の特性上、9歳以上のお子様よりご利用いただけます。幼いお子様連れの場合は、事前にご相談ください。</div></details>
                     <details><summary><span class="faq-q">食事の内容はどのようなものですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">山陰の海・山・里が育んだ食材を使ったフレンチのコース料理です。隠岐の島の岩牡蠣、宍道湖の蜆、木次乳業のチーズ、毎朝収穫した畑の野菜やハーブなど、その日の山陰の「情景」を一皿に表現します。</div></details>
                     <details><summary><span class="faq-q">アレルギーがあります。対応できますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">ご予約の際に事前にお知らせください。可能な範囲で対応いたします。アレルギーの種類や程度によってはお断りする場合もございますので、あらかじめご了承ください。</div></details>
-                    <details><summary><span class="faq-q">チェックインは何時から何時までですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">チェックインは15:00から22:00までです。ディナー付きプランをご予約のお客様は、ディナーが18:00に一斉スタートとなりますので、それまでにチェックインをお願いしております。素泊まりのお客様で22:00以降のご到着になりそうな場合も、事前にご連絡をいただければ可能な限り対応いたしますので、お早めにお知らせください。ご連絡なく22:00を過ぎてのご到着は、対応できないことがございます。</div></details>
+                    <details><summary><span class="faq-q">チェックインは何時から何時までですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">チェックインは15:00から22:00までです。ディナー付きプランをご予約のお客様は、ディナーコースが18:00からのスタートとなりますので、それまでにチェックインをお願いしております。素泊まりのお客様で22:00以降のご到着になりそうな場合も、事前にご連絡をいただければ可能な限り対応いたしますので、お早めにお知らせください。ご連絡なく22:00を過ぎてのご到着は、対応できないことがございます。</div></details>
                     <details><summary><span class="faq-q">チェックアウトは何時ですか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">チェックアウトは10:00です。</div></details>
                     <details><summary><span class="faq-q">夕食・朝食は付けられますか？</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">夕食・朝食はいずれもオプションで、事前のご予約が必要です。館内のレストランでお召し上がりいただけます。食事なしの素泊まりも承ります。</div></details>
                     <details><summary><span class="faq-q">キャンセルポリシーを教えてください。</span><span class="faq-toggle" aria-hidden="true">+</span></summary><div class="faq-a">キャンセルポリシーは予約方法ごとの規定に準じます（ディナーはTableCheck、宿泊は公式予約システムまたは各予約サイト）。詳細は予約時にご確認ください。</div></details>
