@@ -1474,6 +1474,7 @@ body { letter-spacing: 0.03em; }
 
 /* コース案内の予約の注意 */
 .course-reserve { border-left: none; padding-left: 0; font-family: var(--font-serif); font-size: 15px; }
+.course-block p, .course-detail { text-wrap: pretty; }
 
 /* お品書きのカード（手書き風の書体を変数に寄せる） */
 .menu-heading, .menu-season, .menu-item dt, .menu-tag, .menu-note { font-family: var(--font-hand); }
@@ -1491,6 +1492,7 @@ button.list-row:hover, .list-row:hover { padding-left: 0; }
 
 /* よくあるご質問 */
 .faq-q { letter-spacing: 0.02em; }
+.faq-a { text-wrap: pretty; }
 .faq-toggle { font-family: var(--font-sans); color: var(--text-muted); font-size: 18px; }
 
 /* お問い合わせ */
